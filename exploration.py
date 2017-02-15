@@ -73,4 +73,4 @@ if __name__ == "__main__":
     for n in notices:
         record = read_notice(n)
         record = cast_record(record)
-        db.notices.insert(record)
+        db.notices.upsert(record)
