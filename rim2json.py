@@ -58,3 +58,11 @@ range_zones = {
     600: "notes",
     900: "historique",
         }
+zones_fixes = {
+                "000": "guide",
+                "001": "_id",
+                "003": "uri",
+                "008": "context",
+                "017": "n_id_ext",
+                "031": "isni"
+              }
