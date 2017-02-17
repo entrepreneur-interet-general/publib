@@ -75,7 +75,7 @@ def read_notice(fname):
             record["pexs"] = []
         for p in r.find_all("pex"):
             pex = {"no":p.get("no"), "nr":p.get('nr')}
-            atts_l = [(at.get("rang"), at.get("nom").lower(), at.text)
+            atts_l = [(at.get("rang"), at.get("nom"), at.text)
                         for at in p.find_all("attr")]
             atts_d = {n[1]:[] for n in atts_l}
             for n in atts_l:
@@ -120,5 +120,5 @@ if __name__ == "__main__":
     for i, n in enumerate(scan_notices_dir()):
          record = read_notice(n)
          r = json.dumps(record, sort_keys=True, indent=4)
-         print (r)
-         break
+         print(r)
+         db.nn.upsert({"_id":record["_id"]}, record, upsert=True)
