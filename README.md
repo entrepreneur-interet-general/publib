@@ -23,17 +23,20 @@ rétrocompatibilité et  cohérence du modèle de données avec usages. (ajout p
 
 ## Défi BNF:
 Pistes d'intervention en 8 mois
-* PISTE 1 : ETL unifié pour les différentes chaines d'entrée des métadonnées
+* PISTE 1 :INPUT/OUTPUT UNIFIES
+ ETL unifié pour les différentes chaines d'entrée des métadonnées
 Une même logique d'acquisition pour chaque chaine, des règles spécifiques pour chaque type, source, filière et besoin métier ( a identifier de manière exhaustive)
 Des convertisseurs  et adaptateurs génériques pour les différents flux.
 En simple Un mode d'insertion unique des md dans pilote MD
-
 Et un mode de sortie unique des md dans pilote MD?
 
-* PISTE 2 : Décorreler les notices bibliographiques des notices d'autorité et voir comment synchroniser et éditer les notices
-* PISTE 3: Prototype d'accès et de modification des données en paquets + versionning des modifications
-* PISTE 4 : Outil de visualisation des évolutions et usage du Référentiel InterMarc + ajout/suppression de règles
-* PISTE 5: Enrichissement semi-automatique de notices pour suggestions dans ProdMD (la production des MD du catalogue)
+* PISTE 2 : Modèle PRE FNE
+Décorreler les notices bibliographiques des notices d'autorité et voir comment synchroniser et éditer les notices
+* PISTE 3: BIG CAT Prototype d'accès et de modification des données en paquets + versionning des modifications
+* PISTE 4 : AD CAT 90 NG
+Outil de visualisation des évolutions et usage du Référentiel InterMarc + ajout/suppression de règles
+* PISTE 5:  ADCAT 02 NG
+Enrichissement semi-automatique de notices pour suggestions dans ProdMD (la production des MD du catalogue)
 suggestions issues de 2 endroits: interne (notices existantes), externes (API pour des zones spécifiques: exemple lieux, PEP)
 
 ## PISTE 1
@@ -65,6 +68,3 @@ quels évolutions dans le temps?
 par une approche par l'usage et reboucler sur les Ateliers INterXMARC et les traitements de conformité faits au BEA (Contact Sylvie Florès)
 
 Pour cela un proto d'exploration et d'indexation dans MONGO
-
-
-

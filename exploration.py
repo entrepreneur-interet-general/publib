@@ -121,4 +121,4 @@ if __name__ == "__main__":
          record = read_notice(n)
          r = json.dumps(record, sort_keys=True, indent=4)
          print(r)
-         db.nn.upsert({"_id":record["_id"]}, record, upsert=True)
+         db.nn.update({"_id":record["_id"]}, record, upsert=True)
