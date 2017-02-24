@@ -68,3 +68,36 @@ quels évolutions dans le temps?
 par une approche par l'usage et reboucler sur les Ateliers INterXMARC et les traitements de conformité faits au BEA (Contact Sylvie Florès)
 
 Pour cela un proto d'exploration et d'indexation dans MONGO
+cf ./exploration.py
+
+##### Remarques
+Format Intermarc complexe:
+- Zones et sous Zones à position ou avec des champs
+La parti-pris pour le moment est d'applatir la hiérarchie de l'Intermarc et de se passer de conversion pour le moment.
+
+1. Analyse fréquentielle simple:
+permet de définir les champs obligatoires des notices
+et les champs les plus / moins utilisés
+A plusieurs niveaux:
+zones
+sous zones...
+position
+
+2. Analyse factorielle de correspondances
+définir les interdépendances de champs
+
+3. Modelisation du shema de dépendances créé par le format
+Cartographier la norme par type de données et chaine d'entrée....
+
+##### Autres developpements envisagés
+
+- Des silos différents: 100.000 par 100.000
+- Sampling de 1% représentatifs
+- Atomiser les notices?
+
+
+
+Autres reflexions:
+- Mettre les pex avec le numero de notices dans une autre collection
+- Recréer la logique de mise à jour ou création de notices d'autorité immédiate
+- Indexer les champs les plus usités

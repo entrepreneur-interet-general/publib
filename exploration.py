@@ -17,7 +17,6 @@ from collections import defaultdict
 
 
 def scan_notices_dir(notices_dir="./notices"):
-
     for d in sorted(os.listdir(notices_dir), reverse=True):
         for d1 in sorted(os.listdir(os.path.join(notices_dir,d)), reverse=True):
             d2 = os.path.join(notices_dir,d, d1)
@@ -47,6 +46,7 @@ def read_notice(fname):
         record["_id"] = int(r.get("numero"))
         record.update({n.get("tag"): n.text.split('\n')[0] for n in r.find_all("controlfield")})
         for pos in r.find_all("pos"):
+            #sous- zone à position
             if pos.parent.name == "subfield":
                 tag = pos.parent.parent.get("tag")
                 code = pos.parent.get("code")
