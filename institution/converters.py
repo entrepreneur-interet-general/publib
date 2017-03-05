@@ -2,14 +2,17 @@
 #/usr/bin/env/python
 import json
 import csv
+from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
 import graphviz as gv
+import networkx as nx
+import igraph as ig
 import plotly.plotly as py
 import plotly.graph_objs as go
-import networkx as nx
 import matplotlib.pyplot as plt
-
-# import jgraph
-# from jgraph import *
+import plotly.plotly as py
+import plotly.graph_objs as go
 
 __doc__ = '''
         The format nightmare:
@@ -63,9 +66,19 @@ def txt2json(fin="jargon.txt", fout="jargon.json"):
 
 def txt2html(fin="jargon.txt", fout="jargon.html"):
     '''convert txt to html
-    return staticfile
+    return filehandler
     '''
-    pass
+    listin = txt2list(fin)
+    env = Environment(
+        loader=FileSystemLoader('./templates'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
+    template = env.get_template('jargon.html')
+    htmlout = template.render(data=listin, title="Jargon de la BNF")
+    with open(fout, "w") as f:
+        f.write(htmlout)
+        return f
+
 def csv2text(fin="./jargon.csv", fout="./jargon.txt"):
     '''convert csv to txt
     return filehandler
@@ -93,7 +106,17 @@ def csv2html(fin="jargon.csv", fout="jargon.html"):
     '''convert csv to html
     return staticfile
     '''
-    pass
+    listin = csv2list(fin)
+    env = Environment(
+        loader=FileSystemLoader('./templates'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
+    template = env.get_template('jargon.html')
+    htmlout = template.render(data=listin, title="Jargon de la BNF")
+    with open(fout, "w") as f:
+        f.write(htmlout)
+        return f
+
 
 def json2txt(fin="./jargon.json", fout="./jargon.txt"):
     '''convert given JSON to TXT
@@ -116,10 +139,19 @@ def json2csv(fin="./jargon.json", fout="./jargon.txt"):
             f.write("\t".join(v)+"\n")
         return f
 
-def json2html():
+def json2html(fin, fout):
     with open(fin, "r") as f:
         jsonin = json.loads(f)
-    pass
+    listin = json2list(jsonin)
+    env = Environment(
+        loader=FileSystemLoader('./templates'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
+    template = env.get_template('jargon.html')
+    htmlout = template.render(data=listin, title="Jargon de la BNF")
+    with open(fout, "w") as f:
+        f.write(htmlout)
+        return f
 
 def txt2list(fin="./jargon.txt"):
     '''convert given TXT to LIST'''
@@ -171,10 +203,10 @@ def csv2dict(fin="./jargon.csv"):
     return dictout
 
 def json2dict(fin="./jargon.json"):
-    '''convert given CSV to DICT'''
+    '''convert given JSON to DICT'''
     with open(fin, "r") as f:
         dictout = json.loads(f)
-    return dictout
+        return dictout
 
 def list2dict(listin):
     '''
@@ -187,21 +219,67 @@ def list2dict(listin):
     return dictout
 
 def list2tree(listin):
-    pass
+    tree = []
+    for n in in listin:
+        tree.append([n[2].split("/"))
+    return tree
+
 def dict2tree(dictin):
-    pass
+    tree = []
+    for n in in dictin.values():
+        tree.append([n["hierarchy"].split("/"))
+    return tree
+
+def dict2digraph(dictin, module="nx"):
+    '''create a graph specifying the python module'''
+    if module = "nx":
+        G = nx.DiGraph()
+        for k, v in dictin.items():
+            G.add_node(k, definition=v["definition"])
+            G.add_path(v["hierarchy"].split("/"))
+        return G
+    elif module == "gv":
+        G = gv.DiGraph()
+        for k, v in dictin.items():
+            G.node(k, v["definition"])
+            G.edges(v["hierarchy"].split("/"))
+        return G
+    elif module == "ig":
+        G = gv.DiGraph()
+        for k, v in dictin.items():
+            G.add_vertice(k, definition= v["definition"])
+            G.add_edges((v["hierarchy"].split("/"))
+        return G
+    else:
+        raise Exception("Module %s Not Found" %module)
+
+def graph2img(G, imgout, module="ig"):
+    if module == "ig":
+        layout = G.layout('rt')
+        #https://plot.ly/python/tree-plots/#basic-treeplot-in-plotly-with-igraph
+    elif module == "gv":
+        G["format"]=imgout.split(".")[-1]
+        return g1.render(filename=imgout)
+    elif module == "nx":
+        nx.draw(g, with_labels=True, with_arrows=True)
+        plt.savefig(imgout) # save as png
+        plt.show()
+    else:
+        raise Exception("Module %s Not Found" %module)
+def graph2html(G, imgout, module="ig"):
+    raise NotImplementedError
 
 class FileConverter():
     ACC_FORMAT = ["txt", "csv", "json", "html"]
     def __init__(self, fin, fout):
         fmtin, fmtout = fin.split(".")[-1], fout.split(".")[-1]
-
+        if fmtin not in self.ACC_FORMAT:
+            raise Exception("Incorrect input filetype")
+        if fmtout not in self.ACC_FORMAT:
+            raise Exception("Incorrect output filetype")
         method = eval(fmtin+"2"+fmtout)
         method(fin, fout)
 
-class TypeCast():
-    def __init__(self, tin, tout):
-        pass
 
 if __name__ == "__main__":
-    f = FileConverter("jargon.txt", "jargon2.csv")
+    f = FileConverter("jargon.txt", "jargon2.html")
