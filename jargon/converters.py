@@ -2,6 +2,9 @@
 #/usr/bin/env/python
 import json
 import csv
+import pdfminer
+#import docx
+import os
 #from __future__ import absolute_import
 
 from jinja2 import Template, Environment, FileSystemLoader , select_autoescape
@@ -17,46 +20,27 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 
 __doc__ = '''
-        The format nightmare:
+        Trying to solve the format nightmare:
         * fileconverter
-         PDF > DOC
-         DOC > TXT
-         TXT > CSV
-         TXT > JSON
-         TXT > HTML
-
-         CSV > TXT
-         CSV > JSON
-         CSV > HTML
-
-         JSON > TXT
-         JSON > CSV
-         JSON > HTML
-        * datatype cast:
-        TXT > LIST
-        TXT > DICT
-        TXT > GRAPH
-
-        CSV > LIST
-        CSV > DICT
-        CSV > GRAPH
-
-        JSON > LIST
-        CSV > DICT
-        CSV > GRAPH
+        * datatype cast
          '''
 def pdf2doc(fin, fout="jargon.docx"):
     pass
+
+def doc2pdf(fin, fout="jargon.pdf"):
+    pass
+
 def pdf2txt(fin, fout="jargon.txt"):
-    with open(fin) as f:
-        fout = slate.PDF(f)
-        print(fout)
-    # with open(fout, "w") as f:
-    #     for n in listin:
-    #         f.write("\t".join(n)+"\n")
-    # return f
-    # pass
-def doc2txtt(fin, fout="jargon.txt"):
+    os.system('pdf2txt %s %s' %(fin,fout))
+    return
+
+def txt2pdf(fin, fout="jargon.pdf"):
+    pass
+
+def doc2txt(fin, fout="jargon.txt"):
+    pass
+def txt2doc(fin, fout="jargon.docx"):
+    pass
 
 def txt2csv(fin, fout="jargon.csv"):
     '''
@@ -286,16 +270,17 @@ def graph2html(G, imgout, module="ig"):
     raise NotImplementedError
 
 class FileConverter():
-    ACC_FORMAT = ["txt", "csv", "json", "html"]
-    def __init__(self, fin, fout):
+    ACC_FORMAT = ["pdf", "txt", "csv", "json", "html"]
+    def __init__(self, fin, fout, table):
         fmtin, fmtout = fin.split(".")[-1], fout.split(".")[-1]
         if fmtin not in self.ACC_FORMAT:
             raise Exception("Incorrect input filetype")
         if fmtout not in self.ACC_FORMAT:
             raise Exception("Incorrect output filetype")
         method = eval(fmtin+"2"+fmtout)
-        method(fin, fout)
+        if table is True:
+            method(fin, fout, table)
         print("File %s sucessfully converted to %s" %(fin, fout))
 
 if __name__ == "__main__":
-    f = FileConverter("jargon.txt", "jargon.html")
+    f = FileConverter("BnF_jargon_20161020.pdf", "jargon.txt", table=True)
