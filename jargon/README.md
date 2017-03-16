@@ -18,9 +18,9 @@ il gère des formats de documents:
 
 
 et gère de conversion en *types* de données informatiques:
-TXT <> [LIST, DICT, GRAPH]
-CSV <> [LIST, DICT, GRAPH]
-JSON <> [LIST, DICT, GRAPH]
+* TXT <> [LIST| DICT| GRAPH]
+* CSV <> [LIST| DICT| GRAPH]
+* JSON <> [LIST| DICT| GRAPH]
 
 ## Comment il fonctionne
 

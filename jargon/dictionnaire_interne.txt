@@ -1,0 +1,2179 @@
+AaBnF              Association des amis de la             Fondée en 1913 et reconnue d'utilité
+                   Bibliothèque nationale de              publique en 1927, réunion de mécènes qui
+                   France                                 a pour mission d'enrichir les collections de
+                                                          la BnF, de contribuer à leur présentation au
+                                                          plus large public et d'en favoriser le
+                                                          rayonnement.
+
+AAS                Association pour l'action              Association du personnel du ministère de la
+                   sociale, culturelle et sportive        Culture et de la Communication.
+
+AB                 Assistant des bibliothèques            Corps de la fonction publique - Ministère
+                                                          de l'enseignement supérieur.
+
+ABES               Agence bibliographique de              Gère le SUDOC, Calames ainsi que les
+                   l'Enseignement supérieur               outils     collectifs  des    bibliothèques
+                                                          universitaires : Répertoire des thèses, des
+                                                          signets, etc.
+
+
+ABF                Association               des          Remplace        l'ancienne       appellation
+                   bibliothécaires de France              Association des Bibliothécaires Français.
+
+ABN                Agence        bibliographique          L'Agence a changé de nom en mars 2008,
+                   nationale DSR/ABN                      devenant     le   département    Information
+                                                          bibliographique numérique (IBN).
+
+
+
+ABS                Arrière banque de salle                Bureau d’arrivée des documents des
+                                                          magasins à l’arrière des banques de salle.
+
+
+
+ACCEO              Service de traitement en               Mis en place à la BnF en décembre 2015.
+                   temps réel des appels de
+                   clients    sourds       ou
+                   malentendants    développé
+                   par la société du même
+                   nom.
+
+AD                 Archives départementales               _
+
+ACE                Agent      contractuel      sur        Agent contractuel de la BnF.
+                   emploi
+
+ACMO    Agents chargés de la mise en           Remplacés par les agents de préventions (AP)
+        œuvre des mesures d'hygiène et
+        sécurité
+
+ACO     Autorités collectivités                Désormais désignées    sous   le    sigle    ORG
+                                               (catalogues).
+
+ADBDP   Association des directeurs             _
+        de            bibliothèques
+        départementales de prêt
+
+ADBS    Association                 des        _
+        documentalistes              et
+        bibliothécaires spécialisés
+
+ADBU    Association des directeurs             _
+        de             bibliothèques
+        universitaires
+
+ADBGV   Association des directeurs             _
+        de bibliothèques de grandes
+        villes
+
+ADDN    Acquisitions et dons        de         Filière créée pour couvrir les différentes
+        documents numériques                   étapes de traitement des entrées par don ou
+                                               acquisition de documents numériques.
+
+
+AEP     Aux Enfants du Paradis                 Salle polyvalente de l'APBnF.
+
+AFAS    Association des détenteurs             Association créée en 1979 sur l'initiative de
+        de documents audiovisuels              responsables de fonds d'archives sonores ou
+        et sonores                             de phonogrammes inédits ou édités à
+                                               vocation de recherche, d'études ou d'usage
+                                               professionnel.
+
+
+AFNIC   Association française pour le          L'AFNIC est le centre d'information et de
+        nommage       Internet    en           gestion des noms de domaine internet .fr
+        coopération                            (France) et .re (Île de la Réunion).
+
+
+
+AFNIL   Agence francophone pour la             L'AFNIL est chargée d'attribuer des ISBN
+        numérotation internationale            (International Standard Book Number).
+        du livre
+
+AFNOR   Association française       de         _
+        normalisation
+ALTO    Analyzed Layout and Text                 Format utilisé pour la conversion des textes
+        Object                                   contenus dans des images de documents
+                                                 patrimoniaux. Il conserve toutes les
+                                                 coordonnées géométriques des contenus
+                                                 dans l’image et permet la superposition de
+                                                 l’image et du texte ainsi que la surbrillance
+                                                 des mots recherchés lors d’une requête. Ce
+                                                 format est maintenu par la Bibliothèque du
+                                                 Congrès.
+
+AMA     Autorités matières                       Désormais désignées     sous      le    sigle    RAM
+                                                 (catalogues).
+
+AMD     Accueil mobilité départ                  Service d'accueil et de mobilité proposé par
+                                                 le service de logistique des ressources
+                                                 humaines        (DAP/DRH/SLR).          C'est
+                                                 également le nom du processus permettant
+                                                 d'assurer le suivi logistique des agents BnF
+                                                 ou externes.
+
+
+AN      Fichier des Anonymes avant               Ancien fichier de la BN rétroconverti.
+        1960
+
+AN      Archives nationales                      _
+
+ANIR    Base de données des                      Base recensant l'ensemble des actions
+        Actions          nationales,             nationales, internationales et de recherche
+        internationales    et    de              de la BnF.
+        recherche de la BnF
+
+ANL     Notices analytiques                      Type de notices de catalogage.
+
+ANTC    Agent    non    titulaire    sur         Agent vacataire de la BnF.
+        crédit
+
+ANTI    Agent non titulaire à temps              Agent vacataire de la BnF.
+        incomplet
+
+AP      Agent de prévention
+
+AP      Fichier        des          Actes        Ancien fichier de la BN rétroconverti.
+        parlementaires
+
+APB     Association du personnel de la           _
+        BnF
+
+APBnF   Association du personnel de              Juridiquement, une association distincte de
+        la BnF                                   la Bibliothèque, avec son/sa président(e)
+                                                 propre et sa gestion autonome.
+
+APP     Autorités personnes physiques            Désormais désignées      sous      le    sigle    PEP
+                                                 (catalogues).
+
+
+AR        Catalogue des Actes royaux             Ancien fichier de la BN rétroconverti.
+
+ARK       Archival Resource Key                  Système d’identifiants mis au point par la
+                                                 California Digital Library qui a vocation à
+                                                 identifier les objets de manière pérenne sur
+                                                 la base de la norme URI.
+
+Armoire   Climatisation des magasins             _
+HIROSS
+
+ARPBnF    Association pour le restaurant         Ses missions et activités ont été reprises par le
+          du personnel de la BNF                 Comité restauration (DRH)
+
+ARROW     Accessible Registries of Rights        Projet soutenu par la Commission européenne
+          Information                and         (2008-2011) auquel la BnF participe. Son
+          OrphanWorks             towards        objectif : faciliter l’accès aux œuvres sous droits.
+          Europeana
+
+Arsenal   Bibliothèque de l’Arsenal              Collection privée du XVIIe siècle, devenue
+                                                 une bibliothèque publique autonome
+                                                 spécialisée dans la littérature et les
+                                                 manuscrits littéraires, rattachée en 1934 à la
+                                                 Bibliothèque nationale.
+
+ARTT      Aménagement et réduction               _
+          du temps de travail.
+
+ASCII     American Standard Code                 La norme ASCII a longtemps été utilisée
+          for Information Interchange            pour    le   codage      des    caractères
+                                                 alphanumériques en informatique.
+
+ATAE      Adjoint     technique des              _
+          administrations de l’Etat
+          moins     usité   que son
+          prédécesseur : MO (maître-
+          ouvrier).
+
+ATU       Autorités titres uniformes             Désormais désignées sous les sigles TIC et TUT
+                                                 (catalogues).
+
+Autocom   Commutateur automatique                _
+          pour       le   standard
+          téléphonique
+
+BA              Bibliothécaire-adjoint                   Ancien corps du Ministère de l’Éducation
+                                                         nationale.
+
+BA              Reliquat Fonds Barrès          et        Ancien fichier de la BN rétroconverti.
+                Fonds Anatole France
+
+BAC             Bureau             d’assistance          Bureau d’assistance informatique (poste :
+                centralisé                               4545).
+
+BAI             Base         des          actions        Voir ANIR
+                internationales
+
+Baie        de Local électrique /                        _
+brassage       informatique de chaque tour
+
+BAM             BnF Archives et Manuscrits               Catalogue de la BnF où sont décrits des
+                                                         fonds     et    documents  difficilement
+                                                         descriptibles en MARC. BAM utilise le
+                                                         langage l’EAD, un sous-ensemble de
+                                                         l’XML.
+
+BAS             Bibliothécaire-adjoint                   _
+                spécialisé
+
+Bases      de Système informatique de                    _
+production    gestion et de partage des
+              documents     bureautiques,
+              basé sur le logiciel client-
+              serveur Lotus/Domino.
+
+BAT             Bureau             d’assistance          _
+                technique
+
+
+BAT             Bon à tirer                              _
+
+Batch de nuit   Traitement informatique de               _
+                masse concernant une base
+                de données se déroulant de
+                nuit.
+
+BBC             Bureau des badges et des                 _
+                clés
+
+BBF             Bulletin des bibliothèques               Publication     professionnelle       éditée       par
+                de France                                l’ENSSIB.
+
+BCA             Billetterie-contrôle d’accès             Système informatique gérant la billetterie et le
+                                                         contrôle d’accès aux salles de lectures du site F.-
+                                                         Mitterrand et aux expositions. Remplacé par le
+                                                         progiciel GTS en 2014.
+
+BCC            Bureau de la cohérence du              Autrefois, BQC (bureau de la qualité du
+               catalogue  au    sein   de             catalogue).
+               l’Agence   bibliographique
+               nationale.
+
+BCP            Bibliothèque Centrale de Prêt          Ancien nom des BDP avant décentralisation.
+
+BDIC           Bibliothèque             de _
+               documentation internationale
+               contemporaine
+
+BDLI           Bibliothèque de dépôt légal            Grandes bibliothèques en région gérant le
+               imprimeur                              dépôt légal imprimeur.
+
+BDP            Bibliothèque                           _
+               départementale de Prêt
+
+BDS            Banque de salle                        Bureau des postes de renseignement
+                                                      bibliographique et de communication en
+                                                      salles de lecture.
+
+BIBAS          Bibliothécaire       assistant         _
+               spécialisé
+
+Bibliographie Recensement exhaustif par               Paraît depuis 1811 sous divers titres.
+nationale     la BnF, sur la base du dépôt
+française     légal, des documents en
+              toutes langues édités ou
+              diffusés sur le territoire
+              national.
+
+BGF            Bibliographie de la France             Ancien nom de la Bibliographie nationale
+                                                      française – Livres.
+
+Biblio-FR      Liste de diffusion dédiée au           _
+               secteur      bibliothéconomique
+               ayant cessé en mai 2009.
+
+Biblionautes   Site intranet destiné à tous           _
+               les agents de la BnF,
+               accessible uniquement en
+               interne, sur tous les postes
+               de travail.
+
+Bibliotheca    Programme de coopération               Il visait à coordonner les efforts en matière de
+universalis    internationale clos en 2005.           politique de numérisation et à donner un accès
+                                                      en ligne au patrimoine numérisé et aux
+                                                      collections électroniques des bibliothèques
+                                                      nationales.
+
+Biblissima     Bibliotheca bibliothecarum             Observatoire du patrimoine écrit du Moyen
+               novissima                              Âge et de la Renaissance, construit grâce au
+                                                      programme Équipements d’excellence des
+                                                      Investissements d’avenir.
+
+BIFI            Bibliothèque du film                    A fusionné avec la Cinémathèque française en
+                                                        2007
+
+BIPFPIG         Bibliographie de la presse              Recense les journaux français publiés de
+                française    politique  et              1865 à 1944 initialement et des origines à
+                d’information générale                  1944 pour les volumes publiés depuis 1980.
+                                                        Accessible en ligne sous le titre "Presse
+                                                        locale     ancienne",    à     l’adresse :
+                                                        http://presselocaleancienne.bnf.fr/.
+
+BIU             Bibliothèque                            _
+                interuniversitaire
+
+BIUM            Bibliothèque interuniversitaire         A fusionné en 2011 avec la Bibliothèque
+                de médecine                             interuniversitaire de pharmacie pour donner
+                                                        naissance à la Bibliothèque interuniversitaire de
+                                                        Santé (BIUS).
+
+BIUS            Bibliothèque                            _
+                interuniversitaire de Santé
+
+BM              Bibliothèque municipale                 _
+
+BMC             Bibliothèque         municipale         _
+                classée
+
+Bibliothèque-   Bibliothèque       spécialisée          _
+musée      de   située dans le Palais Garnier
+l’Opéra    ou   de    l’Opéra    de     Paris,
+BMO             rattachée à la Bibliothèque
+                nationale en 1935 et
+                relevant aujourd'hui du
+                département de la Musique.
+
+BMVR            Bibliothèque municipale à               _
+                vocation régionale
+
+BN              Bibliothèque nationale                  Nom de l’établissement jusqu’en 1994, avant
+                                                        fusion avec l’EPBF et naissance de la BnF.
+
+BN              Bandeau nord                            Espace de circulation latéral (est-ouest) du
+                                                        site François-Mitterrand.
+
+BnF             Bibliothèque nationale de               Nom de la Bibliothèque depuis 1994, date
+                France                                  de la fusion entre la Bibliothèque nationale
+                                                        et l’Établissement public de la Bibliothèque
+                                                        de France(EpBF).
+
+BNF             Bibliographie          nationale        _
+                française
+
+BN-Opale        Base du catalogage informatisé          Intégré dans le catalogue général.
+                de la BnF (jusqu’en 2002)
+
+BN-Opale         Ancien nom du catalogue                  _
+Plus             général de la BnF (jusqu’en
+                 2009)
+
+Bn-Opaline       Catalogue informatisé qui                Ce catalogue a été clos fin2006 et les notices
+                 réunissait une partie des                versées dans le catalogue BN-Opale Plus,
+                 documents      des    collections        devenu depuis le catalogue général de la BnF.
+                 spécialisées (cartes, estampes,
+                 monnaies, affiches, etc.).
+
+BNUE             Bibliothèque         numérique           Projet de bibliothèque virtuelle européenne lancé
+                 européenne                               en 2006 à l’initiative de la BnF. Devient
+                                                          Europeana, portail multilingue de diffusion du
+                                                          patrimoine européen lancé en novembre 2008.
+
+BNUS             Bibliothèque nationale et                _
+                 universitaire de Strasbourg
+
+Boucle        du Hangars de nacelles du                   _
+vide             TAD où sont stockées les
+                 nacelles inemployées
+
+BPI       ou Bibliothèque              publique           Bibliothèque au statut d'organisme associé
+Beaubourg    d’information                                au Centre Georges-Pompidou, au sein
+                                                          duquel elle est implantée.
+
+BS               Bandeau sud                              Espace de circulation latéral (est-ouest) du
+                                                          site François-Mitterrand.
+
+BSPP             Brigade    des         sapeurs-          Voir également USPP.
+                 pompiers de Paris
+
+BU               Bibliothèque universitaire               _
+
+BULAC            Bibliothèque     universitaire           _
+                 des langues et civilisations
+
+Bulletinage      Opération qui consiste à                 _
+                 pointer chaque numéro de
+                 périodique dès son arrivée
+                 dans l’établissement pour
+                 vérifier que la série est
+                 complète.
+
+BVMM             Bibliothèque virtuelle des               Partiellement accessible sur le CCFr
+                 manuscrits médiévaux
+
+CA              Conseil d’administration               _
+
+CADIST          Centre d’acquisition et de             Centre chargé d’acquérir des documents
+                diffusion de l’information             dans un domaine spécifiques. Les CADIST
+                scientifique et technique              sont souvent pôles associés de la BnF pour
+                                                       leur domaine.
+
+CAE             Contrat d’accompagnement               Remplace depuis 2005 le Contrat emploi
+                dans l’emploi                          solidarité.
+
+CALAMES         Catalogue en ligne des                 Catalogue des manuscrits et archives des
+                archives et des manuscrits             bibliothèques de l’Enseignement supérieur
+                de l’Enseignement supérieur            et de la Recherche alimenté par la
+                                                       rétroconversion du CGM et de PALME.
+                                                       Également interrogeable via le CCFr.
+
+CAO             Commission             d’appel         _
+                d’offres
+
+CAP             Commission administrative              _
+                paritaire
+
+CAP Ou Cap Collectif des associations du               _
+Culture    personnel Culture
+
+CAPLET          Espaces      de    stockage            _
+                partagés sur serveurs, pour
+                la    documentation     non
+                essentielle au suivi des
+                dossiers de l’établissement
+                ou certains types autorisés
+                de fichiers.
+
+CARAN           Centre d’accueil et de                 _
+                recherche     des     Archives
+                nationales - site de Paris
+
+Catalogue     Nom d’un des principaux                  Anciennement     appelé      BN-OpalePlus
+général de la catalogues informatisés de la            (jusqu’en 2009). Par analogie avec BnF
+BnF           BnF                                      Archives et Manuscrits, couramment abrégé
+                                                       en BAM, reçoit parfois l’acronyme BCG
+                                                       pour BnF Catalogue général.
+
+CatGen          Catalogue général       auteurs        Aussi désigné par CG.
+                avant 1960
+
+Catus           Catalogue des usuels         de        Exemplaire consultable en banque de salle, dans
+                l’ancienne salle Labrouste             la salle X, site F.- Mitterrand.
+
+CCAG            Cahier      des      clauses           Pièce administrative d’un marché public.
+                administratives générales
+
+                                                  21
+                                                                             Réf. BnF-ADM-2016-088763-01
+
+
+
+
+CCAP    Cahier       des      clauses           Pièce administrative d’un marché public.
+        administratives particulières
+
+CCBT    Centre     de       coordination        Unité organisationnelle qui a existé à la
+        bibliographique et technique            Bibliothèque nationale de 1985 à 1993.
+
+CCFr    Catalogue        collectif   de         Site web et système d’information qui
+        France                                  propose une interrogation simultanée des
+                                                grands catalogues français : catalogue
+                                                général de la BnF, catalogue des
+                                                bibliothèques universitaires (SUDOC),
+                                                catalogue de fonds anciens ou spécialisés de
+                                                bibliothèques municipales ou spécialisées
+                                                (Base patrimoine), catalogue des manuscrits
+                                                (CGM et PALME), Calames, BnF archives
+                                                et manuscrits (BAM) ainsi qu’un accès au
+                                                répertoire national des bibliothèques et
+                                                fonds documentaires (RNBFD) et à un
+                                                système de prêt interbibliothèques (PIB).
+
+CCI     Comité de         coordination          Instance de validation pour les dossiers
+        informatique                            informatiques,      d’échanges     réguliers
+                                                d’informations concernant les systèmes
+                                                d’information, et de consultation sur la
+                                                répartition des ressources informatiques de
+                                                la BnF.
+
+CCMP    Commission     consultative             _
+        des marchés publics
+
+CCNPS   Catalogue collectif national des        Mis en place en 1983, ce système de catalogage
+        publications en série                   partagé a repris, par fusion, différents fichiers
+                                                déjà existants (ISSN, IPPEC, catalogues
+                                                régionaux...). Faisait l’objet d’une édition sous
+                                                forme de cédérom appelé « Myriade ». Accessible
+                                                désormais dans le SUDOC. A pris le nom de
+                                                SUDOC-PS.
+
+CCPN    Comité de coordination de               _
+        la préservation numérique
+
+CCTP    Cahier      des       clauses           Pièce administrative d’un marché public.
+        techniques particulières
+
+CCPC    Commission         consultative         _
+        paritaire des      contractuels
+        sur emploi
+
+CCV     Contractuel sur crédits de              _
+        vacations
+
+CDD     Contrat à durée déterminée              _
+
+CDD     Classification         décimale         _
+        Dewey
+CDDP         Centre départemental de               _
+             documentation pédagogique
+
+CDI          Contrat      à          durée         _
+             indéterminée
+
+CDIP         Centre de documentation et            Destiné aux personnels de la BnF et situé
+             d’information                         site François-Mitterrand.
+             professionnelles
+
+CDNL         Conference of Directors of            Née en 1974, la CDNL réunit tous les ans
+             National           Libraries          les directeurs des bibliothèques nationales.
+             (Conférence des directeurs
+             de bibliothèques nationales)
+
+CD-Rom       Compact-Disc Read Only                _
+             Memory
+
+CDU          Classification      Décimale          _
+             Universelle
+
+CENL         Conference of       European          Créée en 1987, la CENL regroupe les
+             National            Librarians        bibliothèques nationales des pays membres
+             (Conférence des     directeurs        du Conseil de l’Europe.
+             des bibliothèques   nationales
+             européennes)
+
+CERL         Consortium of European                Consortium créé en 1990 dans le but
+             Research          Libraries           d’améliorer l’accès, l’exploitation et la
+             (Consortium            des            préservation du patrimoine européen
+             bibliothèques de recherche            imprimé.
+             européennes)
+
+CF           Contrôleur financier                  _
+
+CRFCBLD      Centres     régionaux      de         Services des universités qui ont pour
+             formation aux carrières des           mission, à leur échelon géographique,
+             bibliothèques, du livre et de         d’informer le grand public sur les métiers et
+             la documentation                      carrières de la documentation, de constituer
+                                                   et gérer une bibliothèque spécialisée dans le
+                                                   domaine du livre et de la documentation, de
+                                                   préparer aux concours de recrutement en
+                                                   bibliothèques, d’assurer la formation
+                                                   continue des personnels des bibliothèques.
+
+CG           Catalogue général      Auteurs        Ancien fichier de la BN rétroconverti
+             (avant 1960)
+
+CGM    ou Catalogue    général   des               Publication répertoriant les collections de
+CGMBPF    manuscrits             des               manuscrits     conservées    en     France.
+          bibliothèques publiques de               Dématérialisé et accessible via le CCFr
+          France                                   (bibliothèques hors enseignement supérieur
+                                                   et recherche) ou Calames (bibliothèques
+                                                   enseignement supérieur et recherche).
+
+CHS     Comité hygiène et sécurité             Instance représentative de la BnF. Voir
+                                               CHSCT.
+
+CHSCT   Comité       d'hygiène,    de
+        sécurité et des conditions de
+        travail
+
+CID     Correspondant                          _
+        informatique                 de
+        département
+
+CIF     Centre ISSN France                     _
+
+CIL     Correspondant                          Interlocuteur de la CNIL, responsable pour
+        informatique et libertés               la BnF de la protection des données à
+                                               caractère personnel et de l’application de la
+                                               loi du 6 janvier 1978 « Informatique et
+                                               libertés ».
+
+CIN     Commission internationale              Constituée en 1934 la CIN a pour mission
+        de numismatique                        de faciliter la coopération dans le domaine
+                                               de la numismatique et des sciences qui s’y
+                                               rapportent.
+
+CIP     Conseil    et     information          Offre de conseil de la DRH.
+        professionnels
+
+CIP     Correspondant                          Rassemble et transmet les besoins nouveaux
+        informatique de proximité              en matériel, et sert d’appui local.
+
+CLA     Correspondant      pour      la        _
+        logistique administrative
+
+CNC     Centre national du cinéma              Établissement public français dont les
+        et de l’image animée                   missions principales sont de réglementer,
+                                               soutenir et promouvoir l'économie du
+                                               cinéma en France et à l'étranger.
+
+CNDP    Centre     national    de              _
+        documentation pédagogique
+
+CNIL    Commission nationale de                Créée par la loi n° 78-17 du 6 janvier 1978
+        l’informatique et des libertés         relative à l’informatique, aux fichiers et aux
+                                               libertés, la CNIL est une autorité
+                                               administrative indépendante chargée de
+                                               veiller à la protection des données
+                                               personnelles.
+
+CNL     Centre national du livre               Rattaché au ministère de la Culture et de la
+                                               Communication, il a pour vocation de
+                                               soutenir l’ensemble de la chaîne du livre.
+
+CO      Fichier des Collectivités avant        Ancien fichier de la BN rétroconverti
+        1960
+
+Cotation        Plan de classement de la                 23 divisions systématiques (de la lettre A –
+Clément         Bibliothèque du XVIIe siècle             Écriture sainte – à la lettre Z – Polygraphie
+                à 1996                                   et mélanges). Ce cadre de classement a été
+                                                         conçu par Nicolas Clément, garde de la
+                                                         Bibliothèque du roi. Les livres, numérotés,
+                                                         étaient classés par format, puis par sujet, à
+                                                         l’intérieur de chaque division.
+
+CoCa            Coordination du catalogage               _
+
+CODIR           Comité de direction de la                _
+                BnF
+
+COFAR           Collectivités françaises de              _
+                l’Ancien Régime
+
+COM             Contrat    d’objectifs    et   de        Ancien nom du contrat de performance.
+                moyens
+
+COMCAT          Comité du catalogue                      Actif de 2002 à 2012, remplacé par le comité
+                                                         des métadonnées (COMET)
+
+COMET           Comité des métadonnées                   Instance       transverse     d'information,
+                                                         d'expertise et de coordination entre la DSR
+                                                         et la DCO.
+
+COMEX           Comité d’exploitation                    Instance d’information et d’échanges sur le
+                                                         fonctionnement quotidien des sites de la
+                                                         BnF.
+
+COMRED          Comité de rédaction du                   _
+                guide      pratique du
+                catalogueur
+
+COP             Commission         d’ouverture           Procédure relative aux marchés publics.
+                des plis
+
+Contrat   de Outil de formalisation de la                Les résultats font chaque année l'objet d'un
+performance stratégie à moyen terme de                   rapport de performance annexé au rapport
+             la Bibliothèque avec le                     d'activité de l'établissement.
+             ministère de tutelle et outil
+             de pilotage interne des
+             activités.
+
+CPI             Comité       de          pilotage        _
+                informatique
+
+COPIF           Comité       des      projets            Instance représentative de la BnF.
+                individuels de formation
+
+COTATRAN        Cotation transitoire                     Système de cotation temporaire utilisé entre
+                                                         1996 et 1998, se caractérisant par : Format-
+                                                         Département-Type de publication-n°. Les
+                                                         publications sont abrégées en MON :
+                                                         monographies ou PER : périodiques.
+COTRETRO   Cotes rétroconversion                    Opération de correction des cotes dans Sycomore
+                                                    antérieure à la migration des données de la
+                                                    conversion rétrospective des imprimés dans le
+                                                    SI.
+
+CMPE       Commission        des     marchés        Devenue commission consultative des marchés
+           publics de l’Etat                        publics (CCMP) en 2009.
+
+CRA        Conversion rétrospective de              _
+           l’Audiovisuel
+
+CRC        Centre de recherche sur la               Unité de service et de recherche dévolue à
+           conservation                             la conservation des biens culturels. Elle est
+                                                    constituée du CRCC, du LRMH et de
+                                                    l'ECR.
+
+CRCC       Centre de recherche sur la               Rattaché au CRC. A remplacé le CRCDG.
+           conservation des collections             Ses champs d'investigation s'étendent
+                                                    désormais également aux objets en cuir, aux
+                                                    photographies,             aux             films
+                                                    cinématographiques,         aux       supports
+                                                    magnétiques, aux matériaux synthétiques et
+                                                    aux collections d’histoire naturelle, etc.
+
+CRCDG      Centre de recherche sur la               Unité mixte Centre national de la recherche
+           conservation des documents               scientifique – ministère de la Culture et de la
+           graphiques                               Communication – Muséum national d’histoire
+                                                    naturelle. Remplacé par le CRCC.
+
+
+CRD        Chargé    de            recherche        Contrats réservés aux normaliens agrégés de
+           documentaire                             moins de 27 ans prévoyant un service
+                                                    d’enseignement de 96 heures par an dans
+                                                    un établissement d’enseignement complété
+                                                    par 400 heures par an dans un organisme
+                                                    documentaire.
+
+CRDP       Centre     régional    de                _
+           documentation pédagogique
+
+CRI        Conversion         rétrospective         _
+           des imprimés
+
+CRU        Cellule relation utilisateurs            _
+
+CSB        Conseil       supérieur       des        Créé en 1989, il était chargé d’émettre des avis
+           bibliothèques                            et des recommandations sur la situation et les
+                                                    questions qui concernent les bibliothèques et les
+                                                    réseaux documentaires. Est supprimé en 2004.
+                                                    En 2008, le Conseil du Livre reprend ses
+                                                    attributions.
+
+CT         Comité technique                         Instance de concertation composée de
+                                                    représentants de l’administration et de
+                                                    représentants du personnel élus.
+CTA           Chef de travaux d’art                    _
+
+CTLes         Centre technique du livre de             Situé dans les mêmes locaux que la BnF à
+              l’Enseignement supérieur                 Bussy-Saint-Georges.
+
+CTEI          Comité      travaux     et               Comité de pilotage des travaux et
+              équipements immobiliers                  équipements immobiliers de la BnF
+                                                       réunissant l’administration et les tutelles.
+
+CTP           Comité technique paritaire               Instance représentative de la BnF.
+
+CVCD          Chauffage,        ventilation,           _
+              climatisation, désenfumage
+D1            Département          Philosophie,        Ancien sigle du Département Philosophie,
+              histoire, sciences de l’homme            histoire, sciences de l’homme (PHS).
+
+D2            Département Droit, économie,             Ancien sigle du Département Droit, économie,
+              politique                                politique (DEP).
+
+D3            Département       Sciences     et        Ancien sigle du Département Sciences et
+              Techniques                               Techniques (SCT).
+
+D4            Département Littérature et art           Ancien sigle du Département Littérature et art
+                                                       (LLA).
+
+D5            Département de l’Audiovisuel             Ancien sigle du Département de l’Audiovisuel
+                                                       (AUD).
+
+DADVSI        Loi    relative au    droit              Loi n° 2006-961 du 1er août 2006.
+              d’auteur et aux droits
+              voisins dans la société de
+              l’information
+
+DAE           Domaine                      des         Un des domaines du système informatique
+              Accroissements        et     des         (SI).
+              entrées
+
+Daguerre      Base Daguerre                            Base d’images numérisées de la BnF.
+
+data.bnf.fr   Base de données de la BnF                Base de données sémantique contenant des
+                                                       données sur les œuvres, les auteurs et les
+                                                       thèmes du catalogue mise en ligne en 2011.
+
+Data        Outil     informatique       qui        Voir également entrepôt de données.
+warehouse   rassemble        et      permet
+            d’analyser           différentes
+            données d’une entreprise
+            (statistiques,         données
+            financières,        indicateurs
+            d’activité, etc.).
+
+DBMIST      Direction des bibliothèques, des        Au sein du ministère de l’Éducation nationale.
+            musées et de l’information              Remplacée par la mission de l’information
+            scientifique et technique               scientifique et technique et du réseau
+                                                    documentaire       (MISTRD),         elle-même
+                                                    remplacée en 2014 par le département de
+                                                    l’information scientifique et technique et du
+                                                    réseau documentaire (DISTRD).
+
+DBN         Département de la bibliothèque          Ce département a été supprimé en mars 2008 et
+            numérique DSR/DBN                       ses activités réparties entre les départements de
+                                                    la Coopération, du Dépôt légal et de
+                                                    l’Information bibliographique numérique.
+
+DCE         Dossier de consultation des             Pièce administrative d’un marché public.
+            entreprises
+
+DES         Direction de l’Enseignement             _
+            Supérieur
+
+DG          Direction          générale,            _
+            directeur général, directrice
+            générale
+
+DGE         Direction générale                      _
+
+DIR         Direction                               _
+
+DISTRD      Département                de           Au sein du ministère de l’Éducation
+            l’information scientifique et           nationale. A remplacé la mission de
+            technique et du réseau                  l’information scientifique et technique et du
+            documentaire                            réseau documentaire (MISTRD) en 2014.
+
+DLI         Dépôt légal imprimeur                   _
+
+DLINF       Dépôt légal informatique                _
+
+DLL         Direction du livre et de la             Au sein du ministère de la Culture et de la
+            lecture                                 Communication,       assure    un      rôle
+                                                    d’évaluation et de réglementation dans le
+                                                    domaine du livre et de la lecture.
+                                                    Remplacée par le service du livre et de la
+                                                    lecture (SLL) en 2009.
+
+DLWeb       Dépôt légal du web                      _
+
+DOC         Dossiers d'ordonnancement               _
+            classiques
+DoLoRes       Données locales responsable          Coordinateur des données locales d’un
+                                                   département.
+
+DOP           Dossiers d'ordonnancement            _
+              particuliers
+
+DOR           Dossier ordonnateur                  Fond de dossier dématérialisé               d'une
+                                                   dépense ou d'une recette.
+
+DPATE         Direction du personnel               Comme auparavant la DPESR, cette
+              administratif, technique et          direction prend en charge l’ensemble du
+              d’encadrement                        personnel fonctionnaire d’État dans les
+                                                   bibliothèques, que celles-ci dépendent de la
+                                                   Culture ou de l’Enseignement supérieur.
+
+DPGF          Décomposition du         prix        S’emploie pour un marché public.
+              global et forfaitaire
+
+DPI           Demande de         prestation        Demande formalisée par le biais d’une
+              informatique                         application informatique, et transmise au
+                                                   DSI pour instruction.
+
+DPO           Demande                 de           Demande formalisée par le biais d’un
+              programmation d’opération            formulaire et transmise au DMT pour
+                                                   intervention.
+
+DRAC          Direction régionale      des         _
+              affaires culturelles
+
+DTD           Document Type Definition             Format de description des documents dans
+                                                   les normes SGML/XML.
+
+Dublin Core   Format descriptif créé en            Utilisé à la BnF pour gérer et cataloguer les
+              1995 à Dublin (Ohio) par             signets, accroître sur Internet la visibilité
+              OCLC et le NCSA .                    des     catalogues   et   des     collections
+                                                   numérisées.
+
+DVD           Digital Versatile Disk               _
+EAC-CPF         Encoded Archival Context -              Langage XML utilisé pour décrire les
+                Corporate bodies, Persons               collectivités, les personnes et les familles.
+                and Families (Contexte
+                archivistique   encodé    -
+                Collectivités, personnes et
+                familles)
+
+EAD             Encoded             Archival            Langage XML utilisé dans BAM.
+                Description     (Description
+                archivistique encodée)
+
+EBLIDA          European     Bureau          of         Organisation non gouvernementale à but
+                Library, Information       and          non lucratif qui représente les associations
+                Documentation                           et les organisations professionnelles de
+                Associations                            l’information au niveau européen auprès de
+                                                        la Commission européenne.
+
+ECDL            European      Conference     on         Forum européen consacrée aux bibliothèques
+                research     and      advanced          numériques auquel la BnF prend part. Est
+                technology for Digital Libraries        devenu en 2011 le TPDL.
+
+ECR             Équipe de conservation et               Rattachée au CRC. Ses thématiques de
+                de recherche du musée de la             recherche s’attachent à l’étude des
+                musique                                 matériaux et des structures et des
+                                                        fonctionnalités musicales de l’instrument de
+                                                        musique et de leurs évolutions.
+
+                                                        Au sein du CIA, ce groupe avait pour
+EGAD            Expert Group on Archival
+                                                        mission entre 2012 et 2016 de présenter
+                Description        (Groupe
+                                                        une nouvelle norme pour la description des
+                d'experts sur la description
+                                                        documents.
+                archivistique)
+
+
+Électrovannes Vannes    électriques     des             _
+              armoires de climatisation
+
+EMOC            Établissement     public    de          Prédécesseur   de   l’OPPIC.    Ancien       sigle :
+                maîtrise d’ouvrage des travaux          EPMOTC
+                culturels
+
+ENC             École nationale des chartes
+
+ENSSIB          École nationale supérieure              Pôle associé de la Bibliothèque nationale de
+                des        sciences     de              France. Depuis janvier 1999, regroupe aussi
+                l’information     et   des              les attributions de l’IFB et a pour mission
+                bibliothèques                           principale la formation des conservateurs et
+                                                        des bibliothécaires.
+
+Entrepôt   de Outil     informatique       qui        _
+données       rassemble        et      permet
+              d’analyser           différentes
+              données d’une entreprise
+              (statistiques,         données
+              financières,        indicateurs
+              d’activité, etc.).
+
+EPA            Établissement    public      à         _
+               caractère administratif
+
+EPBF           Établissement public de la             Établissement public constructeur de la
+               Bibliothèque de France                 Bibliothèque de France entre 1989 et 1994.
+
+EPE            Unité des événements et                A pour mission la mise en place et la
+               prestations externes (EPE)             coordination de la sécurisation des
+                                                      expositions, événements et manifestations
+                                                      se déroulant sur les sites de la BnF, ainsi
+                                                      que le suivi de la prestation des services
+                                                      extérieurs.
+
+EPIC           Établissement   public        à        _
+               caractère   industriel       et
+               commercial
+
+EPIC           European         Preservation          Site du projet européen ECPA (European
+               Information Center                     Commission on Preservation and Access)
+                                                      orienté sur la préservation des fonds
+                                                      patrimoniaux, les traitements de masse, les
+                                                      transferts de supports. Clos en 2008 mais une
+                                                      version cache est accessible.
+
+Épine dorsale Lien informatique entre une             _
+              notice bibliographique et
+              une unité de conservation
+
+EPMOTC         Établissement public de la             Devenu EMOC puis OPPIC.
+               maîtrise d’ouvrage des travaux
+               culturels.
+
+EPSCEP         Établissement public à                 Ces établissements (universités, grandes
+               caractère scientifique                 écoles…) sont sous la tutelle du ministère
+               culturel et professionnel              de l’Enseignement supérieur et de la
+                                                      Recherche.
+
+EPUB           Electronic Publication                 Format ouvert normalisé pour les livres
+                                                      numériques proposé par l'IDBF.
+
+EROMM          European     Register    of            Base européenne de description des
+               Microform    and    Digital            documents reproduits sur microformes ou
+               Masters (Registre européen             numérisés.
+               de microformes-mères)
+
+ERP            Établissement recevant du              _
+               public
+Europeana   Bibliothèque      numérique          Nom adopté en janvier 2008 pour désigner
+            européenne                           la bibliothèque numérique européenne. Ce
+                                                 nom, cédé par la BnF au projet européen, a
+                                                 d’abord désigné le prototype développé en
+                                                 2007 par la BnF en tant que contribution
+                                                 française à l’édification du projet.
+FA          Factums :    catalogue   des         Ancien fichier de la BN rétroconverti.
+            Factums jusqu’en 1791 rédigé
+            par Corda
+
+FB          Fichier    du    fonds     de        Ancien fichier de la BN rétroconverti.
+            Fontainebleau
+
+FDL         Format des données locales           _
+
+FFCB        Fédération française de              Fédère les associations         régionales        de
+            coopération         entre            coopération.
+            bibliothèques
+
+FFT         Fiche de fait technique              Fiche destinée à signaler des problèmes liés
+                                                 au système d’information.
+
+FH          Factums des 19e-20e s. (dit          Ancien fichier de la BN rétroconverti.
+            « ancien   fichier »,   ex-
+            Hémicycle)
+
+FILA        Foire internationale du livre        Organisée par le SLAM.
+            ancien de Paris
+
+FN          Factums des 19e-20e s. (dit          Ancien fichier de la BN rétroconverti.
+            « nouveau fichier », ex-Salle
+            des Catalogues)
+
+FNPR        Fichier     national      des        _
+            propositions Rameau
+
+FORMIST     Réseau francophone pour la           _
+            formation à l’usage de
+            l’information          dans
+            l’enseignement supérieur
+
+FRAB        Fonds régional d’acquisition         _
+            des bibliothèques
+
+FRANAR         Functional      Requirements         Modèle conceptuel de données pour les
+               and       Numbering       of         notices d’autorité.
+               Authority            Records
+               (Spécifications
+               fonctionnelles            et
+               numérotation des notices
+               d’autorité)
+
+FRBR           Functional      Requirements         Modèle conceptuel de données pour les
+               for Bibliographic Records            notices bibliographiques.
+               (Spécifications
+               fonctionnelles des notices
+               bibliographiques)
+Gallica        Bibliothèque numérique de            Diffuse des documents libres de droits,
+               la BnF sur Internet.                 issus    de  programmes    internes   de
+                                                    numérisation ainsi que de collaborations
+                                                    avec d’autres institutions publiques ou
+                                                    privées.
+
+Gallica Intra Bibliothèque numérique de             Permet aussi l’accès aux œuvres numérisées
+muros         la BnF accessible en salles           sous droit.
+              de lecture.
+
+Gallica        Dispositif, proposé par la           Exemple : Numistral.
+Marque         BnF,      permettant     aux
+blanche        bibliothèques de bénéficier
+               de sa technologie et de son
+               expérience à travers une
+               déclinaison de la plateforme
+               Gallica et de ses outils
+               implantés sur leurs propres
+               serveurs.
+
+GBCP           Gestion budgétaire et                _
+               comptable publique
+
+GCA            Gestion     centralisée   des        _
+               acquisitions
+
+GDL            Gestion des livres                   _
+
+GDP            Gestion des périodiques              _
+
+Geac-LA      Geac-Libre accès                      Base bibliographique des documents acquis pour
+                                                   les collections en libre accès faisant l’objet d’un
+                                                   cédérom jusqu’à l’intégration dans le catalogue
+                                                   général.
+
+GEODE        Gestion                    de         Base Lotus        de   gestion     des      dossiers
+             l'ordonnancement                      ordonnateurs
+             dématérialisé
+
+GIDE         Gestion des identités, droits         Application informatique transverse pour la
+             et équipements                        BnF permettant d’octroyer ou de restituer
+                                                   les attributs affectés à un agent (BnF ou
+                                                   externe) dans le cadre de sa mission :
+                                                   badges, clés, accès aux magasins, aux
+                                                   applications professionnelles, à certains
+                                                   matériels et équipements.
+
+GLA          Gestion de la       logistique        Domaine du système d’information (SI-
+             administrative                        BnF)     qui   désigne   l’ensemble des
+                                                   applications bureautiques : Word, Excel,
+                                                   Lotus Notes, etc.
+
+GMAO         Gestion de la maintenance             _
+             assistée par ordinateur
+
+GPA          Groupe de prévention alcool           Il met en place des actions de prévention et
+                                                   d’information à destination de l’ensemble
+                                                   du personnel de la BnF.
+
+GPC          Guide       pratique       du         _
+             catalogueur
+
+GPE          Gestion       des   personnels        Base de gestion des personnes externes
+             externes                              travaillant sur le site de la BnF pour le
+                                                   compte de la BnF (entreprises externes) ou
+                                                   dans le cadre de conventions avec la BnF.
+
+Grand        Espace de conférence de la            Accès par le hall Est du site François-
+Auditorium   BnF                                   Mitterrand.
+
+GREBIB       Guide de recherches        en         Guide réalisé par le département de la
+             bibliothèque                          recherche bibliographique.
+
+GRH          Gestion  des        ressources        Domaine du système d’information de la
+             humaines                              BnF.
+
+GTA          Gestion du temps et des               Application qui permet de gérer le temps de
+             activités                             travail (cycles, congés et badgeage) à la
+                                                   BnF.
+
+GTC          Gestion             technique         Système utilisé par le département des
+             centralisée                           moyens techniques pour assister les
+                                                   opérateurs de maintenance dans leur
+                                                   activité de suivi des équipements.
+HA          Fichier Histoire de France                Ancien fichier de la BN rétroconverti.
+            1895-1935
+
+HAL         Hyper Articles en Ligne                   Outil d’archives ouvertes développé par le
+                                                      Centre pour la communication scientifique
+                                                      directe de l’INIST. Plateforme de dépôt et
+                                                      de diffusion des travaux scientifiques de
+                                                      niveau recherche couvrant toutes les
+                                                      disciplines.
+
+HB          Fichier Histoire de France                Ancien fichier de la BN rétroconverti.
+            1936-1949
+
+HC          Fichier Histoire de France                Ancien fichier de la BN rétroconverti.
+            1950-1987
+
+HDJ         Haut-de-jardin                            Niveau    d’étude      du     site       François-
+                                                      Mitterrand.
+
+HF          Fichier Histoire des familles             Ancien fichier de la BN rétroconverti.
+
+HL          Catalogue     imprimé          de         Ancien fichier de la BN rétroconverti.
+            l’Histoire de France        (cote
+            « L »)
+
+HP          Fichier Histoire de Paris                 Ancien fichier de la BN rétroconverti.
+
+HR-Access   Base de données de gestion                _
+            des ressources humaines.
+
+HSE         Hygiène,     Sécurité           et        Aussi connu sous le sigle HSCT : hygiène,
+            Environnement.                            sécurité et conditions de travail).
+
+HTML        HyperText          Markup                 Langage de publication utilisé sur le web,
+            Language   (Langage    de                 balisage hypertexte qui permet de structurer
+            marquage hypertexte)                      l’information      avec     un       langage
+                                                      universellement compréhensible, interprété
+                                                      par tous les logiciels de navigation sur le
+                                                      web, sur tout ordinateur.
+IASA      International Association of         Association non-gouvernementale créée en
+          Sound and Audiovisual                1969 afin de servir de plateforme de
+          Archives        (Association         coopération internationale entre centres
+          internationale     d’archives        d’archivage de documents sonores et
+          sonores et audiovisuelles)           audiovisuels.
+
+IAT       Indemnité d’administration           _
+          et de technicité
+
+ICBS      International Committee of           Constitué en 1996 par quatre organisations
+          the Blue Shield (Comité              non gouvernementales réunissant les
+          international du Bouclier            archives (ICA), les musées (ICOM), les
+          bleu)                                monuments et sites (ICOMOS) et les
+                                               bibliothèques (IFLA) pour protéger le
+                                               patrimoine culturel en cas de conflit armé
+                                               ou de catastrophe naturelle.
+
+ICCROM    International Centre for the         _
+          Study of the Preservation
+          and Restoration of Cultural
+          Property            (Centre
+          international d’études pour
+          la   conservation    et    la
+          restauration    des     biens
+          culturels)
+
+ICOM-CC   International Council of             _
+          Museums- Committee for
+          Conservation (Comité de
+          conservation du Conseil
+          international des musées)
+
+IDBF      International         Digital        Consortium international à l'origine du
+          Publishing Forum                     format de livre numérique EPUB. En cours
+                                               de rapprochement, en 2016, avec le W3C.
+
+IFB       Institut de formation     des        Intégré à l’ENSSIB en 1999.
+          bibliothécaires
+
+
+IFLA      International Federation of          Association        internationale      non
+          Library Associations and             gouvernementale fondée en 1927 dont les
+          Institutions    (Fédération          objectifs sont notamment de promouvoir
+          internationale          des          des    normes     de    qualité   pour   le
+          associations             de          développement des bibliothèques et des
+          bibliothécaires   et    des          services d’information.
+          bibliothèques)
+
+IFTS      Indemnité forfaitaire pour           _
+          travaux supplémentaires
+
+IGH       Immeuble       de     grande         _
+          hauteur
+IIIF           International         Image          Désigne à la fois une communauté et un
+               Interoperability Framework           ensemble de spécifications techniques dont
+                                                    l’objectif est de définir un cadre
+                                                    d’interopérabilité pour la diffusion d’images
+                                                    haute résolution sur le Web.
+
+IIPC           International        Internet        En juillet 2003, dix bibliothèques nationales
+               Preservation     Consortium          d’Europe (dont la BnF), d’Amérique du
+               (Consortium     international        Nord, d’Australie ainsi que l’association
+               pour      la     préservation        « Internet Archive » se sont rassemblées
+               d’internet)                          pour développer «une collaboration
+                                                    internationale et assurer la préservation des
+                                                    contenus de l’internet pour les générations
+                                                    futures.
+
+ILAB           International League of              Voir également LILA.
+               Antiquarian      Booksellers
+               (Ligue Internationale de la
+               Librairie Ancienne)
+
+IMPACT         Improving Access to Text             Projet soutenu par la Commission européenne
+                                                    (2008-2011) auquel la BnF a participé et dont
+                                                    l'objectif était de travailler sur la reconnaissance
+                                                    optique de caratères.
+
+INA            Institut    national       de        Établissement public ayant pour mission la
+               l’Audiovisuel                        conservation du patrimoine audiovisuel
+                                                    national (radio et télévision), et partageant
+                                                    les locaux de la BnF - site François-
+                                                    Mitterrand.
+
+INET           Institut national des études         Chargée de la formation des hauts
+               territoriales                        fonctionnaires     dirigeant   les    grandes
+                                                    collectivités    territoriales    et     leurs
+                                                    établissements publics. Assure la formation
+                                                    des     conservateurs     des   bibliothèques
+                                                    territoriaux depuis 2015.
+
+Incrémentiel   Chargement de notices dans           _
+               le SI avec mise à jour,
+               répercussions     sur   des
+               notices déjà présentes.
+
+Incrémentiel   Chargement      direct    de         _
+rampant        notices dans le SI avec mise
+               à jour mais sans passage par
+               une base de chargement.
+INHA         Institut national d’histoire          Établissement public dont la mission est de
+             de l’art                              développer l’activité scientifique et de
+                                                   contribuer à la coopération scientifique
+                                                   internationale dans le domaine de l’histoire
+                                                   de l’art et du patrimoine, et partageant les
+                                                   locaux de la BnF-site Richelieu.
+
+INIST        Institut de l'information             _
+             scientifique et technique
+
+INTD         Institut   national       des         Établissement      d’enseignement      du
+             techniques      de         la         Conservatoire national des arts et métiers
+             documentation                         (CNAM) dont la mission est la formation
+                                                   des documentalistes.
+
+INTERMARC International     Machine                Format de catalogage adopté par la BnF.
+          Readable Cataloguing
+
+IPPEC        Inventaire Permanent       des        Ancienne banque de données du CCN-PS.
+             Périodiques En Cours
+
+IRCANTEC     Complémentaire        retraite        _
+             obligatoire des agents non
+             titulaires de la BnF.
+
+IRHT         Institut de recherche       et        _
+             d'histoire des textes
+
+ISAN         International       Standard          ISO 15706 (2002).
+             Audiovisual          Number
+             (Numéro         international
+             normalisé     des     œuvres
+             audiovisuelles)
+
+ISBD         International      Standard           Norme internationale de description de
+             Bibliographic    Description          catalogage définie par l'IFLA, traduite en
+             (Description                          français par la BnF et la BanQ.
+             bibliographique
+             internationale normalisée)
+
+ISBN         International Standard Book           Permet d’identifier de manière unique
+             Number             (Numéro            chaque édition de chaque livre publié, que
+             international normalisé du            son support soit numérique ou sur papier.
+             livre)
+
+ISDN         Institut des sciences      du         Établissement   de   formation      (géré      par
+             document numérique                    l’ENSSIB).
+
+ISIL         International       Standard          ISO 15511 (2003).
+             Identifier for Libraries and
+             Related        Organisations
+             (Identifiant    international
+             normalisé       pour      les
+             bibliothèques      et     les
+             organismes apparentés)
+
+ISMN   International      Standard          ISO 10957 (1993).
+       Music Number (Numéro
+       international normalisé de la
+       musique)
+
+ISNI   International      Standard          Code international normalisé servant à
+       Name Identifier (Identifiant         identifier de manière univoque, sur le long
+       international normalisé pour         terme et à l’échelle internationale, les
+       les noms)                            personnes et les organismes. La BnF
+                                            participe à la création et au maintien de cet
+                                            identifiant et l’intègre dans ses propres
+                                            données.
+
+ISO    International      Standard          Organisation      non      gouvernementale
+       Organisation                         internationale chargée de la normalisation
+                                            pour     le   monde     économique,     les
+                                            gouvernements et la société.
+
+ISRC   International     Standard           ISO 3901 (2001).
+       Recording Code (Code
+       international normalisé des
+       enregistrements)
+
+ISRN   International     Standard           ISO 10444 (1994).
+       Report Number (Numéro
+       international normalisé des
+       rapports)
+
+ISSN   International       Standard         _
+       Serial Number (Numéro
+       international normalisé des
+       publications en série)
+
+ISTC   International      Standard          ISO-CD 21047 (2002).
+       Textual Work Code (Code
+       international normalisé des
+       œuvres textuelles)
+
+ISWC   International     Standard           ISO 15707 (2001).
+       Musical Work Code (Code
+       international normalisé des
+       œuvres musicales)
+
+ITS    Unité des installations              En charge du suivi et de l'utilisation de
+       techniques de la sûreté              toutes les installations techniques de sûreté.
+
+JO              Journal Officiel                     _
+
+Joël        Le Nom du centre de la BnF à             Pôle spécialisé dans la restauration et la
+Theule         Sablé-sur-Sarthe                      numérisation.
+(Centre)
+
+JPAC            Journées des pôles associés          Remplace l’ancien sigle JPA.
+                et de la coopération
+
+JPL    (CNLJ- Centre        national      de         Organisme spécialisé à l’origine (1963) dans
+JPL)          littérature pour la jeunesse –         la promotion de la lecture des enfants et des
+              La Joie Par les Livres                 jeunes et de la littérature pour la jeunesse.
+                                                     Intégrée à la BnF au 1er janvier 2008, le
+                                                     CNLJ-JPL est un service du département
+                                                     Littérature et art.
+KEEP            Keeping           Emulation          Projet soutenu par la Commission européenne
+                Environments Portable                (2009-2012) auquel la BnF participait et dont
+                                                     l'objectif était de pérenniser la consultation des
+                                                     documents électroniques.
+
+KITCAT          Kit des catalogueurs                 Hébergé sur Lotus Notes dans l'attente
+                                                     d'une nouvelle application informatique.
+
+KVK             Karlsruher         Virtueller        Métacatalogue créé en 1986 par la
+                Katalog                              Technische Universität de Karlsruhe qui
+                                                     permet    d’interroger    des    catalogues
+                                                     nationaux et collectifs et de librairies en
+                                                     ligne.
+
+LCAP      Loi relative à la liberté de la           Loi n° 2016-925 du 7 juillet 2016
+          création, à l’architecture et
+          au patrimoine
+
+LCSH      Library of Congress Subject               Vocabulaire contrôlé, de langue anglaise,
+          Headings                                  géré par la Bibliothèque du Congrès à
+                                                    Washington, utilisé pour l'indexation
+                                                    matière dans de nombreux catalogues et
+                                                    bases de données bibliographiques à travers
+                                                    le monde.
+
+LHD       Lot     homogène               de         _
+          déménagement.
+
+LI        Fichier Liturgie                          Ancien fichier de la BN rétroconverti.
+
+LIBER     Ligue des bibliothèques                   Association non gouvernementale créée en
+          européennes de recherche                  1971 qui a pour objectif la constitution d'un
+                                                    réseau de bibliothèques de recherche ainsi
+                                                    que la défense de la conservation du
+                                                    patrimoine européen et l'accès à la
+                                                    documentation.
+
+LILA      Ligue internationale de la                Voir également ILAB.
+          librairie Ancienne
+
+LMD       Licence master doctorat                   _
+
+LMRH      Laboratoire de recherche                  Rattaché au CRC. Sa mission est
+          des monuments historiques                 d’apporter une assistance scientifique et
+                                                    technique aux travaux de conservation et de
+                                                    restauration des monuments historiques.
+
+LOLF      Loi organique relative aux                _
+          lois de finances
+
+LORA      Louvois,    Opéra,      Richelieu,        Désignation conjointe de ces sites de la BnF.
+          Arsenal
+
+LOTUS     Lotus Notes                               Nom du logiciel utilisé à la BnF pour la
+                                                    messagerie, les bases de production
+                                                    documentaires       et    de  nombreuses
+                                                    applications spécifiques.
+
+Louvois   Bâtiment de la BnF, 2 rue                 Construit   pour   les   collections               du
+          Louvois                                   département de la Musique.
+
+LX        Catalogue     général     (1960-          Ancien fichier de la BN rétroconverti.
+          1969)
+
+
+MACS          Multilingual Access to Subjects        Programme coopératif européen auquel la BnF
+                                                     participait et dont l'objectif était de fournir un
+                                                     accès matière multilingue aux catalogues de
+                                                     bibliothèques. Résultats intégrés dans The
+                                                     European Library.
+
+Mandragore    Base    des      manuscrits            Donne une description iconographique et
+              enluminés de la BnF                    une     indexation     systématique    des
+                                                     enluminures     et    dessins   médiévaux,
+                                                     modernes et orientaux, mais également des
+                                                     sceaux et reliures des collections du
+                                                     département des Manuscrits et de la
+                                                     bibliothèque de l'Arsenal.
+
+MAP           Modernisation de l'action              _
+              publique
+
+MCC           Ministère de la Culture et             Ministère de tutelle de la Bibliothèque
+              de la Communication                    depuis 1981.
+
+MCO-ED        Maintien       en    condition         Application provisoire de correction des épines
+              opérationnelle    de   l’épine         dorsales.
+              dorsale
+
+Mémoire    du Programme de l’Unesco                  Les collections identifiées dans ce cadre et
+monde         destiné à sauvegarder et à             répondant à des critères d’intérêt universel
+              promouvoir le patrimoine               sont inscrites au registre Mémoire du
+              documentaire            de             monde.
+              l’humanité.
+
+MEN           Ministère    de   l’Education          _
+              nationale
+
+MeSH          Medical Subject Headings               Thésaurus de la US National Library of
+                                                     Medicine.
+
+              Pratiques de pilotage et de
+Méthodes
+              réalisation de projets.
+agiles
+
+METS          Metadata Encoding and                  Standard de description des métadonnées
+              Transmission Standard                  descriptives, administratives et structurelles
+                                                     des documents numériques.
+
+MISTRD        Mission de l’information               Remplacée en 2014 par le département de
+              scientifique et technique et           l’information scientifique et technique et du
+              du réseau documentaire                 réseau documentaire.
+
+MOC           Manuscrits occidentaux                 Appellation de l’ancienne division du
+                                                     département des manuscrits responsable des
+                                                     collections de l’aire culturelle gréco-latine et
+                                                     française.
+MOOC        Massive     Open Online              _
+            Courses (Cours en ligne
+            ouvert à tous)
+
+MOR         Manuscrits orientaux                 Ancienne appellation d’une ex-division du
+                                                 département des manuscrits responsable des
+                                                 collections issues de toutes les cultures non gréco-
+                                                 latines : l’Égypte ancienne, le Proche-Orient,
+                                                 l’Afrique du Nord, l’Asie, mais aussi l’Océanie
+                                                 et l’Amérique précolombienne y sont
+                                                 représentées.
+
+NCSA        National     Center       for        Centre américain de recherche                        et
+            Supercomputing                       d'exploitation des superordinateurs.
+            Applications
+
+NEDLIB      Networked European Deposit           Projet soutenu par la Commission européenne
+            Library                              (1998-2000) auquel la BnF a participé. Son
+                                                 objectif était l'étude et la mise au point de
+                                                 procédures permettant l’accès et la conservation
+                                                 à long terme des documents électroniques.
+
+NLA         Nouvelles du Livre Ancien            Revue publiée par l’IRHT en collaboration
+                                                 avec la BnF.
+
+NMPP        Nouvelles messageries de la          Diffuseur de périodiques. Devenu Presstalis en
+            presse parisienne                    2009.
+
+Numistral   Bibliothèque numérique de            Développée en partenariat avec la BnF
+            la BNUS
+
+OAI         Open Archives Initiative             Projet qui vise à faciliter l’échange et la
+            (Initiative pour des archives        valorisation d’archives numériques. Permet
+            ouvertes)                            à des fournisseurs de services de moissonner
+                                                 des métadonnées sur les sites de
+                                                 fournisseurs de données. Il est ainsi possible
+                                                 d’utiliser un protocole OAI pour créer un
+                                                 outil de recherche simultanée dans plusieurs
+                                                 catalogues de bibliothèques.
+                                                 ISO 14721        (2003). Modèle conceptuel
+OAIS        Open Archival Information
+                                                 destiné à la    gestion, à l’archivage et à la
+            System (Système ouvert
+                                                 préservation    à long terme de documents
+            d’archivage d’information)
+                                                 numériques.     SPAR a été conçu selon ce
+                                                 modèle.
+
+OCR         ou Optical           Character          Logiciel informatique qui permet de
+océrisation    Recognition (reconnaissance          reconnaître des caractères de texte au sein
+               optique de caractères)               d’une image numérique.
+
+OCLC           Online Computer Library              Fondé en 1967, OCLC est un organisme
+               Center                               américain à but non lucratif qui offre des
+                                                    services aux bibliothèques du monde entier
+                                                    et en particulier un catalogue, WorldCat où
+                                                    sont notamment chargées les notices du
+                                                    catalogue général de la BnF.
+
+
+OLR            Optical Layout Recognition           Processus informatique de reconnaissance
+                                                    de la mise en page et de la structure logique
+                                                    des documents
+
+OPAC           Online    Public      Access         Catalogue informatisé mis à la disposition
+               Catalogue                            des lecteurs (terme générique).
+
+OPLPP          Observatoire Permanent de la         _
+               Lecture Publique à Paris
+
+OPPIC          Opérateur du patrimoine et           Etablissement public administratif créé en
+               des projets immobiliers de la        2010, spécialisé dans la maîtrise d’ouvrage
+               Culture                              des équipements culturels. Issu de la fusion
+                                                    du Service national des travaux (SNT) et de
+                                                    l’Établissement    public     de    maîtrise
+                                                    d’ouvrage des travaux culturels (EMOC).
+
+ORHION         Observatoire            des          Groupe d’agents représentatifs des métiers
+               organisations et ressources          de la BnF, ayant reçu mission d’examiner
+               humaines sous l’impact               l’impact du numérique sur les métiers et
+               opérationnel du numérique            l’organisation du travail, et d’offrir un
+                                                    espace de rencontre, de réflexion et
+                                                    d’échange.
+
+Oreillettes    Espaces        de       forme        Ces espaces avaient différentes fonctions :
+               triangulaire situés autour de        magasins, locaux techniques, ascenseurs ou
+               la salle Ovale sur le site           espace de circulation interne.
+               Richelieu.
+
+ORG            Organismes                           Notices d’autorité collectivité (catalogues).
+
+ORG            Organisations                        Anciennement ACO (catalogues).
+
+
+PALME        Répertoire national des                  Intégré dans le CCFr.
+             manuscrits          littéraires
+             français du XXe siècle
+             conservés dans diverses
+             institutions accessibles aux
+             chercheurs.
+
+PAO          Publication     assistée     par         _
+             ordinateur
+
+PAPE         Plan d’action        pour      le        Lancé en 2004 par le ministère de la
+             patrimoine écrit                         Culture et de la Communication.
+
+PASPro       Poste d’accès      aux   services        Ancien nom du poste informatique des banques
+             Professionnel                            de salle, aujourd’hui remplacé par le poste
+                                                      complet professionnel.
+
+PASPublic    Poste d’accès      aux   services        Ancien nom du poste informatique des salles de
+             Public                                   lecture, aujourd’hui remplacé par le poste
+                                                      catalogue.
+
+PC           Poste de contrôle                        Exemple : PC Sûreté.
+
+PDL          Plan de       Développement              La liste des projets à développer par le DSI,
+             Logiciel                                 classée par ordre de priorités.
+
+PEB          Prêt Entre Bibliothèques                 Application de prêt         interbibliothèque
+                                                      intégrée au SUDOC.
+
+PEP          Personnes physiques                      Notices d’autorité noms de personnes.
+                                                      Anciennement APP (catalogues).
+
+Petit        Espace de conférence de la               Accès par le hall Est du site François-
+Auditorium   BnF                                      Mitterrand.
+
+PGS          Procédure       générale      de         _
+             sécurité
+
+PHONOREC     Base recensant le récolement de          _
+             la phonothèque nationale
+
+PIB          Prêt interbibliothèque.                  Terme générique pour les échanges
+                                                      temporaires entre institutions d’ouvrages
+                                                      mis à disposition d’un lecteur dans sa
+                                                      bibliothèque d’origine. Peut signifier
+                                                      l’application de prêt interbibliothèque
+                                                      intégrée au CCFr.
+
+PICA         Project Integrated Catalog               Système logiciel appartenant à l'OCLC
+             Automation                               retenu pour la gestion du SUDOC.
+
+PIXML     Production d'instruments de         Application accessible via le navigateur Web
+          recherche en XML                    Internet Explorer. Elle permet l'édition
+                                              d'information et la publication des
+                                              instruments de recherches.
+
+PL        Niveau de l’esplanade               _
+
+PLATON    Plateforme sécurisée de             Plateforme d’échanges entre les éditeurs et
+          Transfert des Ouvrages              les organismes agréés effectuant des
+          Numériques                          éditions    adaptées     aux     personnes
+                                              handicapées, mise en service en mars 2010
+                                              par la BnF.
+
+PO        Publications officielles            _
+
+Pol doc   Politique documentaire              Document        présentant      les     choix
+                                              d’acquisition, de conservation, d'élimination
+                                              et de communication d’une bibliothèque.
+
+PolDoc    Groupe      de   recherche          Site web géré par l’ENSSIB.
+          bibliothéconomique
+          appliqué aux outils des
+          politiques documentaires
+
+Poppart   Interface informatique entre        _
+          l’application de gestion des
+          ressources humaines du
+          ministère de l’Éducation
+          nationale (Poppée) et celle
+          de la BnF (HR- Access)
+
+PR        Périodiques avant 1960              Ancien fichier de la BN rétroconverti.
+
+PREMIS    Preservation     Metadata:          Standard    pour      l'expression               des
+          Implementation Strategies           métadonnées de préservation.
+
+Prisme    Pôle de ressources et               Mezzanine de la salle D du Haut-de-Jardin
+          d’informations sur le monde         spécialisée dans l’économie pratique
+          de l’entreprise                     (recherche d’emploi, création d’entreprises,
+                                              nouvelles technologies et études de
+                                              marché).
+
+RAMEAU        Répertoire       d’Autorité            RAMEAU est le langage d’indexation
+              Matière Encyclopédique et              matière utilisé par la Bibliothèque nationale
+              Alphabétique Unifié                    de France, les bibliothèques universitaires,
+                                                     ainsi    que     de     nombreuses     autres
+                                                     bibliothèques de lecture publique ou de
+                                                     recherche.
+
+RAO           Richelieu, Arsenal, Opéra.             Forme utilisée pour désigner conjointement ces
+                                                     sites de la BnF.
+
+RAO           Rapport d’analyse des offres           Dans le domaine des marchés publics, il
+                                                     s’agit d’une pièce argumentant le choix
+                                                     d’un candidat parmi les autres, qui
+                                                     remporte un appel d’offres.
+
+RAW           Format de fichier pour les             _
+              images numériques.
+
+RBCCN         Répertoire des bibliothèques du        Remplacé par le RCR
+              catalogue collectif national
+
+RCR           Répertoire des centres de              Répertoire de bibliothèques géré par
+              ressources                             l’ABES et intégré au SUDOC. Le numéro
+                                                     RCR attribué par l’ABES permet
+                                                     d’identifier les organismes français et sert de
+                                                     base au code ISIL au niveau international.
+
+RDA           Resource Description and               Norme de catalogage, principalement
+              Access                                 utilisée dans les pays anglo-saxons, qui
+                                                     fournit des instructions et des directives sur
+                                                     la formulation de données pour la
+                                                     description et l'exploration des ressources.
+
+RDF           Resource          Description          Langage de base du web sémantique.
+              Framework
+
+RDJ           Rez-de-jardin                          Niveau recherche         du      site     François-
+                                                     Mitterrand.
+
+RE            Fichier des actes religieux de         Ancien fichier de la BN rétroconverti.
+              l’Ancien Régime
+
+Recherche   à Système de présentation des            _
+facettes      résultats d’une recherche
+              d’information par critères :
+              ceux-ci sont classés dans des
+              facettes et permettent de
+              filtrer la recherche en
+              choisissant un critère précis.
+
+RED           Rupture d'épine dorsale.               _
+
+ReLIRE     Registre      des       livres           _
+           indisponibles en réédition
+           électronique de la BnF.
+
+RENARDUS   Projet      soutenu       par  la        _
+           Commission             européenne
+           (2000-2002) auquel la BnF a
+           participé pour recenser les
+           ressources      scientifiques  et
+           culturelles     accessibles   sur
+           Internet.
+
+RENATER    Réseau national pour la                  Réseau physique et technique auquel la
+           technologie, l’enseignement              BnF est raccordée et par lequel elle accède
+           et la recherche                          à Internet.
+
+RENET      Ressources     électroniques             _
+           Intranet    destinés      aux
+           chercheurs        permettant
+           d’accéder à l’intégralité des
+           ressources numériques de la
+           BnF.
+
+RES        Réserve des livres rares                 Ancien sigle de la Réserve des livres rares
+                                                    (RLR).
+
+Résac      Réserve accroissement                    Préfixe des cotes des documents ayant fait
+                                                    l’objet du chantier de l’accroissement
+                                                    Réserve : transfert de documents de la
+                                                    Direction de l’imprimé vers la Réserve.
+
+RFBNN      Réseau      francophone     des          Réseau constitué en 2006 à l’initiative de la
+           bibliothèques        nationales          BnF par des bibliothèques francophones. Un
+           numériques                               portail dédié à la diffusion du patrimoine
+                                                    documentaire de la Francophonie a été lancé en
+                                                    octobre 2008. Devient le RFN en 2010.
+
+RFID       Radiofrequency Identification _
+           (Identification par radio-
+           fréquence)
+
+RFN        Réseau            francophone            Créé en 2006 à l’initiative des bibliothèques
+           numérique                                nationales de Belgique, du Canada, de
+                                                    France, du Luxembourg, du Québec et de
+                                                    Suisse, réunies à Paris à l’initiative de la
+                                                    BnF, le Réseau francophone numérique
+                                                    réunit 25 des plus grandes institutions
+                                                    documentaires de la francophonie. Son
+                                                    objectif est d'assurer la préservation et
+                                                    l'accessibilité des contenus numériques
+                                                    francophones pour les générations futures.
+
+RGPP       Revue générale des politiques            Programme d’analyse des missions et actions de
+           publiques                                l'État et des collectivités, suivi de la mise en
+                                                    œuvre de réformes structurelles entre 2007 et
+                                                    2012.
+RI              Règlement intérieur                    _
+
+RIA             Robinet Incendie Armé                  Alimenté en permanence par une source
+                                                       d’eau, et prêt à l’emploi (tuyau sous eau,
+                                                       mais pas sous pression).
+
+RIC             Records in Context                     Modèle conceptuel pour la description
+                                                       archivistique proposé par l'EGAD.
+
+Richelieu -    Nom adopté pour le site                 _
+bibliothèques, Richelieu rénové en 2016
+musée,
+galeries
+
+RILM            Répertoire international de            Bibliographie internationale dans le
+                littérature musicale                   domaine musical à laquelle la BnF
+                                                       participe.
+
+RIM             Référentiel InterMarc                  Base du catalogage des notices d’autorité et
+                                                       des notices bibliographiques dans le
+                                                       Catalogue général.
+
+RISM            Répertoire international des           Organisation      internationale   d’utilité
+                sources musicales                      publique, créée à Paris en 1952, qui a pour
+                                                       objectif de répertorier de manière
+                                                       exhaustive les sources musicales du monde
+                                                       entier transmises à la postérité.
+
+RLG             Research Library Group                 Réseau américain de bibliothèques, archives et
+                                                       musées créé en 1974 ayant fusionné en 2006
+                                                       avec OCLC.
+
+RNBFD           Répertoire national des                Répertoire intégré au Catalogue collectif de
+                bibliothèques et des fonds             France (CCFr).
+                documentaires
+
+RNBCD           Répertoire    national   des           Remplacé par le RNBFD
+                bibliothèques et centres de
+                documentation
+
+ROA             Responsable        opérationnel        _
+                d’accueil
+
+ROSS            Responsable      opérationnel          _
+                de la sécurité des systèmes
+
+RTT             Réduction     du    temps   de         _
+                travail
+
+Service     des Service de la DMT chargé               _
+Relations       d’assurer     le   soutien
+utilisateurs    logistique aux utilisateurs
+                (4343).
+
+Rue           Permet la circulation de                _
+intérieure    véhicules au niveau A1 du
+              bâtiment de Tolbiac.
+Salle         La première grande salle de             Ancienne « salle de travail » ou « salle des
+Labrouste     lecture du site Richelieu.              Imprimés » de la Bibliothèque nationale,
+                                                      elle accueille la bibliothèque de l’INHA.
+
+Salle Ovale   La deuxième grande salle de             Ancienne « salle des périodiques » de la
+              lecture du site Richelieu.              Bibliothèque    nationale.  Anciennement
+                                                      partagée entre la Salle de références de
+                                                      Richelieu et la bibliothèque de l’INHA.
+                                                      Devrait devenir une salle de consultation
+                                                      introductive aux départements spécialisés.
+
+Schéma        Synthèse réalisée en 2016 de            _
+numérique     la stratégie numérique de la
+              BnF et de ses projets phares
+              dans ce domaine.
+
+Scrum         Méthode agile s'appuyant                _
+              sur le découpage d'un projet
+              en « boîtes de temps »
+              appelées « sprints ».
+
+SES           Spécifications   externes     du        Spécifications externes d’un logiciel/progiciel
+              système                                 (méthode SDM/S).
+
+SGBD          Système de gestion de base              La gestion et l’accès à une base de données
+              de données                              sont assurés par un ensemble de
+                                                      programmes qui constituent le SGBD.
+
+SGDL          Société des gens de lettres             _
+
+SGML          Standard       Generalized              Langage de description à balises, de norme
+              Markup Language (Langage                ISO (ISO 8879 : 1986). C’est sur une base
+              normalisé   de    balisage              SGML que Tim Berners-Lee créa HTML,
+              généralisé)                             langage de balisage utilisé pour le web. Un
+                                                      document SGML doit contenir une DTD.
+
+SHD           Service historique      de    la        Service à compétence nationale conservant
+              Défense                                 les archives du ministère de la Défense
+
+SI            Système d’information                   _
+
+SIBEL         Sciences de l’information et des        _
+              bibliothèques en ligne
+
+SIBMAS        Société internationale des              Fondée en 1954 pour promouvoir la
+              bibliothèques et des musées             recherche, pratique ou théorique, dans les
+              des arts du spectacle                   différents domaines documentaires des arts
+                                                      du spectacle.
+SIGB      Système informatisé         de         Désigne le système d’information intégré
+          gestion de bibliothèque                qui permet de gérer les collections, les
+                                                 catalogues, les publics, les prêts, etc. d’une
+                                                 bibliothèque.
+
+Signets   Répertoire             sélectif        _
+          encyclopédique de sites
+          internet proposé par la BnF
+          sur son site internet.
+
+SICD      Service inter-établissement            Employé dans le domaine universitaire.
+          de              coopération
+          documentaire
+
+SINDBAD   Service d’information des              Accessible sur le site internet de la BnF.
+          bibliothécaires à distance
+
+SIPIL     Système     informatique    de         Système      informatique      de     pilotage
+          pilotage                               regroupant plusieurs bases de données
+                                                 utiles à la production de statistiques ou
+                                                 d’indicateurs de suivi et de pilotage dans les
+                                                 principaux domaines d’activité de la BnF.
+
+
+SIREPA    Système        d’information           Progiciel budgétaire et comptable utilisé à la
+          relationnel              des           BnF depuis le 1er janvier 2004.
+          établissements        publics
+          administratifs
+
+SL        Fichier du     Fonds     Smith-        Ancien fichier de la BN rétroconverti.
+          Lesouëf
+
+SLAM      Syndicat    national de      la        Syndicat de libraires d’anciens. Le SLAM
+          librairie    ancienne        et        est affilié à la LILA ou ILAB.
+          moderne
+
+SLL       Service du livre et de la              Au sein du ministère de la Culture et de la
+          lecture                                Communication,        assure       un  rôle
+                                                 d’évaluation et de réglementation dans le
+                                                 domaine du livre et de la lecture.
+
+SNE       Syndicat      national      de         _
+          l'Edition
+
+SNI       Service des numérotations              Ancien nom de l’ISSN.
+          internationales
+
+SPAR      Système de préservation et             « Magasin virtuel » de la BnF : système de
+          d’archivage réparti                    stockage des documents numériques, dont
+                                                 l’objectif est de stocker, gérer, pérenniser et
+                                                 communiquer l’ensemble des collections
+                                                 numériques de la BnF et d’institutions
+                                                 partenaires.
+Sprinklers   Système anti-incendie                   Dans les bureaux et les magasins, têtes de
+                                                     robinets avec diffusion « douche » installés
+                                                     au plafond pour l’aspersion en cas
+                                                     d’incendie.
+
+SPSI         Service Prévention Sécurité             Service assuré à la BnF par une unité des
+             Incendie                                sapeurs-pompiers de Paris.
+
+SQL          Structured             Query            Le langage SQL est un langage de
+             Language(Langage                        requêtage   permettant  d’interroger à
+             structuré de requêtes)                  distance ou directement un serveur une
+                                                     base de données.
+
+SRR          Salle de références de Richelieu        Aussi appelée « salle ovale », désigne la partie
+                                                     du département de la recherche bibliographique
+                                                     située à Richelieu.
+
+Starac       Statistiques de fréquentation
+             des salles de lecture des
+             départements spécialisés
+
+Statcom      Statistiques                 de         Outil de production de statistiques de
+             communication                           fréquentation des salles de lecture, de
+                                                     réservation de places et de documents, de
+                                                     production de carte de lecteurs et de
+                                                     communication de documents (pour le site
+                                                     François-Mitterrand).
+
+SU           Supplément sur fiches au                Ancien fichier de la BN rétroconverti.
+             Catalogue général Auteurs
+             (avant 1960)
+
+SUDOC        Système universitaire        de         Système et site permettant d’accéder au
+             documentation                           catalogue collectif des bibliothèques
+                                                     universitaires françaises, aux ressources
+                                                     électroniques    de     ces    bibliothèques,
+                                                     comportant un répertoire des bibliothèques
+                                                     et un système de prêt interbibliothèque.
+
+Sycomore     Système de communication des            Base informatique de récolement, qui permettait
+             ouvrages et récolement                  la communication de documents jusqu’au
+                                                     transfert des collections en 1998.
+
+TA        Technicien d’art                       _
+
+TAD       Transport automatisé des               Système de nacelles automatisées pour le
+          documents                              transport des documents et du courrier
+                                                 interne sur le site François-Mitterrand.
+
+TD        Thèses françaises de licence en        Ancien fichier de la BN rétroconverti.
+          droit du 19e siècle
+
+TEI       Text Encoding Initiative               Communauté académique internationale
+          (Initiative pour l'encodage            dans le champ des humanités numériques
+          du texte)                              visant à définir des recommandations pour
+                                                 l’encodage de documents textuels.
+
+TEL       The European Library                   Portail d’accès aux ressources de l’ensemble
+                                                 des bibliothèques nationales d’Europe.
+
+TEL       Thèses en ligne                        Serveur du CNRS ayant pour objectif de
+                                                 promouvoir l’auto-archivage en ligne des
+                                                 thèses, pour favoriser leur consultation, et la
+                                                 communication          scientifique      entre
+                                                 chercheurs.
+
+TELplus   Projet     soutenu  par    la          Son objectif : développer de nouveaux services et
+          Commission         européenne          améliorer l’accès aux documents numériques.
+          (2007-2009) auquel la BnF
+          participe.
+
+TEN       Tableau électrique normal              _
+
+TGB       Très Grande Bibliothèque               Terme employé (notamment par les
+                                                 journalistes) pour désigner la BnF lors de sa
+                                                 construction.
+
+THB       Tableaux électriques haute             _
+          et basse tension
+
+TIC       Titres conventionnels                  Notices d’autorité titres conventionnels.
+                                                 Peut correspondre à des anciennes ATU
+                                                 (catalogues).
+
+TL        Thèses françaises de licence en        Ancien fichier de la BN rétroconverti.
+          droit du 19e siècle (nouveau
+          fichier)
+
+TM        Fichier des thèses de médecine         Ancien fichier de la BN rétroconverti.
+          avant 1960
+
+TPDL      Theory and Practice         of         Forum       européen        consacrée  aux
+          Digital Libraries                      bibliothèques numériques auquel la BnF
+                                                 prend part. A pris la suite de l'ECDL.
+
+Trajectoire   Dépêche d’information de la            _
+              BnF
+
+Traxer        Dériver une notice d’une               _
+              base bibliographique vers
+              une autre
+
+Trigramme     Sigle désignant une entité             _
+              organisationnelle (direction,
+              délégation, département ou
+              service) de la BnF, utilisé
+              dans les documents et les
+              applications informatiques.
+
+TSC           Technicien des services                _
+              culturels et des bâtiments de
+              France
+
+TUM           Titres uniformes musicaux              Notices    d’autorité    titres         uniformes
+                                                     musicaux (catalogues).
+
+TUT           Titres uniformes textuels              Notices d’autorité titres uniformes textuels.
+                                                     Anciennement ATU (catalogues).
+
+
+U
+
+
+UC            Unité de conservation                  _
+
+UC            Unité centrale                         _
+
+UCTRAN        Unité      de    conservation          Système de        cotation       succédant           à
+              transitoire                            COTATRAN.
+
+UGOS          Unités de gestion           des        Agents de sûreté titulaires qui sont en
+              opérations de sûreté                   contact avec la totalité des départements et
+                                                     qui interviennent sur l’ensemble des sites
+                                                     parisiens de la BnF.
+
+Unicode       Unicode est un standard                Vise à donner à tout caractère de n’importe
+              informatique développé par             quel système d’écriture de langue un
+              le Consortium Unicode.                 identifiant numérique unique, et ce quelle
+                                                     que soit la plate-forme informatique ou le
+                                                     logiciel.
+
+UNIMARC       Universal         Machine              Format adopté par la              majorité        des
+              Readable Cataloguing                   bibliothèques publiques.
+
+URI           Uniform Resource Identifier            Chaîne de caractères normalisés permettant
+                                                     d’identifier de manière permanente une
+                                                     ressource abstraite ou physique, accessible
+                                                     ou non sur Internet.
+
+USPP          Unité des Sapeurs-Pompiers             Voir également BSPP.
+              de Paris
+
+
+UTF-8         Universal Character Set               Codage de caractères informatiques conçu
+              Transformation Format - 8             pour coder l’ensemble des caractères du
+              bits                                  « répertoire universel de caractères codés »,
+                                                    initialement développé par l’ISO dans la
+                                                    norme internationale ISO/CEI 10646,
+                                                    aujourd’hui compatible avec le standard
+                                                    Unicode, en restant compatible avec la
+                                                    norme ASCII.
+
+UO            Unité organisationnelle               Désigne     tout   service, département,
+                                                    direction, etc. de la BnF possédant un
+                                                    trigramme.
+
+URFIST        Unités régionales de                  Unités chargées de former le personnel des
+              formation à l'information             bibliothèques et le public universitaire
+              scientifique et technique             (étudiants et enseignants) à l'information
+                                                    scientifique et technique et de les
+                                                    sensibiliser aux nouvelles technologies de
+                                                    l'information et de la communication.
+
+VA            Vérification d'aptitude               Dans le cadre de marchés, a pour objet,
+                                                    après une mise en ordre de marche, de
+                                                    constater que les prestations, livrées ou
+                                                    exécutées, présentent les caractéristiques
+                                                    techniques qui les rendent aptes à remplir
+                                                    les fonctions demandées.
+
+VA            Fichier des    catalogues   de        Ancien fichier de la BN rétroconverti
+              Ventes Art
+
+VAE           Validation des acquis de              _
+              l'expérience
+
+Vague      de Édition   groupée  des                _
+différés      demandes            de
+              communications pour le
+              lendemain
+
+VB            Fichier des catalogues      de        Ancien fichier de la BN rétroconverti.
+              Ventes Livres
+
+VIAF          Virtual         International         Service d'OCLC intégrant dans un seul et
+              Authority     File    (Fichier        même réservoir les données d'autorité d'une
+              d'autorité       international        quarantaine    d'institutions, dont     des
+              virtuel)                              bibliothèques nationales.
+
+VSR          Vérification   de     service        Dans le cadre de marchés, a pour objet de
+             régulier                             constater que les prestations fournies sont
+                                                  capables d’assurer un service régulier dans
+                                                  des conditions normales.
+
+
+Worldcat     Catalogue           collectif        _
+             international développé par
+             OCLC
+
+WIFI         Wireless Fidelity                    Accès sans fil à Internet.
+
+W3C          World      Wide         Web          Organisme de standardisation à but non
+             Consortium                           lucratif, fondé en octobre 1994, chargé de
+                                                  promouvoir       la    compatibilité   des
+                                                  technologies du World Wide Web.
+
+XML          eXtensible           Markup          Standard du World Wide Web Consortium
+             Language      (Langage   de          qui sert de base pour créer des langages
+             balisage extensible)                 balisés spécialisés. C'est un « méta langage ».
+                                                  L'objectif initial de XML est de faciliter le
+                                                  partage de textes et d'informations
+                                                  structurés, par exemple au travers de
+                                                  l'internet, en séparant le contenu (les
+                                                  données) du contenant (la présentation des
+                                                  données). Il constitue une simplification de
+                                                  SGML.
+
+XML Schema Langage permettant de                  Une instance d'un schéma XML est un peu
+           définir la structure d'un              l'équivalent d'une DTD.
+           document XML.
+
+XSD          XML Schema Description               Fichier dans lequel on décrit la structure
+                                                  d'un fichier XML en utilisant le schéma
+                                                  XML qui lui est propre.

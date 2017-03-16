@@ -1,0 +1,213 @@
+Rattachement                 Trigramme       Nom développé
+AGC                          AGC             agence comptable
+AGC/DCR                      DCR             département Comptabilité-recette
+AGC/DCR/SCO                  SCO             service de la Comptabilité
+AGC/SCR                      SCR             service Comptabilité-recette
+AGC/SDE                      SDE             service de la Dépense
+AGC/SDP                      SDP             service Dépenses de personnel
+AGC/SPF                      SPF             service de Paiement des fournisseurs
+COM                          COM             délégation à la Communication
+COM/EDI                      EDI             missions éditoriales
+COM/PRE                      PRE             service de Presse
+COM/REI                      REI             Service Relations extérieures et institutionnelles
+COM/SCI                      SCI             service Coordination internet et réseaux sociaux
+DAP                          DAP             direction de l'Administration et du personnel
+DAP/DAJ                      DAJ             département Affaires juridiques et commande publique
+DAP/DAJ/SEJ                  SEJ             service juridique
+DAP/DAJ/SMA                  SMA             service des Marchés
+DAP/DBF                      DBF             département du Budget et des affaires financières                                             service d’Ordonnancement des dépenses de bâtiment, de systèmes d’informations et de logistique
+DAP/DBF/BSL                  BSL
+DAP/DBF/SBI                  SBI             service Billetterie et régie de recettes
+DAP/DBF/SBP                  SBP             service du Budget et de la programmation
+DAP/DBF/SBU                  SBU             service du Budget
+DAP/DBF/SCA                  SCA             service d'Ordonnancement des dépenses des Affaires culturelles et administratives
+DAP/DBF/SCC                  SCC             service d'Ordonnancement des dépenses des collections et de la conservation
+DAP/DBF/SFA                  SFA             service Financier de la DAP
+DAP/DBF/SIF                  SIF             service de l'Informatique financière
+DAP/DBF/SOA                  SOA             service Ordonnancement et affaires générales
+DAP/DBF/SOD                  SOD             service de l'Ordonnancement des crédits déconcentrés
+DAP/DBF/SPI                  SPI             service de l’Aide au pilotage
+DAP/DBF/SRE                  SRE             service des Recettes
+DAP/DMT                      DMT             département des Moyens techniques
+DAP/DMT/CGP                  CGP             mission Coordination générale opérations d'investissement
+DAP/DMT/CRU                  CRU             cellule Relations utilisateurs
+DAP/DMT/DMI                  DMI             division de la Maintenance immobilière
+DAP/DMT/DMI/GCH              GCH             service Génie climatique-Réseaux hydrauliques
+DAP/DMT/DMI/GET              GET             service Génie électrique-Transports mécanisés
+DAP/DMT/DMI/PCA              PCA             pôle Coordination administrative et financière
+DAP/DMT/DMI/PTR              PTR             service Projet et travaux
+DAP/DMT/DMI/SMS              SMS             service Support, maintenance et supervision
+DAP/DMT/HSE                  HSE             service Hygiène sécurité environnement
+DAP/DMT/IRI                  IRI             intendance Richelieu
+DAP/DMT/LMG                  LMG             service Logistique et moyens généraux
+DAP/DMT/MRH                  MRH             mission Ressources humaines
+DAP/DMT/PBD                  PBD             mission Coordination des procédures, des circuits, des bases
+DAP/DMT/PCG                  PCG             mission Coordination budgétaire et contrôle de gestion
+DAP/DMT/SUR                  SUR             service Sûreté
+DAP/DMT/TME                  TME             division Travaux maintenance exploitation
+DAP/DRH           DRH   direction déléguée aux Ressources humaines
+DAP/DRH/DPE       DPE   département du Personnel et de l'emploi
+DAP/DRH/DPE/SAP   SAP   service de l'Administration du personnel
+DAP/DRH/DPE/SEC   SEC   service de l'Emploi et des crédits
+DAP/DRH/MIS       MIS   bureau des Missions
+DAP/DRH/SAS       SAS   service de l'Action sociale
+DAP/DRH/SLR       SLR   service Logistique des ressources humaines
+DAP/DRH/SME       SME   service de Médecine de prévention
+DAP/DRH/SQF       SQF   service des Qualifications et de la formation
+DCO               DCO   direction des Collections
+DCO/AAF           AAF   affaires administratives et financières
+DCO/AAF/GCA       GCA   service de la Gestion centralisée des acquisitions
+DCO/AAF/SAB       SAB   service des Affaires budgétaires
+DCO/AAF/SCR       SCR   service de la Coordination et des ressources
+DCO/ARS           ARS   bibliothèque de l'Arsenal
+DCO/ARS/SCC       SCC   service Conservation et communication
+DCO/ARS/SCO       SCO   service Collections
+DCO/ASP           ASP   département des Arts du spectacle
+DCO/ASP/MJV       MJV   maison Jean-Vilar
+DCO/ASP/SAI       SAI   Service des archives et des imprimés
+DCO/ASP/SCC       SCC   Service de la conservation et de la communication
+DCO/ASP/SID       SID   Service de l'iconographie et de la documentation
+DCO/AST           AST   affaires scientifiques et techniques
+DCO/AST/INV       INV   service de l'Inventaire rétrospectif
+DCO/AST/MCO       MCO   mission de Coordination
+DCO/AUD           AUD   département de l'Audiovisuel
+DCO/AUD/SCC       SCC   service Consultation et conservation
+DCO/AUD/SIM       SIM   service Image
+DCO/AUD/SMM    SMM   service Multimédias
+DCO/AUD/SPU    SPU   service public
+DCO/AUD/SSO    SSO   service Son
+DCO/CPL        CPL   département des Cartes et plans
+DCO/CPL/SAG    SAG   service des acquisitions et des collections géographiques
+DCO/CPL/SCC    SCC   service conservation et communication
+DCO/CPL/SDL    SDL   service du Dépôt légal et des fonds patrimoniaux
+DCO/DEP        DEP   département Droit Économie Politique
+DCO/DEP/COO    COO   cellule de Coordination
+DCO/DEP/DPO    DPO   service Droit science politique publications officielles
+DCO/DEP/ECP    ECP   service Économie Prisme
+DCO/DEP/PRE    PRE   service Presse
+DCO/DEP/SEC    SEC   service Entrées, conservation
+DCO/EST        EST   département des Estampes et de la photographie
+DCO/EST/SAR    SAR   service de l'estampe ancienne et de la réserve
+DCO/EST/SCC    SCC   service conservation et communication
+DCO/EST/SMC    SMC   service de l'estampe moderne et contemporaine
+DCO/EST/SPH    SPH   service de la photographie
+DCO/LLA        LLA   département Littérature et art
+DCO/LLA/CNLJ   NLJ   centre national Littérature pour la jeunesse
+DCO/LLA/COO    COO   cellule de Coordination
+DCO/LLA/SAR    SAR   service Art
+DCO/LLA/SCE    SCE   service de la Conservation et des entrées
+DCO/LLA/SLL    SLL   service du Livre et de la littérature française
+DCO/LLA/SLM    SLM   service Littératures du monde
+DCO/MMA        MMA   département des Monnaies, médailles et antiques
+DCO/MSS        MSS   département des Manuscrits
+DCO/MSS/MIN    MIN   mission informatique et numérisation
+DCO/MSS/MPI    MPI   mission Services aux publics Imprimés
+DCO/MSS/SCC    SCC   service Conservation et communication
+DCO/MSS/SMC    SMC   service des Manuscrits modernes et contemporains
+DCO/MSS/SMD    SMD   service des Manuscrits médiévaux
+DCO/MSS/SOR    SOR   service des Manuscrits orientaux
+DCO/MUS        MUS   département de la Musique
+DCO/MUS/BMO    BMO   bibliothèque-musée de l'Opéra
+DCO/MUS/LOU    LOU   musique Louvois
+DCO/MUS/SCC    SCC   service Conservation et communication
+DCO/MUS/SCI    SCI   service des Collections imprimées
+DCO/MUS/SCP    SCP   service des Collections patrimoniales
+DCO/ORB           ORB   département d'Orientation et de Recherche bibliographique
+DCO/ORB/COO       COO   cellule Coordination
+DCO/ORB/SAR       SAR   service Assistance à la recherche
+DCO/ORB/SCO       SCO   service des Collections
+DCO/PHS           PHS département Philosophie Histoire Sciences de l'homme
+DCO/PHS/COO       COO   cellule de Coordination
+DCO/PHS/HIS       HIS   service Histoire
+DCO/PHS/PHI       PHI   service Philosophie Religion
+DCO/PHS/SCE       SCE   service Conservation et entrées
+DCO/PHS/SOC       SOC   service Sciences sociales
+DCO/PRI           PRI   projet Richelieu
+DCO/RLR           RLR   réserve des Livres rares
+DCO/ScT           ScT   département Sciences et techniques
+DCO/ScT/COO       COO   cellule de Coordination
+DCO/ScT/HSF       HSF   service Histoire des sciences fondamentales
+DCO/ScT/SCE       SCE   service de la Conservation et des entrées dépôt légal
+DCO/ScT/SCO       SCO   service de la Conservation
+DCO/ScT/SDC       SDC   service du Développement des collections
+DCO/ScT/SVI       SVI   service Sciences de la vie Sciences de l'ingénieur
+DDC               DDC   direction de la Diffusion culturelle
+DDC/DED           DED   département des Éditions
+DDC/DED/SCO       SCO   service commercial
+DDC/DED/SEL       SEL   service de l'Édition des livres
+DDC/DED/SEL/CIC   CIC   cellule iconographique
+DDC/DED/SMU       SMU   service des Éditions multimédias
+DDC/DEM           DEM   département des Expositions et des manifestations
+DDC/DEM/EXP       EXP   service des Expositions
+DDC/DEM/MNF       MNF   service des Manifestations
+
+DDC/DPM           DPM   département des Publics et de la médiation
+DDC/DPM/ACC       ACC   service de l'Accueil général
+DDC/DPM/PGQ       PGQ   service de l'Action pédagogique
+DDC/SCG           SCG   service de Coordination générale
+
+DGE               DGE   direction générale
+DGE/ARC           ARC   mission pour la gestion de la production documentaire et des archives
+DGE/MCI           MCI   mission de Communication interne
+DGE/PRI           PRI   projet Richelieu
+DME           DME   délégation au Mécénat
+DRI           DRI   délégation aux Relations internationales
+DSG           DSG   délégation à la Stratégie et à la recherche
+DSR           DSR   direction des Services et des réseaux
+DSR/CAF       CAF   mission de Coordination administrative et financière
+DSR/CAF/BBF   BBF   bureau Budget et finances
+DSR/CAF/BRH   BRH   bureau des Ressources humaines
+DSR/DCP       DCP   département de la Coopération
+DSR/DCP/CCF   CCF   service CCFr
+DSR/DCP/CNG   CNG   service de la Coopération numérique et de Gallica
+DSR/DCP/MCR   MCR   mission Coopération régionale communication formation
+DSR/DCP/PAG   PAG   service Pôles associés Gallica
+DSR/DDL       DDL   département du Dépôt légal
+DSR/DDL/BFL   BFL   service de la Bibliographie nationale française/livres
+DSR/DDL/BFP   BFP   service de la Bibliographie nationale française/périodiques
+DSR/DDL/DLN   DLN   service Dépôt légal numérique
+DSR/DDL/ECH   ECH   service des Échanges
+DSR/DDL/GDL   GDL   service Gestion des livres
+DSR/DDL/GDP   GDP   service Gestion des périodiques
+DSR/DDL/SRD   SRD   service de la Redistribution documentaire
+DSR/DRE       DRE   département de la Reproduction
+DSR/DRE/AAF   AAF   service des Affaires administratives et financières
+DSR/DRE/CPR   CPR   service Commandes et production Richelieu
+DSR/DRE/CPT   CPT   service Commandes et production Tolbiac
+DSR/DRE/SCL   SCL   service Clients
+DSR/DRE/SPR   SPR   service Production
+DSR/DRE/SRC   SRC   service Redevance comptabilité
+DSR/DSC       DSC   département de la Conservation
+DSR/DSC/BSG   BSG   centre technique de Bussy Saint Georges
+DSR/DSC/JLT   JLT   centre Joël-Le-Theule (Sablé)
+DSR/DSC/NUM   NUM   service Numérisation
+DSR/DSC/RES   RES   service Restauration
+DSR/DSC/SEC   SEC   service central
+DSR/DSC/SET   SET   service technique
+DSR/DSI       DSI   département des Systèmes d'information
+DSR/DSI/MCP   MCP   mission Coordination et projets
+DSR/DSI/SED       SED   service Études et développement
+DSR/DSI/SED/B2I   B2I   bureau Ingénierie et intégration
+DSR/DSI/SED/BCD   BCD   bureau Conception et développement
+DSR/DSI/SED/BEA   BEA   bureau Études et accompagnement
+DSR/DSI/SED/CBC   CBC   cellule Bureautique communicante
+DSR/DSI/SED/CDB   CDB   cellule Données bibliothéconomiques
+DSR/DSI/SED/CRH   CRH   cellule Ressources humaines
+DSR/DSI/SSP       SSP   service Support et production
+DSR/DSI/SSP/BAC   BAC   bureau d'Assistance centralisée
+DSR/DSI/SSP/BCL   BCL   bureau Coordination et logistique
+DSR/DSI/SSP/BSA   BSA   bureau des Services applicatifs
+DSR/DSI/SSP/BSI   BSI   bureau Sécurité et infrastructures
+DSR/IBN           IBN   département de l'Information bibliographique et numérique
+DSR/IBN/SCM       SCM   service Coordination et administration des métadonnées
+DSR/IBN/SCM/PDA   PDA   pôle Données d'autorité
+DSR/IBN/SCM/PDB   PDB   pôle Données bibliographiques
+DSR/IBN/SPD       SPD   service Prospective et services documentaires
+DSR/IBN/SPD/PDS   PDS   pôle Diffusion des données et services
+DSR/IBN/SPD/PFP   PFP   pôle Communication et formation professionnelles
+DSR/IBN/SPD/PMF   PMF   pôle Modélisation fonctionnelle
+DSR/MET           MET   département des Métadonnées
+DSR/MET/SDM       SDM   service Diffusion des métadonnées
+DSR/MET/SIM       SIM   service Ingénierie des métadonnées
+DSR/MET/SRE       SRE   service des Référentiels
+PDT               PDT   Présidence                                                                                    
