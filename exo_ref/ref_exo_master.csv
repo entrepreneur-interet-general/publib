@@ -1,0 +1,147 @@
+Format	Zone	Sous-zone	Position(s)	Référentiel	Lignes	Type
+A	WWW	$w	4	Ecriture	33	A
+A	WWW	$w	608	CodeLangue	1093	A
+A	8		1213	CodePays	302	A
+A	8		1416	CodeLangue	1093	A
+A	8		1820	GenreMusical	859	A
+A	8		1920	ComposMusic	135	A
+A	8		2223	TypesCollec	91	A
+A	8		24	Collectivites	12	A
+A	8		2526	DomAdmin	44	A
+A	40	$a		CodePays	302	A
+A	41	$a		CodeLangue	1093	A
+A	41	$t		CodeLangue	1093	A
+A	41	$v		CodeLangue	1093	A
+A	42	$d	103	DegreLongitude	181	A
+A	42	$d	405	MinutesSecondes	60	A
+A	42	$d	607	MinutesSecondes	60	A
+A	42	$e	103	DegreLongitude	181	A
+A	42	$e	405	MinutesSecondes	60	A
+A	42	$e	607	MinutesSecondes	60	A
+A	42	$f	103	DegreLatitude	91	A
+A	42	$f	405	MinutesSecondes	60	A
+A	42	$f	607	MinutesSecondes	60	A
+A	42	$g	103	DegreLatitude	91	A
+A	42	$g	405	MinutesSecondes	60	A
+A	42	$g	607	MinutesSecondes	60	A
+A	48	$a	1	DistributionExecution	109	B
+A	48	$b	1	DistributionExecution	109	B
+A	72	$a		CadreGeoActuel	832	A
+A	621	$a		VMASubdivision	30	A
+A	624	$a	2	DomRegroup	64	A
+A	628	$a		RegroupDewey	50	A
+A	650	$a		A650za	8	C
+A	690	$a		CodeProjetA	14	A
+B	WWW	$w	4	Ecriture	33	A
+B	WWW	$w	608	CodeLangue	1093	A
+B	4		1	CodePays	302	A
+B	8		2930	CodePays	302	A
+B	8		3133	CodeLangue	1093	A
+B	8		36	Periodicite	19	A
+B	8		3738	CentresISSN	72	A
+B	8		39	Ecriture	33	A
+B	009c		1517	GenreMusical	859	A
+B	009c		1516	ComposMusic	135	A
+B	009h		2123	FormatFilm	10	A
+B	10	$a		B010za	2	A
+B	21	$p		CodePays	302	A
+B	25	$p		CodePays	302	A
+B	40	$a		CodePays	302	A
+B	41	$a		CodeLangue	1093	A
+B	41	$b		CodeLangue	1093	A
+B	41	$c		CodeLangue	1093	A
+B	41	$d		CodeLangue	1093	A
+B	41	$e		CodeLangue	1093	A
+B	41	$f		CodeLangue	1093	A
+B	41	$g		CodeLangue	1093	A
+B	41	$h		CodeLangue	1093	A
+B	41	$i		CodeLangue	1093	A
+B	42	$d	103	DegreLongitude	181	A
+B	42	$d	405	MinutesSecondes	60	A
+B	42	$d	607	MinutesSecondes	60	A
+B	42	$e	103	DegreLongitude	181	A
+B	42	$e	405	MinutesSecondes	60	A
+B	42	$e	607	MinutesSecondes	60	A
+B	42	$f	103	DegreLatitude	91	A
+B	42	$f	405	MinutesSecondes	60	A
+B	42	$f	607	MinutesSecondes	60	A
+B	42	$g	103	DegreLatitude	91	A
+B	42	$g	405	MinutesSecondes	60	A
+B	42	$g	607	MinutesSecondes	60	A
+B	42	$u		B042zu	15	A
+B	43	$a		RepreRelief	13	A
+B	43	$b		Projection	32	A
+B	43	$c		Meridien	39	A
+B	47	$a		Ecriture	33	A
+B	47	$c		TranscrNombres	26	A
+B	48	$a	1	DistributionExecution	109	B
+B	48	$b	1	DistributionExecution	109	B
+B	50	$a		B050sza	58	A
+B	50	$c		B050szc	34	A
+B	72	$a		CadreGeoActuel	832	A
+B	72	$b		CadreGeoModerne	en cours	A
+B	100	$4.00		CodeFonctionAuteur	193	A
+B	101	$4.00		CodeFonctionInter	199	A
+B	110	$4.00		CodeFonctionAuteur	193	A
+B	111	$4.00		CodeFonctionInter	199	A
+B	250	$u		Nombre	701	A
+B	285	$f		B285zf	10	C
+B	285	$g		B285zg	25	C
+B	285	$j		B285zj	149	C
+B	285	$k		B285zk	17	C
+B	314	$p		CodePays	302	A
+B	316	$p		CodePays	302	A
+B	522	$g		TonaliteMode	43	C
+B	522	$m		Clef	21	A
+B	620	$a		B620za	61	C
+B	626	$a		B626za	61	C
+B	630	$a		B630za	60	A
+B	640	$a		B640za	85	A
+B	640	$b		B640zb	21	A
+B	640	$c		B640zc	113	A
+B	640	$d		B640zd	32	A
+B	641	$a		B641za	99	C
+B	641	$z		B641zz	18	C
+B	645	$a		B645za	10	A
+B	645	$b		B645zb	10	A
+B	645	$c		B645zc	26	A
+B	645	$d		B645zd	53	A
+B	645	$e		B645ze	5	A
+B	645	$f		B645zf	2	A
+B	645	$g		B645zg	14	A
+B	645	$h		B645zh	1	A
+B	645	$i		B645zi	5	A
+B	646	$a		B646za	109	C
+B	647	$a		B647za	61	C
+B	680	$b		CadreClassLivres	71	A
+B	680	$c		CadreClassPub	114	A
+B	680	$d		CadreClassNum	52	A
+B	680	$e		CadreClassMus	37	A
+B	680	$f		CadreClassCartographie	48	A
+B	680	$g		CadreClassAV	47	A
+B	690	$a		CodeProjet	298	A
+B	690	$f		TypoQuebec	11	A
+B	690	$g		CadreClassQuebec	251	A
+B	690	$z		DepServBnF	5	A
+B	700	$4.00		CodeFonctionAuteur	193	A
+B	701	$4.00		CodeFonctionInter	199	A
+B	702	$4.00		CodeFonctionColl	53	A
+B	710	$4.00		CodeFonctionAuteur	193	A
+B	711	$4.00		CodeFonctionInter	199	A
+B	712	$4.00		CodeFonctionColl	53	A
+B	720	$4.00		CodeFonctionDistr	34	A
+B	721	$4.00		CodeFonctionDistr	34	A
+B	722	$4.00		CodeFonctionDistr	34	A
+B	725	$4.00		CodeFonctionDistr	34	A
+B	726	$4.00		CodeFonctionDistr	34	A
+B	727	$4.00		CodeFonctionDistr	34	A
+B	730	$4.00		CodeFonctionDistr	34	A
+B	731	$4.00		CodeFonctionDistr	34	A
+B	732	$4.00		CodeFonctionDistr	34	A
+B	735	$4.00		CodeFonctionDistr	34	A
+B	736	$4.00		CodeFonctionDistr	34	A
+B	737	$4.00		CodeFonctionDistr	34	A
+B	917	$o		SourceNum1	17	A
+B	919	$o		SourceNum2		A
+B	934	$c		BibExterieure		C
+B	998	$o		SourceNum1	17	A

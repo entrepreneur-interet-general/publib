@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>%s</title>
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+  <body>
+    <div id="container" class="container">
+    <h2 align=center>Jargon de la BNF</h2>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <div class="form-group pull-right">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher un acronyme">
+    </div>
+    <span class="counter pull-right"></span>
+
+    <table id="jargonTable" class="table  table-list-search table-bordered">
+      <thead class="thead-inverse">
+        <tr>
+          <th>Trigramme</th>
+          <th>Explication</th>
+          <th>Organigramme</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr id="AAF	affaires administratives et financières	DCO/AAF">
+          <td class="trigramme">AAF	affaires administratives et financières	DCO/AAF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="AAF	service des Affaires administratives et financières	DSR/DRE/AAF">
+          <td class="trigramme">AAF	service des Affaires administratives et financières	DSR/DRE/AAF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ACC	service de l&#39;Accueil général	DDC/DPM/ACC">
+          <td class="trigramme">ACC	service de l&#39;Accueil général	DDC/DPM/ACC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="AGC	agence comptable	AGC">
+          <td class="trigramme">AGC	agence comptable	AGC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ARC	mission pour la gestion de la production documentaire et des archives	DGE/ARC">
+          <td class="trigramme">ARC	mission pour la gestion de la production documentaire et des archives	DGE/ARC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ARS	bibliothèque de l&#39;Arsenal	DCO/ARS">
+          <td class="trigramme">ARS	bibliothèque de l&#39;Arsenal	DCO/ARS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ASP	département des Arts du spectacle	DCO/ASP">
+          <td class="trigramme">ASP	département des Arts du spectacle	DCO/ASP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="AST	affaires scientifiques et techniques	DCO/AST">
+          <td class="trigramme">AST	affaires scientifiques et techniques	DCO/AST</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="AUD	département de l&#39;Audiovisuel	DCO/AUD">
+          <td class="trigramme">AUD	département de l&#39;Audiovisuel	DCO/AUD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="B2I	bureau Ingénierie et intégration	DSR/DSI/SED/B2I">
+          <td class="trigramme">B2I	bureau Ingénierie et intégration	DSR/DSI/SED/B2I</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BAC	bureau d&#39;Assistance centralisée	DSR/DSI/SSP/BAC">
+          <td class="trigramme">BAC	bureau d&#39;Assistance centralisée	DSR/DSI/SSP/BAC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BBF	bureau Budget et finances	DSR/CAF/BBF">
+          <td class="trigramme">BBF	bureau Budget et finances	DSR/CAF/BBF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BCD	bureau Conception et développement	DSR/DSI/SED/BCD">
+          <td class="trigramme">BCD	bureau Conception et développement	DSR/DSI/SED/BCD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BCL	bureau Coordination et logistique	DSR/DSI/SSP/BCL">
+          <td class="trigramme">BCL	bureau Coordination et logistique	DSR/DSI/SSP/BCL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BEA	bureau Études et accompagnement	DSR/DSI/SED/BEA">
+          <td class="trigramme">BEA	bureau Études et accompagnement	DSR/DSI/SED/BEA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BFL	service de la bibliographie nationale française/livres	DSR/DDL/BFL">
+          <td class="trigramme">BFL	service de la bibliographie nationale française/livres	DSR/DDL/BFL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BFP	service de la bibliographie nationale française/périodiques	DSR/DDL/BFP">
+          <td class="trigramme">BFP	service de la bibliographie nationale française/périodiques	DSR/DDL/BFP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BMO	bibliothèque-musée de l&#39;Opéra	DCO/MUS/BMO">
+          <td class="trigramme">BMO	bibliothèque-musée de l&#39;Opéra	DCO/MUS/BMO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BRH	bureau des Ressources humaines	DSR/CAF/BRH">
+          <td class="trigramme">BRH	bureau des Ressources humaines	DSR/CAF/BRH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BSA	bureau des Services applicatifs	DSR/DSI/SSP/BSA">
+          <td class="trigramme">BSA	bureau des Services applicatifs	DSR/DSI/SSP/BSA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BSG	centre technique de Bussy Saint Georges	DSR/DSC/BSG">
+          <td class="trigramme">BSG	centre technique de Bussy Saint Georges	DSR/DSC/BSG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BSI	bureau Sécurité et infrastructures	DSR/DSI/SSP/BSI">
+          <td class="trigramme">BSI	bureau Sécurité et infrastructures	DSR/DSI/SSP/BSI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="BSL	service d’Ordonnancement des dépenses de bâtiment">
+          <td class="trigramme">BSL	service d’Ordonnancement des dépenses de bâtiment</td>
+          <td class="trigramme-edit"> de systèmes d’informations et de logistique	DAP/DBF/BSL</td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CAF	mission de Coordination administrative et financière	DSR/CAF">
+          <td class="trigramme">CAF	mission de Coordination administrative et financière	DSR/CAF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CBC	cellule Bureautique communicante	DSR/DSI/SED/CBC">
+          <td class="trigramme">CBC	cellule Bureautique communicante	DSR/DSI/SED/CBC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CCF	service CCFr	DSR/DCP/CCF">
+          <td class="trigramme">CCF	service CCFr	DSR/DCP/CCF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CDB	cellule Données bibliothéconomiques	DSR/DSI/SED/CDB">
+          <td class="trigramme">CDB	cellule Données bibliothéconomiques	DSR/DSI/SED/CDB</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CGP	mission Coordination générale opérations d&#39;investissement	DAP/DMT/CGP">
+          <td class="trigramme">CGP	mission Coordination générale opérations d&#39;investissement	DAP/DMT/CGP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CIC	cellule iconographique	DDC/DED/SEL/CIC">
+          <td class="trigramme">CIC	cellule iconographique	DDC/DED/SEL/CIC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CNG	service de la coopération numérique et de Gallica	DSR/DCP/CNG">
+          <td class="trigramme">CNG	service de la coopération numérique et de Gallica	DSR/DCP/CNG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COM	délégation à la Communication	COM">
+          <td class="trigramme">COM	délégation à la Communication	COM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COO	cellule de Coordination	DCO/DEP/COO">
+          <td class="trigramme">COO	cellule de Coordination	DCO/DEP/COO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COO	cellule de Coordination	DCO/LLA/COO">
+          <td class="trigramme">COO	cellule de Coordination	DCO/LLA/COO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COO	cellule Coordination	DCO/ORB/COO">
+          <td class="trigramme">COO	cellule Coordination	DCO/ORB/COO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COO	cellule de Coordination	DCO/PHS/COO">
+          <td class="trigramme">COO	cellule de Coordination	DCO/PHS/COO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="COO	cellule de Coordination	DCO/ScT/COO">
+          <td class="trigramme">COO	cellule de Coordination	DCO/ScT/COO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CPL	département des Cartes et plans	DCO/CPL">
+          <td class="trigramme">CPL	département des Cartes et plans	DCO/CPL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CPR	service Commandes et production Richelieu	DSR/DRE/CPR">
+          <td class="trigramme">CPR	service Commandes et production Richelieu	DSR/DRE/CPR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CPT	service Commandes et production Tolbiac	DSR/DRE/CPT">
+          <td class="trigramme">CPT	service Commandes et production Tolbiac	DSR/DRE/CPT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CRH	cellule Ressources humaines	DSR/DSI/SED/CRH">
+          <td class="trigramme">CRH	cellule Ressources humaines	DSR/DSI/SED/CRH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="CRU	cellule Relations utilisateurs	DAP/DMT/CRU">
+          <td class="trigramme">CRU	cellule Relations utilisateurs	DAP/DMT/CRU</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DAJ	département Affaires juridiques et commande publique	DAP/DAJ">
+          <td class="trigramme">DAJ	département Affaires juridiques et commande publique	DAP/DAJ</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DAP	direction de l&#39;Administration et du personnel	DAP">
+          <td class="trigramme">DAP	direction de l&#39;Administration et du personnel	DAP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DBF	département du Budget et des affaires financières	DAP/DBF">
+          <td class="trigramme">DBF	département du Budget et des affaires financières	DAP/DBF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DCO	direction des Collections	DCO">
+          <td class="trigramme">DCO	direction des Collections	DCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DCP	département de la Coopération	DSR/DCP">
+          <td class="trigramme">DCP	département de la Coopération	DSR/DCP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DCR	département Comptabilité-recette	AGC/DCR">
+          <td class="trigramme">DCR	département Comptabilité-recette	AGC/DCR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DDC	direction de la Diffusion culturelle	DDC">
+          <td class="trigramme">DDC	direction de la Diffusion culturelle	DDC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DDL	département du Dépôt légal	DSR/DDL">
+          <td class="trigramme">DDL	département du Dépôt légal	DSR/DDL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DED	département des Éditions	DDC/DED">
+          <td class="trigramme">DED	département des Éditions	DDC/DED</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DEM	département des Expositions et des manifestations	DDC/DEM">
+          <td class="trigramme">DEM	département des Expositions et des manifestations	DDC/DEM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DEP	département Droit Économie Politique	DCO/DEP">
+          <td class="trigramme">DEP	département Droit Économie Politique	DCO/DEP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DGE	direction générale	DGE">
+          <td class="trigramme">DGE	direction générale	DGE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DLN	service du dépôt légal numérique	DSR/DDL/DLN">
+          <td class="trigramme">DLN	service du dépôt légal numérique	DSR/DDL/DLN</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DME	délégation au Mécénat	DME">
+          <td class="trigramme">DME	délégation au Mécénat	DME</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DMI	division de la Maintenance immobilière	DAP/DMT/DMI">
+          <td class="trigramme">DMI	division de la Maintenance immobilière	DAP/DMT/DMI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DMT	département des Moyens techniques	DAP/DMT">
+          <td class="trigramme">DMT	département des Moyens techniques	DAP/DMT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DPE	département du Personnel et de l&#39;emploi	DAP/DRH/DPE">
+          <td class="trigramme">DPE	département du Personnel et de l&#39;emploi	DAP/DRH/DPE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DPM	département des Publics et de la médiation	DDC/DPM">
+          <td class="trigramme">DPM	département des Publics et de la médiation	DDC/DPM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DPO	service des publications officielles	DCO/DEP/DPO">
+          <td class="trigramme">DPO	service des publications officielles	DCO/DEP/DPO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DRE	département de la Reproduction	DSR/DRE">
+          <td class="trigramme">DRE	département de la Reproduction	DSR/DRE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DRH	direction déléguée aux Ressources humaines	DAP/DRH">
+          <td class="trigramme">DRH	direction déléguée aux Ressources humaines	DAP/DRH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DRI	délégation aux Relations internationales	DRI">
+          <td class="trigramme">DRI	délégation aux Relations internationales	DRI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DSC	département de la Conservation	DSR/DSC">
+          <td class="trigramme">DSC	département de la Conservation	DSR/DSC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DSG	délégation à la Stratégie et à la Recherche	DSG">
+          <td class="trigramme">DSG	délégation à la Stratégie et à la Recherche	DSG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DSI	département des Systèmes d&#39;information	DSR/DSI">
+          <td class="trigramme">DSI	département des Systèmes d&#39;information	DSR/DSI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="DSR	direction des Services et des réseaux	DSR">
+          <td class="trigramme">DSR	direction des Services et des réseaux	DSR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ECH	service des Échanges	DSR/DDL/ECH">
+          <td class="trigramme">ECH	service des Échanges	DSR/DDL/ECH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ECP	service Économie Prisme	DCO/DEP/ECP">
+          <td class="trigramme">ECP	service Économie Prisme	DCO/DEP/ECP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="EDI	missions éditoriales	COM/EDI">
+          <td class="trigramme">EDI	missions éditoriales	COM/EDI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="EST	département des Estampes et de la photographie	DCO/EST">
+          <td class="trigramme">EST	département des Estampes et de la photographie	DCO/EST</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="EXP	service des Expositions	DDC/DEM/EXP">
+          <td class="trigramme">EXP	service des Expositions	DDC/DEM/EXP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="GCA	service de la Gestion centralisée des acquisitions	DCO/AAF/GCA">
+          <td class="trigramme">GCA	service de la Gestion centralisée des acquisitions	DCO/AAF/GCA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="GDL	service Gestion des livres	DSR/DDL/GDL">
+          <td class="trigramme">GDL	service Gestion des livres	DSR/DDL/GDL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="GDP	service Gestion des périodiques	DSR/DDL/GDP">
+          <td class="trigramme">GDP	service Gestion des périodiques	DSR/DDL/GDP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="GCH	service Génie climatique-Réseaux hydrauliques	DAP/DMT/DMI/GCH">
+          <td class="trigramme">GCH	service Génie climatique-Réseaux hydrauliques	DAP/DMT/DMI/GCH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="GET	service Génie électrique-Transports mécanisés	DAP/DMT/DMI/GET">
+          <td class="trigramme">GET	service Génie électrique-Transports mécanisés	DAP/DMT/DMI/GET</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="HIS	service Histoire	DCO/PHS/HIS">
+          <td class="trigramme">HIS	service Histoire	DCO/PHS/HIS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="HSE	service Hygiène sécurité environnement	DAP/DMT/HSE">
+          <td class="trigramme">HSE	service Hygiène sécurité environnement	DAP/DMT/HSE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="HSF	service Histoire des sciences fondamentales	DCO/ScT/HSF">
+          <td class="trigramme">HSF	service Histoire des sciences fondamentales	DCO/ScT/HSF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="IBN	département de l&#39;Information bibliographique et numérique	DSR/IBN">
+          <td class="trigramme">IBN	département de l&#39;Information bibliographique et numérique	DSR/IBN</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="INV	service de l&#39;Inventaire rétrospectif	DCO/AST/INV">
+          <td class="trigramme">INV	service de l&#39;Inventaire rétrospectif	DCO/AST/INV</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="IRI	intendance Richelieu	DAP/DMT/IRI">
+          <td class="trigramme">IRI	intendance Richelieu	DAP/DMT/IRI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="JLT	centre Joël-Le-Theule (Sablé-sur-Sarthe)	DSR/DSC/JLT">
+          <td class="trigramme">JLT	centre Joël-Le-Theule (Sablé-sur-Sarthe)	DSR/DSC/JLT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="LLA	département Littérature et art	DCO/LLA">
+          <td class="trigramme">LLA	département Littérature et art	DCO/LLA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="LMG	service Logistique et moyens généraux	DAP/DMT/LMG">
+          <td class="trigramme">LMG	service Logistique et moyens généraux	DAP/DMT/LMG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="LOU	musique Louvois	DCO/MUS/LOU">
+          <td class="trigramme">LOU	musique Louvois	DCO/MUS/LOU</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MCI	mission de Communication interne	DGE/MCI">
+          <td class="trigramme">MCI	mission de Communication interne	DGE/MCI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MCO	mission de Coordination	DCO/AST/MCO">
+          <td class="trigramme">MCO	mission de Coordination	DCO/AST/MCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MCP	mission Coordination et projets	DSR/DSI/MCP">
+          <td class="trigramme">MCP	mission Coordination et projets	DSR/DSI/MCP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MCR	mission Coopération régionale communication formation	DSR/DCP/MCR">
+          <td class="trigramme">MCR	mission Coopération régionale communication formation	DSR/DCP/MCR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MET	département des Métadonnées	MET">
+          <td class="trigramme">MET	département des Métadonnées	MET</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MIN	mission Informatique et numérisation	DCO/MSS/MIN">
+          <td class="trigramme">MIN	mission Informatique et numérisation	DCO/MSS/MIN</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MIS	bureau des Missions	DAP/DRH/MIS">
+          <td class="trigramme">MIS	bureau des Missions	DAP/DRH/MIS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MIS	bureau des Missions	DAP/DBF/SCA/MIS">
+          <td class="trigramme">MIS	bureau des Missions	DAP/DBF/SCA/MIS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MJV	maison Jean-Vilar	DCO/ASP/MJV">
+          <td class="trigramme">MJV	maison Jean-Vilar	DCO/ASP/MJV</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MMA	département des Monnaies">
+          <td class="trigramme">MMA	département des Monnaies</td>
+          <td class="trigramme-edit"> médailles et antiques	DCO/MMA</td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MNF	service des Manifestations	DDC/DEM/MNF">
+          <td class="trigramme">MNF	service des Manifestations	DDC/DEM/MNF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MPI	mission Services aux publics Imprimés	DCO/MSS/MPI">
+          <td class="trigramme">MPI	mission Services aux publics Imprimés	DCO/MSS/MPI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MRH	mission Ressources humaines	DAP/DMT/MRH">
+          <td class="trigramme">MRH	mission Ressources humaines	DAP/DMT/MRH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MSS	département des Manuscrits	DCO/MSS">
+          <td class="trigramme">MSS	département des Manuscrits	DCO/MSS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="MUS	département de la Musique	DCO/MUS">
+          <td class="trigramme">MUS	département de la Musique	DCO/MUS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="NLJ	centre national Littérature pour la jeunesse	DCO/LLA/CNLJ">
+          <td class="trigramme">NLJ	centre national Littérature pour la jeunesse	DCO/LLA/CNLJ</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="NUM	service Numérisation	DSR/DSC/NUM">
+          <td class="trigramme">NUM	service Numérisation	DSR/DSC/NUM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="ORB	département d&#39;Orientation et de recherche bibliographique	DCO/ORB">
+          <td class="trigramme">ORB	département d&#39;Orientation et de recherche bibliographique	DCO/ORB</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PAG	service Pôles associés Gallica	DSR/DCP/PAG">
+          <td class="trigramme">PAG	service Pôles associés Gallica	DSR/DCP/PAG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PBD	mission Coordination des procédures">
+          <td class="trigramme">PBD	mission Coordination des procédures</td>
+          <td class="trigramme-edit"> des circuits</td>
+          <td class="organigramme"> des bases	DAP/DMT/PBD</td>
+        </tr>
+        
+        <tr id="PCA	pôle Coordination administrative et financière	DAP/DMT/DMI/PCA">
+          <td class="trigramme">PCA	pôle Coordination administrative et financière	DAP/DMT/DMI/PCA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PCG	mission Coordination budgétaire et contrôle de gestion	DAP/DMT/PCG">
+          <td class="trigramme">PCG	mission Coordination budgétaire et contrôle de gestion	DAP/DMT/PCG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PDA	pôle Données d&#39;autorité	DSR/IBN/SCM/PDA">
+          <td class="trigramme">PDA	pôle Données d&#39;autorité	DSR/IBN/SCM/PDA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PDB	pôle Données bibliographiques	DSR/IBN/SCM/PDB">
+          <td class="trigramme">PDB	pôle Données bibliographiques	DSR/IBN/SCM/PDB</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PDS	pôle Diffusion des données et services	DSR/IBN/SPD/PDS">
+          <td class="trigramme">PDS	pôle Diffusion des données et services	DSR/IBN/SPD/PDS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PDT	Présidence	PDT">
+          <td class="trigramme">PDT	Présidence	PDT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PFP	pôle Communication et formation professionnelles	DSR/IBN/SPD/PFP">
+          <td class="trigramme">PFP	pôle Communication et formation professionnelles	DSR/IBN/SPD/PFP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PGQ	service de l&#39;Action pédagogique	DDC/DPM/PGQ">
+          <td class="trigramme">PGQ	service de l&#39;Action pédagogique	DDC/DPM/PGQ</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PHI	service Philosophie Religion	DCO/PHS/PHI">
+          <td class="trigramme">PHI	service Philosophie Religion	DCO/PHS/PHI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PHS	département Philosophie Histoire Sciences de l&#39;homme	DCO/PHS">
+          <td class="trigramme">PHS	département Philosophie Histoire Sciences de l&#39;homme	DCO/PHS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PMF	pôle Modélisation fonctionnelle	DSR/IBN/SPD/PMF">
+          <td class="trigramme">PMF	pôle Modélisation fonctionnelle	DSR/IBN/SPD/PMF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PRE	service de presse	COM/PRE">
+          <td class="trigramme">PRE	service de presse	COM/PRE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PRE	service Presse	DCO/DEP/PRE">
+          <td class="trigramme">PRE	service Presse	DCO/DEP/PRE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PRI	projet Richelieu	DCO/PRI">
+          <td class="trigramme">PRI	projet Richelieu	DCO/PRI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PRI	projet Richelieu	DGE/PRI">
+          <td class="trigramme">PRI	projet Richelieu	DGE/PRI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="PTR	service Projet et travaux	DAP/DMT/DMI/PTR">
+          <td class="trigramme">PTR	service Projet et travaux	DAP/DMT/DMI/PTR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="REI	relations extérieures et institutionnelles	COM/REI">
+          <td class="trigramme">REI	relations extérieures et institutionnelles	COM/REI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="RES	service Restauration	DSR/DSC/RES">
+          <td class="trigramme">RES	service Restauration	DSR/DSC/RES</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="RLR	réserve des Livres rares	DCO/RLR">
+          <td class="trigramme">RLR	réserve des Livres rares	DCO/RLR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAB	service des Affaires budgétaires	DCO/AAF/SAB">
+          <td class="trigramme">SAB	service des Affaires budgétaires	DCO/AAF/SAB</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAG	service des acquisitions et des collections géographiques	DCO/CPL/SAG">
+          <td class="trigramme">SAG	service des acquisitions et des collections géographiques	DCO/CPL/SAG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAI	service des Archives et des imprimés	DCO/ASP/SAI">
+          <td class="trigramme">SAI	service des Archives et des imprimés	DCO/ASP/SAI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAP	service de l&#39;Administration du personnel	DAP/DRH/DPE/SAP">
+          <td class="trigramme">SAP	service de l&#39;Administration du personnel	DAP/DRH/DPE/SAP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAR	service de l&#39;estampe ancienne et de la réserve	DCO/EST/SAR">
+          <td class="trigramme">SAR	service de l&#39;estampe ancienne et de la réserve	DCO/EST/SAR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAR	service Art	DCO/LLA/SAR">
+          <td class="trigramme">SAR	service Art	DCO/LLA/SAR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAR	service Assistance à la recherche	DCO/ORB/SAR">
+          <td class="trigramme">SAR	service Assistance à la recherche	DCO/ORB/SAR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SAS	service de l&#39;Action sociale	DAP/DRH/SAS">
+          <td class="trigramme">SAS	service de l&#39;Action sociale	DAP/DRH/SAS</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SBI	service Billetterie et régie de recettes	DAP/DBF/SBI">
+          <td class="trigramme">SBI	service Billetterie et régie de recettes	DAP/DBF/SBI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SBP	service du Budget et de la programmation	DAP/DBF/SBP">
+          <td class="trigramme">SBP	service du Budget et de la programmation	DAP/DBF/SBP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SBU	service du Budget	DAP/DBF/SBU">
+          <td class="trigramme">SBU	service du Budget	DAP/DBF/SBU</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCA	service d&#39;Ordonnancement des dépenses des affaires culturelles et administratives	DAP/DBF/SCA">
+          <td class="trigramme">SCA	service d&#39;Ordonnancement des dépenses des affaires culturelles et administratives	DAP/DBF/SCA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service Conservation et communication	DCO/ARS/SCC">
+          <td class="trigramme">SCC	service Conservation et communication	DCO/ARS/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service de la conservation et de la communication	DCO/ASP/SCC">
+          <td class="trigramme">SCC	service de la conservation et de la communication	DCO/ASP/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service Consultation et conservation	DCO/AUD/SCC">
+          <td class="trigramme">SCC	service Consultation et conservation	DCO/AUD/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service conservation et communication	DCO/CPL/SCC">
+          <td class="trigramme">SCC	service conservation et communication	DCO/CPL/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service conservation et communication	DCO/EST/SCC">
+          <td class="trigramme">SCC	service conservation et communication	DCO/EST/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service Conservation et communication	DCO/MSS/SCC">
+          <td class="trigramme">SCC	service Conservation et communication	DCO/MSS/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service Conservation et communication	DCO/MUS/SCC">
+          <td class="trigramme">SCC	service Conservation et communication	DCO/MUS/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCC	service d&#39;Ordonnancement des dépenses des collections et de la conservation	DAP/DBF/SCC">
+          <td class="trigramme">SCC	service d&#39;Ordonnancement des dépenses des collections et de la conservation	DAP/DBF/SCC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCE	service de la Conservation et des entrées	DCO/LLA/SCE">
+          <td class="trigramme">SCE	service de la Conservation et des entrées	DCO/LLA/SCE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCE	service Conservation et entrées	DCO/PHS/SCE">
+          <td class="trigramme">SCE	service Conservation et entrées	DCO/PHS/SCE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCE	service de la Conservation et des entrées dépôt légal	DCO/ScT/SCE">
+          <td class="trigramme">SCE	service de la Conservation et des entrées dépôt légal	DCO/ScT/SCE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCG	service de Coordination générale	DDC/SCG">
+          <td class="trigramme">SCG	service de Coordination générale	DDC/SCG</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCI	service de Coordination Internet - Intranet	COM/SCI">
+          <td class="trigramme">SCI	service de Coordination Internet - Intranet	COM/SCI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCI	service des Collections imprimées	DCO/MUS/SCI">
+          <td class="trigramme">SCI	service des Collections imprimées	DCO/MUS/SCI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCL	service Clients	DSR/DRE/SCL">
+          <td class="trigramme">SCL	service Clients	DSR/DRE/SCL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCM	service Coordination et administration des métadonnées	DSR/IBN/SCM">
+          <td class="trigramme">SCM	service Coordination et administration des métadonnées	DSR/IBN/SCM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCO	service de la Comptabilité	AGC/DCR/SCO">
+          <td class="trigramme">SCO	service de la Comptabilité	AGC/DCR/SCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCO	service Collections	DCO/ARS/SCO">
+          <td class="trigramme">SCO	service Collections	DCO/ARS/SCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCO	service des Collections	DCO/ORB/SCO">
+          <td class="trigramme">SCO	service des Collections	DCO/ORB/SCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCO	service de la Conservation	DCO/ScT/SCO">
+          <td class="trigramme">SCO	service de la Conservation	DCO/ScT/SCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCO	service commercial	DDC/DED/SCO">
+          <td class="trigramme">SCO	service commercial	DDC/DED/SCO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCP	service des Collections patrimoniales	DCO/MUS/SCP">
+          <td class="trigramme">SCP	service des Collections patrimoniales	DCO/MUS/SCP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCR	service Comptabilité-recette	AGC/SCR">
+          <td class="trigramme">SCR	service Comptabilité-recette	AGC/SCR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCR	service de la Coordination et des ressources	DCO/AAF/SCR">
+          <td class="trigramme">SCR	service de la Coordination et des ressources	DCO/AAF/SCR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SCT	département Sciences et techniques	DCO/ScT">
+          <td class="trigramme">SCT	département Sciences et techniques	DCO/ScT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SDC	service du Développement des collections	DCO/ScT/SDC">
+          <td class="trigramme">SDC	service du Développement des collections	DCO/ScT/SDC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SDE	service de la Dépense	AGC/SDE">
+          <td class="trigramme">SDE	service de la Dépense	AGC/SDE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SDL	service du Dépôt légal et des fonds patrimoniaux	DCO/CPL/SDL">
+          <td class="trigramme">SDL	service du Dépôt légal et des fonds patrimoniaux	DCO/CPL/SDL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SDM	service Diffusion des métadonnées	DSR/MET/SDM">
+          <td class="trigramme">SDM	service Diffusion des métadonnées	DSR/MET/SDM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SDP	service Dépenses de personnel	AGC/SDP">
+          <td class="trigramme">SDP	service Dépenses de personnel	AGC/SDP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SEC	service de l&#39;Emploi et des crédits	DAP/DRH/DPE/SEC">
+          <td class="trigramme">SEC	service de l&#39;Emploi et des crédits	DAP/DRH/DPE/SEC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SEC	service Entrées">
+          <td class="trigramme">SEC	service Entrées</td>
+          <td class="trigramme-edit"> conservation	DCO/DEP/SEC</td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SEC	service central	DSR/DSC/SEC">
+          <td class="trigramme">SEC	service central	DSR/DSC/SEC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SED	service Études et développement	DSR/DSI/SED">
+          <td class="trigramme">SED	service Études et développement	DSR/DSI/SED</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SEJ	service juridique	DAP/DAJ/SEJ">
+          <td class="trigramme">SEJ	service juridique	DAP/DAJ/SEJ</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SEL	service de l&#39;Édition des livres	DDC/DED/SEL">
+          <td class="trigramme">SEL	service de l&#39;Édition des livres	DDC/DED/SEL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SET	service technique	DSR/DSC/SET">
+          <td class="trigramme">SET	service technique	DSR/DSC/SET</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SFA	service Financier de la direction de l’administration et du personnel	DAP/DBF/SFA">
+          <td class="trigramme">SFA	service Financier de la direction de l’administration et du personnel	DAP/DBF/SFA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SID	service de l&#39;Iconographie et de la documentation	DCO/ASP/SID">
+          <td class="trigramme">SID	service de l&#39;Iconographie et de la documentation	DCO/ASP/SID</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SIF	service de l&#39;Informatique financière	DAP/DBF/SIF">
+          <td class="trigramme">SIF	service de l&#39;Informatique financière	DAP/DBF/SIF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SIM	service Image	DCO/AUD/SIM">
+          <td class="trigramme">SIM	service Image	DCO/AUD/SIM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SIM	service Ingénierie des métadonnées	DSR/MET/SIM">
+          <td class="trigramme">SIM	service Ingénierie des métadonnées	DSR/MET/SIM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SLL	service du Livre et de la littérature française	DCO/LLA/SLL">
+          <td class="trigramme">SLL	service du Livre et de la littérature française	DCO/LLA/SLL</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SLM	service Littératures du monde	DCO/LLA/SLM">
+          <td class="trigramme">SLM	service Littératures du monde	DCO/LLA/SLM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SLR	service Logistique des ressources humaines	DAP/DRH/SLR">
+          <td class="trigramme">SLR	service Logistique des ressources humaines	DAP/DRH/SLR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMA	service des Marchés	DAP/DAJ/SMA">
+          <td class="trigramme">SMA	service des Marchés	DAP/DAJ/SMA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMC	service de l&#39;estampe moderne et contemporaine	DCO/EST/SMC">
+          <td class="trigramme">SMC	service de l&#39;estampe moderne et contemporaine	DCO/EST/SMC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMC	service des manuscrits modernes et contemporains	DCO/MSS/SMC">
+          <td class="trigramme">SMC	service des manuscrits modernes et contemporains	DCO/MSS/SMC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMD	service des Manuscrits médiévaux	DCO/MSS/SMD">
+          <td class="trigramme">SMD	service des Manuscrits médiévaux	DCO/MSS/SMD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SME	service de Médecine de prévention	DAP/DRH/SME">
+          <td class="trigramme">SME	service de Médecine de prévention	DAP/DRH/SME</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMM	service Multimédias	DCO/AUD/SMM">
+          <td class="trigramme">SMM	service Multimédias	DCO/AUD/SMM</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMS	service Support">
+          <td class="trigramme">SMS	service Support</td>
+          <td class="trigramme-edit"> maintenance et supervision	DAP/DAMT/DMI/SMS</td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SMU	service des Éditions multimédias	DDC/DED/SMU">
+          <td class="trigramme">SMU	service des Éditions multimédias	DDC/DED/SMU</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SOA	service Ordonnancement et affaires générales	DAP/DBF/SOA">
+          <td class="trigramme">SOA	service Ordonnancement et affaires générales	DAP/DBF/SOA</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SOC	service Sciences sociales	DCO/PHS/SOC">
+          <td class="trigramme">SOC	service Sciences sociales	DCO/PHS/SOC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SOD	service de l&#39;Ordonnancement des crédits déconcentrés	DAP/DBF/SOD">
+          <td class="trigramme">SOD	service de l&#39;Ordonnancement des crédits déconcentrés	DAP/DBF/SOD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SOR	service des Manuscrits orientaux	DCO/MSS/SOR">
+          <td class="trigramme">SOR	service des Manuscrits orientaux	DCO/MSS/SOR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPD	service Prospective et services documentaires	DSR/IBN/SPD">
+          <td class="trigramme">SPD	service Prospective et services documentaires	DSR/IBN/SPD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPF	service de Paiement des fournisseurs	AGC/SPF">
+          <td class="trigramme">SPF	service de Paiement des fournisseurs	AGC/SPF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPH	service de la Photographie	DCO/EST/SPH">
+          <td class="trigramme">SPH	service de la Photographie	DCO/EST/SPH</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPI	service de l’Aide au pilotage	DAP/DBF/SPI">
+          <td class="trigramme">SPI	service de l’Aide au pilotage	DAP/DBF/SPI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPR	service Production	DSR/DRE/SPR">
+          <td class="trigramme">SPR	service Production	DSR/DRE/SPR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPT	service Projets et travaux	DAP/DMT/DMI/SPT">
+          <td class="trigramme">SPT	service Projets et travaux	DAP/DMT/DMI/SPT</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SPU	service public	DCO/AUD/SPU">
+          <td class="trigramme">SPU	service public	DCO/AUD/SPU</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SQF	service des Qualifications et de la formation	DAP/DRH/SQF">
+          <td class="trigramme">SQF	service des Qualifications et de la formation	DAP/DRH/SQF</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SRE	service des Recettes	DAP/DBF/SRE">
+          <td class="trigramme">SRE	service des Recettes	DAP/DBF/SRE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SRE	service des Référentiels	DSR/MET/SRE">
+          <td class="trigramme">SRE	service des Référentiels	DSR/MET/SRE</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SRC	service Redevance comptabilité	DSR/DRE/SRC">
+          <td class="trigramme">SRC	service Redevance comptabilité	DSR/DRE/SRC</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SRD	service de la Redistribution documentaire	DSR/DDL/SRD">
+          <td class="trigramme">SRD	service de la Redistribution documentaire	DSR/DDL/SRD</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SSO	service Son	DCO/AUD/SSO">
+          <td class="trigramme">SSO	service Son	DCO/AUD/SSO</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SSP	service Support et production	DSR/DSI/SSP">
+          <td class="trigramme">SSP	service Support et production	DSR/DSI/SSP</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SUR	service Sûreté	DAP/DMT/SUR">
+          <td class="trigramme">SUR	service Sûreté	DAP/DMT/SUR</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="SVI	service Sciences de la vie Sciences de l&#39;ingénieur	DCO/ScT/SVI">
+          <td class="trigramme">SVI	service Sciences de la vie Sciences de l&#39;ingénieur	DCO/ScT/SVI</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+        <tr id="TME	division Travaux maintenance exploitation	DAP/DMT/TME">
+          <td class="trigramme">TME	division Travaux maintenance exploitation	DAP/DMT/TME</td>
+          <td class="trigramme-edit"></td>
+          <td class="organigramme"></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    </div>
+    <script type="text/javascript">
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("jargonTable");
+      tr = table.getElementsByTagName("tr");
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+
+  <body>
+</html>
