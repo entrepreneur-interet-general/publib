@@ -8,8 +8,11 @@ import os
 from datetime import datetime as dt
 from multiprocessing import Pool
 import json
+import re
 
-# import re
+U_INT = re.compile(r'\d+', re.UNICODE)
+U_NONINT = re.compile(r'[^(\d|\s)+]+', re.UNICODE)
+
 # def cast_str_2_int(value):
 #     regex.find("\d+")
 def scan_notices_dir(notices_dir="/notices/xml/ixm/bnopalex/"):
@@ -22,6 +25,106 @@ def scan_notices_dir(notices_dir="/notices/xml/ixm/bnopalex/"):
                 for f in sorted(os.listdir(d3),reverse=True):
                     yield os.path.join(d3, f)
 
+def get_pos(pos):
+    '''pour chaque tag "pos"
+    renvoyer son tag parent ou grand parent
+    le code, le sens
+    '''
+
+    if pos.parent.name == "subfield":
+        tag = pos.parent.parent.get("tag")
+        code = pos.parent.get("code")
+        key = tag+"P"+code
+
+        try:
+            sens = pos.get("sens")
+            value = cast(pos.text, key, sens)
+        except KeyError:
+            sens = None
+            value = cast(pos.text, key)
+        return (key, value, sens)
+    elif pos.parent.name == "controlfield" or pos.parent.name == "leader":
+        tag = pos.parent.get("tag")
+        if tag is None:
+            tag = "000"
+        code = pos.get("code")
+        key = tag+"P"+code
+        value = pos.text
+        try:
+            sens = pos.get("sens")
+            value = cast(value, key, sens)
+        except KeyError:
+            sens = None
+            value = cast(value, key)
+        return (key, value, sens)
+    else:
+        print("Error", post.parent.name,">", "P", pos )
+        return (None, None, None)
+
+
+
+def get_subfield(sub):
+    '''
+    Pour une sous-zone récupérer tous les champs data
+    '''
+
+    if sub.parent.name == "datafield":
+        tag = sub.parent.get("tag")
+        code = sub.get("code")
+        key = tag+"$"+code
+        value = sub.text
+        try:
+            sens = sub.get("sens")
+            value = cast(value, key, sens)
+        except KeyError:
+            sens = None
+            value = cast(value, key)
+        return (key, value , sens)
+
+    else:
+        print("Error:", sub.parent.name,">$", sub)
+        return (None, None, None)
+
+def get_attribute(at):
+    '''
+    Pour une notice récupérer tous les attributs (données de gestion)
+    '''
+    if at.parent.name == "record":
+        try:
+            key = at.get("nom").lower()
+            value = at.text
+            try:
+                sens = at.get("sens")
+                value = cast(at.text, key, sens)
+            except KeyError:
+                sens = None
+                value = cast(at.text, key)
+            return (key, value, sens)
+        except KeyError:
+            return (None, None, None)
+    else:
+        return (None, None, None)
+
+def get_pex(pex):
+    '''chaque partie d'exemplaire correspond à un dictionnaire stockés dans la notice dans une liste non ordonnée
+    elle dispose d'un ensemble de nom, sens explicite et attribut codé.
+    Le sens a vocation a se substituer à l'attribut codé pour etre plus explicite
+    Le nom est mis en minuscule
+    Une pex est un dictionnaire
+    '''
+    nr, no = int(pex.get("nr")), int(pex.get("no"))
+    pex_d = {"nr": nr, "no":no}
+    for attr in pex.findAll("attr"):
+        key = attr.get("nom").lower()
+        value = attr.text
+        try:
+            sens = attr.get("sens")
+            value = cast(value, key, sens)
+        except KeyError:
+            sens = None
+            value = cast(value, key)
+        pex_d[key] = {"sens":sens, "value": value}
+    return pex_d
 
 def convert_notice(fname):
     '''lire et applatir la notice xml'''
@@ -35,99 +138,80 @@ def convert_notice(fname):
         record["format"] = r.get("format")
         record["type"] = r.get("type")
         record["_id"] = int(r.get("numero"))
-        try:
-        #record.update({n.get("tag"): n.text.split('\n')[0] for n in r.find_all("controlfield")})
-            for pos in r.find_all("pos"):
-                #sous- zone à position
-                if pos.parent.name == "subfield":
-                    tag = pos.parent.parent.get("tag")
-                    code = pos.parent.get("code")
-                    # sens = pos.get("sens")
-                    value = pos.text
-                    try:
-                        sens = pos.get("sens")
-                    except KeyError:
-                        sens = None
-                    record[tag+"p"+code] =  {"value": value, "sens": sens}
+        positions = [get_pos(pos) for pos in r.find_all("pos")]
 
-                elif pos.parent.name == "controlfield" or pos.parent.name == "leader":
-                    tag = pos.parent.get("tag")
-                    if tag is None:
-                        tag = "000"
-                    code = pos.get("code")
-                    value = pos.text
-                    try:
-                        sens = pos.get("sens")
-                    except KeyError:
-                        sens = None
-                    record[tag+"P"+code] =  {"value": value, "sens": sens}
+        subfields = [get_subfield(sub) for sub in r.find_all("subfield")]
+        attributes = [get_attribute(att) for att in r.find_all("attr")]
+        fields = positions+subfields+attributes
+        fields_d = {n[0]:{"value":n[1], "sens":n[2]} for n in fields if n[0] is not None or n[1] is not None}
+        record.update(fields_d)
+        if r.find("pex") is not None:
+            pexs = {"pexs": [get_pex(pex) for pex in r.find_all("pex")]}
+            record.update(pexs)
 
+        return db.notices.insert(record)
+        
+def cast(value,key, sens=None):
+    '''casting value using tips(based on keys and meaning) and basic patterns'''
+    nb = re.findall(U_INT, value)
+    inv = re.findall(U_NONINT, value)
+    if len(nb) > 0:
+
+        #serach by key
+        if key is not None:
+            if "num" in key:
+
+                if len(inv) == 0:
+                    try:
+                        return int(value)
+                    except ValueError:
+                        return value.strip()
+                        # return long(value)
                 else:
-                    print(">>>>>", pos.parent.name)
-            for sub in r.find_all("subfield"):
-                if sub.parent.name == "datafield":
-                    tag = sub.parent.get("tag")
-                    code = sub.get("code")
-                    value = sub.text
-                    try:
-                        sens = pos.get("sens")
-                    except KeyError:
-                        sens = None
-                    record[tag+"$"+code] =  {"value": value, "sens": sens}
+                    return value
+            if "date" in key:
+                if len(nb) == 3:
+                    if len(nb[-1]) == 4:
+                        return dt.strptime("-".join(nb), "%d-%m-%Y")
+                    elif len(nb[0]) == 4:
+                        return dt.strptime("-".join(nb), "%Y-%m-%d")
                 else:
-                    print(">>>>>", pos.parent.name)
-            for at in r.find_all("attr"):
-                if at.parent.name == "record":
-                    record[at.get("nom")] = at.text
-
-            if r.find("pex") is not None:
-                records["pexs"] = [index_pex(pex) for p in r.find_all("pex")]
-            print(db.notices.insert(cast_record(record)))
-        except Exception as e:
-            print(fname, e)
-            pass
+                    if int(value) == 0:
+                        return None
+                    else:
+                        print("Date ko", value)
+                        return value
+            else:
+                try:
+                    return int(value)
+                except ValueError:
+                    return(value)
+    return value
 
 def detect_date(v):
     '''transormer les dates de gestion en les formattant en type date'''
+    if type(v) == dict:
+        value = v["value"]
+    else:
+        value = v
     if "/" in v:
         if "__" in v:
-            return dt.strptime(v.replace("_", "00"), "%d/%m/%Y")
-        return dt.strptime(v.replace(" ", ""), "%d/%m/%Y")
+            date = dt.strptime(v.replace("_", "00"), "%d/%m/%Y")
+        else:
+            date = dt.strptime(v.replace(" ", ""), "%d/%m/%Y")
 
     elif v == "00000000":
-        return None
+        date = None
+
     else:
         if v.startswith("20") or v.startswith("19"):
-            return dt.strptime(v, "%Y%m%d")
+            date =  dt.strptime(v, "%Y%m%d")
         else:
-            print("Error", v)
-            return v
+            print("Error casting date:", v)
+            date = v
+    return date
 
-def cast_record(record):
-    '''etape 0: cast des valeurs numériques et des dates a partir de leur nom'''
-    for k, v in record.items():
 
-        if "date" in k:
-            if not "type" in k:
-                record[k] = detect_date(v)
-        if "nb" in k:
-            record[k] = int(v)
-    return record
-
-def index_pex(pex):
-    '''chaque partie d'exemplaire correspond à un dictionnaire stockés dans la notice dans une liste non ordonnée
-    elle dispose d'un ensemble de nom, sens explicite et attribut codé.
-    Le sens a vocation a se substituer à l'attribut codé pour etre plus explicite
-    '''
-    nr, no = int(pex.get("nr")), int(pex.get("no"))
-    pex_d = {"nr": nr, "no":no}
-    for attr in pex.findAll("attr"):
-        try:
-            key, val = attr.get(nom), attr.get("sens")
-        except KeyError:
-            key, val = attr.get(nom), attr.text
-        pex_d[key] = val
-    return pex_d
 
 
 def count_keys(db, col):
@@ -165,10 +249,14 @@ def count_keys(db, col):
 
 if __name__ == "__main__":
     client = MongoClient()
-    # db = client.catalogue
     db = client.catalogue
-    p = Pool(9)
-    p.map(convert_notice, [f for f in scan_notices_dir()])
+    for n in scan_notices_dir():
+        print(n)
+        print(convert_notice(n))
+        break
+
+    #p = Pool(9)
+    #p.map(convert_notice, [f for f in scan_notices_dir()])
     # col = db.nn
     # print(count_keys(db, "nn"))
     # r_ids = db.notices.distinct("_id")
