@@ -178,34 +178,35 @@ def cast(value,key, sens=None):
             if "date" in key:
                 if len(nb) == 3:
                     if len(nb[-1]) == 4:
-                        try:
-                            #31 jours 12 mois
-                            if nb[0] < 32 and nb[1]< 13:
-                                return dt.strptime("-".join(nb), "%d-%m-%Y")
-                            elif nb[1] < 32 and nb[0]< 13:
-                                return dt.strptime("-".join(nb), "%m-%d-%Y")
-                            else:
-                                return dt.strptime("-".join(nb), "%d-%m-%Y")
-                        except ValueError:
+                        #31 jours 12 mois
+                        if int(nb[0]) >= 12:
+                            return dt.strptime("-".join(nb), "%d-%m-%Y")
+                        if int(nb[1]) >= 12:
                             return dt.strptime("-".join(nb), "%m-%d-%Y")
-                    elif len(nb[0]) == 4:
-                        try:
-                            #31 jours 12 mois
-                            if nb[1] < 32 and nb[2]< 13:
-                                return dt.strptime("-".join(nb), "%Y-%d-%m")
-                            elif nb[2] < 32 and nb[1]< 13:
-                                return dt.strptime("-".join(nb), "%Y-%m-%d")
-                            else:
-                                return dt.strptime("-".join(nb), "%Y-%m-%d")
-                        except ValueError:
+                        else:
+                            #default
+                            try:
+                                return dt.strptime("-".join(nb), "%d-%m-%Y")
+                            except:
+                                return "-".join(nb)
 
+                    elif len(nb[0]) == 4:
+                        if int(nb[1]) >= 12:
                             return dt.strptime("-".join(nb), "%Y-%d-%m")
+                        if int(nb[2]) >= 12:
+                            return dt.strptime("-".join(nb), "%Y-%m-%d")
+                        else:
+                            #default
+                            try:
+                                return dt.strptime("-".join(nb), "%Y-%m-%d")
+                            except:
+                                return "-".join(nb)
                 else:
                     if int(value) == 0:
                         return None
                     else:
                         print("Date ko", value)
-                        return value
+                        return "-".join(nb)
             else:
                 try:
                     return int(value)
@@ -273,7 +274,7 @@ def count_keys(db, col):
 
 
 if __name__ == "__main__":
-    client = MongoClient(host, port, maxPoolSize=150, waitQueueMultiple=10)
+    client = MongoClient(host=http://, port, maxPoolSize=150, waitQueueMultiple=10)
     db = client.catalogue
 
     p = Pool(9)
