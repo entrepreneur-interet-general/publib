@@ -1,5 +1,9 @@
 # Lang API
 
+Prototype de mise à jour automatique des référentiels de langue utilisés dans le catalogage des notices bibliographique et d'autorités
+## Architecture et fonctionnement
+
+
 ## Référentiel officiel:
 
 http://id.loc.gov/vocabulary/iso639-2/<lang_code>
