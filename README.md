@@ -15,9 +15,9 @@ qui s'est soldé par plusieurs mini développement
 
 
 ## Pistes d'intervention
-[BIG CAT](./big_cat) en guise de développement liminaire et préparatoire: Modélisation en  NosQL des données bibliographiques pour explorer les différentes pistes envisagées:
+[BIG CAT](https://github.com/eig-2017/publib/tree/master/bigcat) en guise de développement liminaire et préparatoire: Modélisation en  NosQL des données bibliographiques pour explorer les différentes pistes envisagées:
 
-* [TAM](./tam) Traitement Automatique Multidocuments
-* [API FNE](./fne) Mise à jour avec des référentiels exeternes et Report de Forme ?
-* [RIM NG](./rim) Controle de qualité et versionning des notices catalogue
-* [ETL](./etl) Modèle Extract Transform and Load: simplication de l'entrée et la sortie des métadonnées
+* [TAM](https://github.com/eig-2017/publib/tree/master/tam) Traitement Automatique Multidocuments
+* [API FNE](https://github.com/eig-2017/publib/tree/master/fne) Mise à jour avec des référentiels exeternes et Report de Forme ?
+* [RIM NG](https://github.com/eig-2017/publib/tree/master/rim) Controle de qualité et versionning des notices catalogue
+* [ETL](https://github.com/eig-2017/publib/tree/master/etl) Modèle Extract Transform and Load: simplication de l'entrée et la sortie des métadonnées
