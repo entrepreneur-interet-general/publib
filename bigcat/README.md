@@ -96,14 +96,19 @@ la première solution implique de transférer la base sur un serveur de dévelop
 C'est une opération de **mise à l'échelle verticale** qui implique de traiter les notices interxmarc:
 - leur retraitements:
     - cast de type
-    - indexation des pexs
+    - indexation des pexs en multiple embedded documents
     - vérification des notices
 
+    A noter: le cast de type int se fera a prosteriori au cas par cas: les logiques de multiprocessing embarquent des int trop lourds pour Mongo
+    OverflowError: MongoDB can only handle up to 8-byte ints
+
+
 - l'ajout de valeurs multiples aggrégées après insertion dans la base
+- les logiques d'indexation
 
 ```
-#historique des modifications
-"history":[{"user":<user>, "date":<dt>, "action":<action_type:signalement|edition|validation|import>, "type": <action_type>]}, ...},
+# historique des modifications
+"history":[{"user":<user>, "org":<structure> "date":<dt>, "action":<action_type:signalement|edition|validation|import>, "type": <action_type>]}, ...},
 #status de la notice
 "status": "<validé|confirmé|en attente>"
 #on distingue la source de l'origine
@@ -111,6 +116,7 @@ C'est une opération de **mise à l'échelle verticale** qui implique de traiter
 "source": {"org": "", "country":"", "lang": }
 #l'origine indique le point d'entrée dans la chaine de traitements qui ont permis le versement de la notice
 "origin": {"org": "", "channel":"", "action":"<manual|import|update>"}
+
 "doc_type":""
 
 ```
