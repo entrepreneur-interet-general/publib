@@ -1,0 +1,4 @@
+- base de données: pcn, rim,  valeur, valuation, Pays code_pays
+- code libellé
+- mise a jour par la cellule doc
+- mise à jour manuel

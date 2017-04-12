@@ -74,9 +74,9 @@ if __name__ =="__main__":
     # build_datastore_IDLOC()
     # conn = MongoClient()
     # db = conn.referentials
-    bnf_ref = build_datastore_BNF()
+    build_datastore_BNF()
     # print(len(ref.keys()), len(db.lang_code.distinct("identifier")))
-    print(search("soussou"))
+    # print(bnf_ref)
     # for record in db.lang_code.find():
     #     iid = record["identifier"]
     #     try:

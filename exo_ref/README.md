@@ -32,9 +32,17 @@ le code attribué et la valeur correspondante. Selon le référentiel, on peut t
 
 ### Master_ref
 
-En v0.1 **création d'un fichier XLS à plat** caractérisé comme suit
-pour chaque code son référentiel correspondant pour prise de connaissance
-globale de la base
+En v0.1 **création d'un fichier XLS à plat** :
+pour chaque code son libellé et son référentiel correspondant à faire valider par les responsables des référentiels externes
+Code	Libellé	Date (M)	Type	Types de notices(M)	Usages (zones et sous zones) (M)	Nom du référentiel	Nom_usage/web	Notes internes au document	Règle de contrôle	NORME Externe	Modalité de mise à jour	Valeur fixe	Responsable	Commentaire	CODE ou LISTE
+
+
+| Code  | Libellé  |  Date (M) | Type  |  Type de notices (M) | Usages (M) | Nom du référentiel| Nom ref web| Règles de controle | NORME | Mise à jour| Valeur fixe (BOOL)| Responsable | Code OU Liste
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|le code en intermarc "fre"   | la valeur explicite : "français"  | les dates de mises à jour 18/05/2014;19/09/2016   |  Choix en cas de notices specifiques (Audiovisuel,Cadre de classement,Image fixe, Document cartographique) |   Notice de type A ou B ou multiple AB| Zones intermarc où sont insérées ces données | Nom utilisé par la base de données et la doc| Nom de référentiel sur le web | Règles de controle et d'interdépendances| Norme externe utilisées: ISO-639-2 Alpha3 | AUtomatique/ manuelle |true si la BNF a fixé la valeur false dans le cas d'une maj automatique| Nom de la personne en charge ou organisme ILOC.GOUV | List: le libellé est le même que le code: il s'agit d'une liste fermée de valeurs contrôlée Code: correspond à une dictionnaire|
+
+
+### Référentiel de langues
 
 En v0.1.1 identifier les valeurs à mettre à jours depuis l'extérieur
 accessible depuis une API en prenant un exemple: le code de langue
@@ -47,22 +55,17 @@ Etapes:
 4. Ouvrir une route api pour questionner la base fusionnée
 5. Ouvrir une route api pour la MàJ en temps réel
 
-Problème:
-Le normalisateur officiel bLoque l'acces depuis une adresse virtuelle:
-Unauthorized
 
 
-
-
-#### code langue
 
 Elle suit la norme ISO 639-2 Alpha 3 et est officiellement maintenue par la
-Library of Congress
+Library of Congress.
+Dans le développement
 
 
 * Source officielle:
 http://id.loc.gov/ Library of Congress
-mais **bloqué depuis la VM**
+
 
 * Sources alternatives:
 http://www-01.sil.org/iso639-3/codes.asp?order=639_2&letter=a
@@ -73,17 +76,19 @@ https://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt txt [dernière MàJ 2
 
 * Evolution de la la norme
 http://www.loc.gov/standards/iso639-2/php/code_changes.php
+PAs de MàJ ou de flux rss
 
 * Mise à jour d'un code de langue à la fois?
 http://id.loc.gov/vocabulary/iso639-2/<code_lang>.skos.json
 
-Bloqué depuis la VM
-1. Création du dataset externe de base:
-bloqué par la VM et le proxy
-recours à la version alternative du SIL
-dans build_lang_code.py
 
-2. Création de l'api
+1. Création du dataset externe de base:
+
+Création d'un dump en scrappant la page de la library of congress
+Exposer une méthode de regénération du référentiel
+Exposer une méthode de mise à jour automatique
+
+2. Création de l'api d'exemple
 
 
 ####s code pays
