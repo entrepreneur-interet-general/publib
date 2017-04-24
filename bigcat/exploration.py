@@ -138,19 +138,25 @@ def convert_notice(fname):
         record["format"] = r.get("format")
         record["type"] = r.get("type")
         record["_id"] = int(r.get("numero"))
-        positions = [get_pos(pos) for pos in r.find_all("pos")]
+        record["source_file"] = fname
+        try:
+            positions = [get_pos(pos) for pos in r.find_all("pos")]
 
-        subfields = [get_subfield(sub) for sub in r.find_all("subfield")]
-        attributes = [get_attribute(att) for att in r.find_all("attr")]
-        fields = positions+subfields+attributes
-        fields_d = {n[0]:{"value":n[1], "sens":n[2]} for n in fields if n[0] is not None or n[1] is not None}
-        record.update(fields_d)
-        if r.find("pex") is not None:
-            pexs = {"pexs": [get_pex(pex) for pex in r.find_all("pex")]}
-            record.update(pexs)
+            subfields = [get_subfield(sub) for sub in r.find_all("subfield")]
+            attributes = [get_attribute(att) for att in r.find_all("attr")]
+            fields = positions+subfields+attributes
+            fields_d = {n[0]:{"value":n[1], "sens":n[2]} for n in fields if n[0] is not None or n[1] is not None}
+            record.update(fields_d)
+            if r.find("pex") is not None:
+                pexs = {"pexs": [get_pex(pex) for pex in r.find_all("pex")]}
+                record.update(pexs)
+            record["status"] = True
+            return db.notices.insert(record)
+        except Exception as e:
+            record["status"] = False
+            record["msg"] = str(e)
+            return db.logs.insert(record)
 
-        return db.notices.insert(record)
-        
 def cast(value,key, sens=None):
     '''casting value using tips(based on keys and meaning) and basic patterns'''
     nb = re.findall(U_INT, value)
@@ -172,9 +178,28 @@ def cast(value,key, sens=None):
             if "date" in key:
                 if len(nb) == 3:
                     if len(nb[-1]) == 4:
-                        return dt.strptime("-".join(nb), "%d-%m-%Y")
+                        try:
+                            #31 jours 12 mois
+                            if nb[0] < 32 and nb[1]< 13:
+                                return dt.strptime("-".join(nb), "%d-%m-%Y")
+                            elif nb[1] < 32 and nb[0]< 13:
+                                return dt.strptime("-".join(nb), "%m-%d-%Y")
+                            else:
+                                return dt.strptime("-".join(nb), "%d-%m-%Y")
+                        except ValueError:
+                            return dt.strptime("-".join(nb), "%m-%d-%Y")
                     elif len(nb[0]) == 4:
-                        return dt.strptime("-".join(nb), "%Y-%m-%d")
+                        try:
+                            #31 jours 12 mois
+                            if nb[1] < 32 and nb[2]< 13:
+                                return dt.strptime("-".join(nb), "%Y-%d-%m")
+                            elif nb[2] < 32 and nb[1]< 13:
+                                return dt.strptime("-".join(nb), "%Y-%m-%d")
+                            else:
+                                return dt.strptime("-".join(nb), "%Y-%m-%d")
+                        except ValueError:
+
+                            return dt.strptime("-".join(nb), "%Y-%d-%m")
                 else:
                     if int(value) == 0:
                         return None

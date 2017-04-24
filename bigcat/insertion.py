@@ -13,209 +13,149 @@ import re
 U_INT = re.compile(r'\d+', re.UNICODE)
 U_NONINT = re.compile(r'[^(\d|\s)+]+', re.UNICODE)
 
-# def cast_str_2_int(value):
-#     regex.find("\d+")
-def scan_notices_dir(notices_dir="/notices/xml/ixm/bnopalex/"):
+def to_index(fname):
+    exists = db.notices.findOne({"source_file": fname})
+    return(exists is None)
+
+def reindex(fname):
+    '''evaluate which one has be to be reindex or index'''
+    exists = db.notices.findOne({"source_file": fname})
+    if exists is not None:
+        print()
+        return(exists["status"] is False)
+    else:
+        return(True)
+
+def get_notices_f(notices_dir="/notices/xml/ixm/bnopalex/"):
     ''' retourner l'ensemble des notices présentes dans l'arborescence '''
-    for d in sorted(os.listdir(notices_dir), reverse=True):
-        for d1 in sorted(os.listdir(os.path.join(notices_dir,d)), reverse=True):
+    for d in sorted(os.listdir(notices_dir), reverse=False):
+        for d1 in sorted(os.listdir(os.path.join(notices_dir,d)), reverse=False):
+            d2 = os.path.join(notices_dir,d, d1)
+            for d3 in sorted(os.listdir(d2), reverse=True):
+                d3 = os.path.join(d2, d3)
+                for f in sorted(os.listdir(d3),reverse=False):
+                    yield os.path.join(d3, f)
+
+def get_new_notices(db, notices_dir="/notices/xml/ixm/bnopalex/"):
+    ''' retourner l'ensemble des notices présentes dans l'arborescence '''
+    for d in sorted(os.listdir(notices_dir), reverse=False):
+        for d1 in sorted(os.listdir(os.path.join(notices_dir,d)), reverse=False):
             d2 = os.path.join(notices_dir,d, d1)
             for d3 in sorted(os.listdir(d2), reverse=False):
                 d3 = os.path.join(d2, d3)
-                for f in sorted(os.listdir(d3),reverse=True):
-                    yield os.path.join(d3, f)
-
-def get_pos(pos):
-    '''pour chaque tag "pos"
-    renvoyer son tag parent ou grand parent
-    le code, le sens
-    '''
-
-    if pos.parent.name == "subfield":
-        tag = pos.parent.parent.get("tag")
-        code = pos.parent.get("code")
-        key = tag+"P"+code
-
-        try:
-            sens = pos.get("sens")
-            value = cast(pos.text, key, sens)
-        except KeyError:
-            sens = None
-            value = cast(pos.text, key)
-        return (key, value, sens)
-    elif pos.parent.name == "controlfield" or pos.parent.name == "leader":
-        tag = pos.parent.get("tag")
-        if tag is None:
-            tag = "000"
-        code = pos.get("code")
-        key = tag+"P"+code
-        value = pos.text
-        try:
-            sens = pos.get("sens")
-            value = cast(value, key, sens)
-        except KeyError:
-            sens = None
-            value = cast(value, key)
-        return (key, value, sens)
-    else:
-        print("Error", post.parent.name,">", "P", pos )
-        return (None, None, None)
+                for f in sorted(os.listdir(d3),reverse=False):
+                    fname = os.path.join(d3, f)
+                    print(fname)
+                    if db.notices.find_one({"source_file":fname}) is None:
+                        print(fname, "index")
+                        # yield os.path.join(d3, f)
+                        yield db.notices.insert({"source_file": fname, "status":False, "msg": "to index"})
 
 
-
-def get_subfield(sub):
-    '''
-    Pour une sous-zone récupérer tous les champs data
-    '''
-
-    if sub.parent.name == "datafield":
-        tag = sub.parent.get("tag")
-        code = sub.get("code")
-        key = tag+"$"+code
-        value = sub.text
-        try:
-            sens = sub.get("sens")
-            value = cast(value, key, sens)
-        except KeyError:
-            sens = None
-            value = cast(value, key)
-        return (key, value , sens)
-
-    else:
-        print("Error:", sub.parent.name,">$", sub)
-        return (None, None, None)
-
-def get_attribute(at):
-    '''
-    Pour une notice récupérer tous les attributs (données de gestion)
-    '''
-    if at.parent.name == "record":
-        try:
-            key = at.get("nom").lower()
-            value = at.text
-            try:
-                sens = at.get("sens")
-                value = cast(at.text, key, sens)
-            except KeyError:
-                sens = None
-                value = cast(at.text, key)
-            return (key, value, sens)
-        except KeyError:
-            return (None, None, None)
-    else:
-        return (None, None, None)
-
-def get_pex(pex):
-    '''chaque partie d'exemplaire correspond à un dictionnaire stockés dans la notice dans une liste non ordonnée
-    elle dispose d'un ensemble de nom, sens explicite et attribut codé.
-    Le sens a vocation a se substituer à l'attribut codé pour etre plus explicite
-    Le nom est mis en minuscule
-    Une pex est un dictionnaire
-    '''
-    nr, no = int(pex.get("nr")), int(pex.get("no"))
-    pex_d = {"nr": nr, "no":no}
-    for attr in pex.findAll("attr"):
-        key = attr.get("nom").lower()
-        value = attr.text
-        try:
-            sens = attr.get("sens")
-            value = cast(value, key, sens)
-        except KeyError:
-            sens = None
-            value = cast(value, key)
-        pex_d[key] = {"sens":sens, "value": value}
-    return pex_d
 
 def convert_notice(fname):
     '''lire et applatir la notice xml'''
     record = {}
+
+
+
     #fname = fname.replace("./bnopalex", "./notices")
     with open(fname, "r", encoding="utf-8") as f:
-        notice = f.read()
-        r = bs(notice, "lxml")
-        # print(r.encoding)
-        r = r.record
-        record["format"] = r.get("format")
-        record["type"] = r.get("type")
-        record["_id"] = int(r.get("numero"))
-        record["source_file"] = fname
         try:
-            positions = [get_pos(pos) for pos in r.find_all("pos")]
+            notice = f.read()
+            r = bs(notice, "lxml")
+            # print(r.encoding)
+            r = r.record
+            record["format"] = r.get("format")
+            record["type"] = r.get("type")
+            record["_id"] = int(r.get("numero"))
+            record["source_file"] = fname
 
+            positions = [get_pos(pos) for pos in r.find_all("pos")]
             subfields = [get_subfield(sub) for sub in r.find_all("subfield")]
             attributes = [get_attribute(att) for att in r.find_all("attr")]
             fields = positions+subfields+attributes
             fields_d = {n[0]:{"value":n[1], "sens":n[2]} for n in fields if n[0] is not None or n[1] is not None}
-            record.update(fields_d)
-            if r.find("pex") is not None:
-                pexs = {"pexs": [get_pex(pex) for pex in r.find_all("pex")]}
-                record.update(pexs)
-            record["status"] = True
-            return db.notices.insert(record)
+            try:
+                record.update(fields_d)
+                if r.find("pex") is not None:
+                    pexs = {"pexs": [get_pex(pex) for pex in r.find_all("pex")]}
+                    record.update(pexs)
+                record["status"] = True
+                try:
+                    return db.notices.update({"_id": record["_id"]}, record, upsert=True)
+                except Exception as e:
+                    record["status"] = False
+                    record["msg"] = str(e)
+                    return db.notices.update({"_id": record["_id"]}, record, upsert=True)
+            except Exception as e:
+                record["status"] = False
+                record["msg"] = str(e)
+                return db.notices.update({"_id": record["_id"]}, record, upsert=True)
         except Exception as e:
+            print(e)
+            record = {}
             record["status"] = False
             record["msg"] = str(e)
-            return db.logs.insert(record)
+            record["source_file"] = fname
+            return db.notices.insert(record)
 
 def cast(value,key, sens=None):
     '''casting value using tips(based on keys and meaning) and basic patterns'''
     nb = re.findall(U_INT, value)
     inv = re.findall(U_NONINT, value)
     if len(nb) > 0:
-
-        #serach by key
-        if key is not None:
-            if "num" in key:
-
-                if len(inv) == 0:
-                    try:
-                        return int(value)
-                    except ValueError:
-                        return value.strip()
-                        # return long(value)
-                else:
-                    return value
+        #search by key: max int overflow error > 8Bytes
+        # if key is not None:
+        #     if "num" in key:
+        #         if len(inv) == 0:
+        #             try:
+        #                 return int(value)
+        #             except ValueError:
+        #                 return value.strip()
+        #                 # return long(value)
+        #         else:
+        #             return value
             if "date" in key:
                 if len(nb) == 3:
                     if len(nb[-1]) == 4:
                         #31 jours 12 mois
-                        if int(nb[0]) >= 12:
-                            return dt.strptime("-".join(nb), "%d-%m-%Y")
-                        if int(nb[1]) >= 12:
+                        try:
                             return dt.strptime("-".join(nb), "%m-%d-%Y")
-                        else:
-                            #default
+                        except ValueError:
                             try:
-                                return dt.strptime("-".join(nb), "%d-%m-%Y")
+                                return dt.strptime("-".join(nb), "%m-%d-%Y")
                             except:
                                 return "-".join(nb)
 
                     elif len(nb[0]) == 4:
-                        if int(nb[1]) >= 12:
+                        try:
                             return dt.strptime("-".join(nb), "%Y-%d-%m")
-                        if int(nb[2]) >= 12:
-                            return dt.strptime("-".join(nb), "%Y-%m-%d")
-                        else:
-                            #default
+                        except ValueError:
                             try:
-                                return dt.strptime("-".join(nb), "%Y-%m-%d")
+                                return dt.strptime("-".join(nb), "%Y-%d-%m")
                             except:
                                 return "-".join(nb)
+
+                    else:
+
+                        try:
+                            #default fr
+                            return dt.strptime("-".join(nb), "%d-%m-%Y")
+                        except:
+                            return "-".join(nb)
                 else:
                     if int(value) == 0:
                         return None
                     else:
-                        print("Date ko", value)
                         return "-".join(nb)
-            else:
-                try:
-                    return int(value)
-                except ValueError:
-                    return(value)
+
     return value
 
 def detect_date(v):
-    '''transormer les dates de gestion en les formattant en type date'''
+    '''transormer les dates de gestion en les formattant en type date
+    not used
+    '''
     if type(v) == dict:
         value = v["value"]
     else:
@@ -270,18 +210,70 @@ def count_keys(db, col):
         # print(n)
         print(n["_id"], db[col].find({n["_id"]:{"$exists":True}}).count())
         ## do something with distinctThingFields['results']
+def is_new(f):
+    client = MongoClient("127.0.0.1", 27019, maxPoolSize=75, waitQueueMultiple=10, connect=False)
+    #client = MongoClient()
+    db = client.bigcat
+    # simple function as an example
+    if db.notices.find_one({"source_file":f}) is None:
+        return f
+
+def to_index():
+    # client = MongoClient("127.0.0.1", 27019, maxPoolSize=75, waitQueueMultiple=10, connect=False)
+    #client = MongoClient()
+    # db = client.bigcat
+    pool = Pool(processes=9)
+    for f in pool.imap(is_new,get_notices_f,chunksize=10):
+        print(f)
+        convert_notice(f)
+        pool.close()
 
 
 
 if __name__ == "__main__":
-    client = MongoClient(host=http://, port, maxPoolSize=150, waitQueueMultiple=10)
-    db = client.catalogue
+    client = MongoClient("127.0.0.1", 27019, maxPoolSize=75, waitQueueMultiple=10, connect=False)
+    #client = MongoClient()
+    db = client.bigcat
+    # client = MongoClient("127.0.0.1", 27017, maxPoolSize=75, waitQueueMultiple=10, connect=False)
+    #client = MongoClient()
+    # db = client.catcat
+    # print("Notices", db.notices.count())
+    # print("Erreurs", db.logs.count())
+    # p = Pool(5)
+    # listr = db.notices.distinct("fname")
+    #db.refs.update([{"fname":n},{"$set":{"status":True}} for n in listr], multi=True)
+    # bulk = db.initialize_ordered_bulk_op()
+    # for fname in db.notices.distinct("source_file"):
+    #     db.refs.update({'fname': fname}, {'$set': {'status': True}})
+    # bulk.execute()
+    # print(listr)
+    #p.map(add_status, listr)
+    # p.map =
+    # to_index = [f for f in get_notices_f() if db.find_one({"source_file":f['name']}) is None]
+    # to_index =
+    #to_index = [n["fname"] for n in db.refs.find({"status":False}, {"_id":False, "fname":True})]
+    # already_done = db.notices.distinct("source_file")
+    # print(len(already_done))
 
-    p = Pool(9)
-    p.map(convert_notice, [f for f in scan_notices_dir()])
+    # for n in get_notices_f():
+    #     doc = db.notices.find_one({"source_file":n})
+    #     if doc is None:
+    #         print("Index notice")
+    #         print(convert_notice(n))
+
+        # else:
+        #     print("Done", n)
+
+
+    # get_new_notices(db)
+    # p.map(convert_notice, to_index)
+    # from multiprocessing import Pool
+
+    # if f not in list_in])
 
     # col = db.nn
     # print(count_keys(db, "nn"))
     # r_ids = db.notices.distinct("_id")
     # index_notices(db)
     # correct_logs(db)
+    to_index()

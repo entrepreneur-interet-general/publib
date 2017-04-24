@@ -23,19 +23,20 @@ rétrocompatibilité et  cohérence du modèle de données avec usages. (ajout p
 
 ## Défi BNF:
 Pistes d'intervention en 8 mois
-* PISTE 1 :INPUT/OUTPUT UNIFIES
+* PISTE 1 :ETL
  ETL unifié pour les différentes chaines d'entrée des métadonnées
 Une même logique d'acquisition pour chaque chaine, des règles spécifiques pour chaque type, source, filière et besoin métier ( a identifier de manière exhaustive)
 Des convertisseurs  et adaptateurs génériques pour les différents flux.
 En simple Un mode d'insertion unique des md dans pilote MD
 Et un mode de sortie unique des md dans pilote MD?
+> Mise de coté pour question d'intégration SI
 
-* PISTE 2 : Modèle PRE FNE
+* PISTE 2 : API FNE
 Décorreler les notices bibliographiques des notices d'autorité et voir comment synchroniser et éditer les notices
-* PISTE 3: BIG CAT Prototype d'accès et de modification des données en paquets + versionning des modifications
-* PISTE 4 : AD CAT 90 NG
+* PISTE 3: TAM Prototype d'accès et de modification des données en paquets + versionning des modifications
+* PISTE 4 : RIM NG
 Outil de visualisation des évolutions et usage du Référentiel InterMarc + ajout/suppression de règles
-* PISTE 5:  ADCAT 02 NG
+* PISTE 5:  EXO REF
 Enrichissement semi-automatique de notices pour suggestions dans ProdMD (la production des MD du catalogue)
 suggestions issues de 2 endroits: interne (notices existantes), externes (API pour des zones spécifiques: exemple lieux, PEP)
 
@@ -54,8 +55,9 @@ Et peut être d'ajouter aux Ateliers de reflexion sur InterMarc NG, une vision d
 Pour cette pise, je souhaiterais explorer un autre Système de Gestion de Base de données:
 - NoSQL (Mongo ou ElascticSearch)
 ou évaluer l'opportunité d'un système mixte PostgresQL (JSONB Nodes)
+Exploration BIG  CAT
 
-### Premier développement liminaire envisagé
+### Premier développement liminaire envisagé: EXPLORATION BIG CAT
 Un outil statistique sur les données existantes qui s'affranchisse des indexations de la BDD existante.
 Soit en utilisant les notices InterXMARC
 1. Détecter:
@@ -69,6 +71,7 @@ par une approche par l'usage et reboucler sur les Ateliers INterXMARC et les tra
 
 Pour cela un proto d'exploration et d'indexation dans MONGO
 cf ./exploration.py
+
 
 ##### Remarques
 Format Intermarc complexe:
@@ -96,8 +99,7 @@ Cartographier la norme par type de données et chaine d'entrée....
 - Atomiser les notices?
 
 
-
 Autres reflexions:
-- Mettre les pex avec le numero de notices dans une autre collection
+- Mettre les pex avec le numero de notices dans une autre collection NON
 - Recréer la logique de mise à jour ou création de notices d'autorité immédiate
 - Indexer les champs les plus usités
