@@ -176,14 +176,13 @@ On distingue deux grand type de notices:
 
 * Les autres informations liées aux notices seront mappées a partir des code de zones une fois l'insertion faite
 
-
-### 4 echecs successifs d'insertion en base MONGODB:
- (Compter entre 5 et 7 jours d'insertion des 19M de notices)
+## Echec de l'insertion dans une seule base MONGO
+4 echecs successifs d'insertion en base MONGODB:
+(Compter entre 5 et 7 jours d'insertion des 19M de notices)
 
 * 1ere tentative sur une VM : crash après aggregation
 * 2e tentative sur une VM: Memory Overflow
 * 3e tentative: erreur d'écriture sur le disque du srv de test allocation de block par déconnexion du disque /notices
-
 * 4e tentative: Decconnection de mongo incompatibilité avec  Virtual Box
 MongoDB requires a filesystem that supports fsync() on directories. For example, HGFS and Virtual Box’s shared folders do not support this operation.
 
@@ -204,31 +203,100 @@ mettre à l'épreuve les capacité d'un serveur unique*
 
 
 
-### Installation d'un environnement distribué (cloud) de 3 serveurs pour elastic search
+### Installation d'un environnement distribué (cloud) de 3 serveurs pour elastic search / et /ou MongoDB
 
 Créer 3 VirtualHost sur le srv
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
 
-Need more than 64G de RAM so forget about it
+Requiert 64G de RAM sur le serveur
 
 http://www.tuxfixer.com/install-and-configure-elasticsearch-cluster-on-centos-7-nodes/
 
 
-| Tentative stoppée
+Mettre 3 serveurs APACHE sur une seule machine pour créer le cluster requis
+https://crunchify.com/how-to-run-multiple-tomcat-instances-on-one-server/
 
-### Reduire le périmêtre de notices pour POC
-Réduire à 10% de l'ensemble
+### Création d'un cluster qui répartisse la charge entre les deux machines à ma dispo?
+
+## Autres solutions
+
+### LITTLE CAT
+#### Reduire le périmêtre de notices pour POC
+Réduire à 10% de l'ensemble des notices BIBLIOGRAPHIQUES
 
 10% des notices BIB et
-10% des notices AUT?
+1O0% des notices AUT
 
 * stats expresses
 19M 226 013 notices:
 - 5M566616 notices aut
 - 13M659397 notices bib
 
-1M4 notices BIB
-55616 notices AUT?
-Selection au hasard parmis les notices  BIB
 
-`./parallel_index2.py`
+1M4 notices BIB
++ 55616 notices AUT?
+Selection au hasard parmis les notices  BIB
+cf script `./parallel_index2.py`
+
+
+* dans bac à sable:
+- import des notices AUT (~5M6) 5M566 615 notices AUT
+- notices BIB :  (~1M4) 1M396.601 notices BIB
+
+:folder: Archives BIB: sample_bib10_0.json
+:folder: Archives AUTH: authority.json
+
+
+* dans env de travail:
+- notices AUT (5 566 615 notices)
+- notices BIB :  1549000 soit +10% mais non samplées
+
+:folder: Archives BIB: sample_bib10_1.json
+:folder: Archives AUTH: authority.json
+
+
+Configuer mongo pour ES
+
+1. Transformer la BDD mongo en replicaset
+- Stopper le daemon
+sudo systemclt stop mongo
+
+- Editer la configuration de mongo
+nano /etc/mongod.conf
+Ajouter
+
+replSet=rs0
+dbpath=YOUR_PATH_TO_DATA/DB
+logpath=YOUR_PATH_TO_LOG/MONGO.LOG
+
+- Ouvrir mongo et réinitialiser la BDD
+mongo DATABASE_NAME
+config = { "_id" : "rs0", "members" : [ { "_id" : 0, "host" : "127.0.0.1:27017" } ] }
+rs.initiate(config)
+rs.slaveOk() // allows read operations to run on secondary members.
+
+:ok: Fait sur env de travail
+
+
+2. Installer ElasticSearch
+- Installer Java8
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.rpm"
+
+sudo yum -y localinstall jdk-8u73-linux-x64.rpm
+- Installer ElasticSearch
+* Télécharger le packet ES 5
+https://www.elastic.co/downloads/elasticsearch
+
+sudo rpm -ivh elasticsearch-1.7.3.noarch.rpm
+
+3. Configurer ElasticSearch
+
+nano /etc/elasticsearch/elasticsearch/
+### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
+ sudo systemctl daemon-reload
+ sudo systemctl enable elasticsearch.service
+### You can start elasticsearch service by executing
+ sudo systemctl start elasticsearch.service
+
+>>> Impossible de se connecter
+- télécharger elasticsearch-mapper-attachments pour Mongo-River
