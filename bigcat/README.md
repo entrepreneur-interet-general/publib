@@ -255,7 +255,7 @@ cf script `./parallel_index2.py`
 :folder: Archives AUTH: authority.json
 
 
-Configuer mongo pour ES
+#### Configuer mongo pour ES
 
 1. Transformer la BDD mongo en replicaset
 - Stopper le daemon
@@ -277,6 +277,8 @@ rs.slaveOk() // allows read operations to run on secondary members.
 
 :ok: Fait sur env de travail
 
+https://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
+
 
 2. Installer ElasticSearch
 - Installer Java8
@@ -291,6 +293,8 @@ sudo rpm -ivh elasticsearch-1.7.3.noarch.rpm
 
 3. Configurer ElasticSearch
 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-centos-7#step-4-%E2%80%94-securing-elastic
+
 nano /etc/elasticsearch/elasticsearch/
 ### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
  sudo systemctl daemon-reload
@@ -298,5 +302,9 @@ nano /etc/elasticsearch/elasticsearch/
 ### You can start elasticsearch service by executing
  sudo systemctl start elasticsearch.service
 
->>> Impossible de se connecter
+>>> Se connecter en sudo
+
+
 - télécharger elasticsearch-mapper-attachments pour Mongo-River
+http://stackoverflow.com/questions/9140661/setting-up-mongodb-river-for-elasticsearch
+- télécharger mongoriver
