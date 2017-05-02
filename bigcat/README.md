@@ -176,6 +176,21 @@ On distingue deux grand type de notices:
 
 * Les autres informations liées aux notices seront mappées a partir des code de zones une fois l'insertion faite
 
+
+### 4 echecs successifs d'insertion en base MONGODB:
+ (Compter entre 5 et 7 jours d'insertion des 19M de notices)
+
+* 1ere tentative sur une VM : crash après aggregation
+* 2e tentative sur une VM: Memory Overflow
+* 3e tentative: erreur d'écriture sur le disque du srv de test allocation de block par déconnexion du disque /notices
+
+* 4e tentative: Decconnection de mongo incompatibilité avec  Virtual Box
+MongoDB requires a filesystem that supports fsync() on directories. For example, HGFS and Virtual Box’s shared folders do not support this operation.
+
+ https://docs.mongodb.com/manual/administration/production-notes/#kernel-and-file-systems
+
+
+
 ## 3. Mise à l'échelle horizontale
 
 La particularité du NoSQl base de données orientée documents est de permetre la mise à l'échelle horizontale
@@ -186,3 +201,34 @@ Sur le concept du sharding https://docs.mongodb.com/v3.0/core/sharding-introduct
 
 *Les SGBD avec de gros datasets  et de nombreuses applications (modifications multiples en concurrences) peuvent
 mettre à l'épreuve les capacité d'un serveur unique*
+
+
+
+### Installation d'un environnement distribué (cloud) de 3 serveurs pour elastic search
+
+Créer 3 VirtualHost sur le srv
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
+
+Need more than 64G de RAM so forget about it
+
+http://www.tuxfixer.com/install-and-configure-elasticsearch-cluster-on-centos-7-nodes/
+
+
+| Tentative stoppée
+
+### Reduire le périmêtre de notices pour POC
+Réduire à 10% de l'ensemble
+
+10% des notices BIB et
+10% des notices AUT?
+
+* stats expresses
+19M 226 013 notices:
+- 5M566616 notices aut
+- 13M659397 notices bib
+
+1M4 notices BIB
+55616 notices AUT?
+Selection au hasard parmis les notices  BIB
+
+`./parallel_index2.py`
