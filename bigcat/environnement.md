@@ -232,7 +232,8 @@ nano /etc/mongod.conf
     logpath=YOUR_PATH_TO_LOG/MONGO.LOG
 
 journal=
-- Permettre la connextion multiple
+- Permettre la connexion multiple
+
 
 ### Mongo Replica
 * Transformer la BDD mongo en replicaset
@@ -249,39 +250,65 @@ logpath=YOUR_PATH_TO_LOG/MONGO.LOG
 
 - Ouvrir mongo et réinitialiser la BDD
 mongo DATABASE_NAME
+```
 config = { "_id" : "rs0", "members" : [ { "_id" : 0, "host" : "127.0.0.1:27017" } ] }
 rs.initiate(config)
 rs.slaveOk() // allows read operations to run on secondary members.
-
+```
 
 ## Elastic Search
 ### Elastic Search standalone
-tps://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
+
+Depuis Mongo
+
+https://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
+
 ### Elastic Search cluster
-
-
-
-:ok: Fait sur env de travail
-
-ht
-
 
 2. Installer ElasticSearch
 - Installer Java8
-wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.rpm"
+```bash
+$ sudo yum install java-1.8.0-openjdk.x86_64
+```
 
-sudo yum -y localinstall jdk-8u73-linux-x64.rpm
 - Installer ElasticSearch
-* Télécharger le packet ES 5
-https://www.elastic.co/downloads/elasticsearch
-
-sudo rpm -ivh elasticsearch-1.7.3.noarch.rpm
+Last version : elastic-search 5.3.2
+```bash
+sudo vim /etc/yum.repos.d/elasticsearch.repo
+```
+```
+[elasticsearch-5.x]
+name=Elasticsearch repository for 5.x packages
+baseurl=https://artifacts.elastic.co/packages/5.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+```
 
 3. Configurer ElasticSearch
 
+config directory location to /etc/elasticsearch/elasticsearch.yaml
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-centos-7#step-4-%E2%80%94-securing-elastic
 
-nano /etc/elasticsearch/elasticsearch/
+nano /etc/elasticsearch/elasticsearch.yaml
+
+cluster.name = "BIG FOOT"
+node.name = "Node1"
+path.data = "/data/es"
+path.logs = "/data/logs/es"
+network.host #specific adress
+network.port #specific port
+
+
+:warning: Make sure that the heap size is set to about half the memory available
+on the system and that the owner of the process is allowed to use this
+limit.
+
+Elasticsearch performs poorly when the system is swapping the memory.
+
+
 ### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
  sudo systemctl daemon-reload
  sudo systemctl enable elasticsearch.service

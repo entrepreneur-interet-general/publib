@@ -255,27 +255,38 @@ def convert(i):
             pass
     else:
         pass
+
 def get_file(i):
+    '''recomposition du chemin du fichier notice.xml a partir de son numéro'''
     fname = str(i)+".xml"
     return os.path.join(ROOT, "/".join([fname[0], fname[1], fname[2:5],fname]))
 
 def sampling_f():
-    '''sampling 10% of total nBIB i.e 1M365939'''
+    '''sampling 10% of total nBIB when 200000<= nbib > 460000
+    total_nBib = 13659395
+    sample_10 = int(round((total_nBib/10)))
+    we take more than 10% because notice_nb can either exists or not
+    '''
     import numpy as np
     return(list(np.random.randint(20000000, 46000000, 2000000)))
 
+def get_notices_auth():
+    '''generer l'ensemble des notices XML
+    Les notices AUT  sont comprises entre 10M et 17M106000'''
+    return [get_file(i) for i in range(10000000, 17106000)]
+
+def get_notices_bib():
+    '''generer l'ensemble des notices BIB qui sont comprises entre
+    20M et 46M'''
+    return [get_file(i) for i in range(20000000, 46000000)]
+
 
 if __name__ == "__main__":
+    #Multithreading via Cython using POOL
     p = Pool(5)
-    #SAMPLE BIB
-    p.map(convert, sampling_f())
+    #Sampling nBIB
+    #p.map(convert, sampling_f())
     #AUT
-    #print("processed notices range 1:2")
-    #p.map(convert, list(range(10000000, 17106000)))
+    #p.map(convert, get_notices_auth())
     #BIB
-    #print("process notices range 2:2.5")
-    #p.map(convert, list(range(20000000, 25000000)))
-    #p.map(convert, list(range(25000000, 30000000)))
-    # print("processed notices range 3:5")
-    # p.map(convert, list(range(30000000, 40000000)))
-    # p.map(convert, list(range(40000000, 46000000)))
+    #p.map(convert, get_notices_bib())

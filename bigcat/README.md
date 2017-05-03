@@ -139,7 +139,7 @@ Il s'agit
   * les nombres (integer, float, long)
   * les textes (string) avec controle automatique de taille autorisé
 * en réutilisant le travail de traduction déjà réalisé dans le XML
-qui donne un "sens" explicite à certaun code
+qui donne un "sens" explicite à certaines valeurs codées
 
 le champ des notices est donc converti et transposé en json et stocké ainsi:
 
@@ -148,7 +148,60 @@ le champ des notices est donc converti et transposé en json et stocké ainsi:
   y sont ajouté au meme niveau les données de gestion
   ainsi que les parties d'exemplaires sous forme de liste de dictionnaires
 
+:warning: Le choix d'applatir la hiérarchie sur deux niveaux maximum est liée au limite de l"'indexation en Mongo/elastic qui ne peut scanner qu'à 2 niveaux maximum
+
 Voir le script python `insertion.py`
+
+###### Quelques informations sur les clés
+
+Les deux valeurs obligatoires et communes à toutes notices:
+* **IDentifiant de notices**
+
+Pour le moment, l'**id** unique de la notice correspond au numéro de notices
+ (non perenne) il peut etre à terme remplacé par l' [ark](http://www.bnf.fr/fr/professionnels/issn_isbn_autres_numeros/a.ark.html)
+
+Dans notre premier [exemple](./exempleB.xml) cet identifiant corresond à la fois
+au numéro présent dans la notice :
+
+ `<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic"> `
+
+et au nom du fichier xml  `42008009.xml`
+
+
+Pour rappel l'ARK est utilisé pour deux types de ressources à la BnF :
+
+     * Les documents numériques (préfixe "b"), cf. par exemple
+     http://gallica.bnf.fr/ark:/12148/bpt6k107371t
+
+     * Les notices bibliographiques (préfixe « c »), cf. par exemple
+     http://catalogue.bnf.fr/ark:/12148/cb31009475p
+
+Dans notre cas, seules les notices bibliographiques nous intéressent pour la partie identififiant de la notice. Des id ark pourront être rattachés au PEX (Partie d'Exemplaire)
+
+* **Type de notice**
+On distingue deux grand type de notices:
+  * Autorité
+  * Bibliographique
+
+<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic">
+
+* La hiérarchie interne au format (les différents niveaux allant du générique au spécifique)
+pourra être reproduite grace à une clé de tri composite:
+  - zone(ENTIER à 3 chiffres DESC ordre numérique)
+  - sous-zone(CARACTERE UNIQUE DESC ordre alphabétique)
+  - position(RANG ou position ENTIER DESC ordre numérique)  
+
+On pourra donc ramener au parent (de la sous zone à la zone ou de la valeur à position à la valeur) [Niveau 0]
+ou expliciter la hierarchie
+
+###### Quelques informations sur les valeurs
+
+Pour capitaliser le travail existant, les valeurs de chaque zonesouszone est découpé en deux niveaux informations {"sens": "", "value":""}
+- Le sens correspond à une explicitation exhaustive de la valeur de la zone_souszone.
+    Exemple 'I' => Lieu Indéterminé
+déjà développée dans les notices XML.
+
+Lorsque le sens est "null" soit la valeur est explicite soit elle fait référence à une valeur controlée et définie dans les règles du format.
 
 
 ## Etape 2: Interface de consultation/recherche/modification
