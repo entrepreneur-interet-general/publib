@@ -1,69 +1,125 @@
-# Modele BDD: Big CAT
+# Big CAT
 
-Test initial avec Mongo DB.
-### Intro
-Un outil statistique sur les données existantes qui s'affranchisse des indexations de la BDD existante.
-Soit en utilisant les notices InterXMARC
-1. Détecter:
-- les clés obligatoires,
-- les interdépendances de zones
-Pour identifier des 'types' ou famille de métadonnées:
-quels règles spécifiques?
-quels champs spécifiques?
-quels évolutions dans le temps?
-par une approche par l'usage et reboucler sur les Ateliers INterXMARC et les traitements de conformité faits au BEA (Contact Sylvie Florès)
+Proposer un modèle de données orienté documents (notices)
+Test initial avec Mongo DB pour le stockage et ElasticSearch pour l'indexation et la recherche
 
-Pour cela un proto d'exploration et d'indexation dans MONGO
-cf ./exploration.py
+## Objectifs
+
+**PISTE TAM**
+* Exposer simplement les données du catalogue via une API qui permet:
+  - la consultation
+  - l'insertion
+  - la modification/correction
+  - la suppression
+
+des notices par unité ou par paquets qui seront indexées automatiquement par le numéro de notices.
 
 
-##### Remarques
-Format Intermarc complexe:
-- Zones et sous Zones à position ou avec des champs
-La parti-pris pour le moment est d'applatir la hiérarchie de l'Intermarc et de se passer de conversion pour le moment.
-
-1. Analyse fréquentielle simple:
-permet de définir les champs obligatoires des notices
-et les champs les plus / moins utilisés
-A plusieurs niveaux:
-zones
-sous zones...
-position
-
-2. Analyse factorielle de correspondances
-définir les interdépendances de champs
-
-3. Modelisation du shema de dépendances créé par le format
-Cartographier la norme par type de données et chaine d'entrée....
-
-##### Autres developpements envisagés
-
-- Des silos différents: 100.000 par 100.000? => sharding une fois l'échantillon fait?
-- Sampling de 1% représentatifs
-- Atomiser les notices?
+**PISTE RIM NG**
+* Proposer un [tableau de bord](dashboard.md) pour le suivi des zones, sous zones utilisés dans le catalogue et permettre l'administration du format, la modification  et l'alignement
+à d'autres référentiels et le suivi des règles d'interdépendances des zones au niveau de la  notice
 
 
-Autres reflexions:
-- Mettre les pex avec le numero de notices dans une autre collection NON
-- Recréer la logique de mise à jour ou création de notices d'autorité immédiate OUI après
-- Indexer les champs les plus usités OUI ensuite
-- Créer un service de mise à jour à partir des referentiels externes
+**PISTE EXO_REF /FNE**
+* Permettre le suivi, et le controle qualité sur les insertions et modifications au catalogue grace à l'historique et au logs par versions
+
+* Permettre l'indexation et la modification en temps réel ainsi que la collaboration avec d'autres institutions
+
+## Etape 0:  Mise en place de l'environnement
+
+Les prérequis pour ce genre d'opération consiste principalement dans la mise en place d'un environnement de travail adapté et capable de traiter les 19M de notices de la BNF dans un temps relativement court.
+
+Etape négligée dans les premiers temps dont toutes les étapes ont été décrites
+dans le document [Environnement](environnement.md)
+On y trouve notamment les instructions sur l'
+- Installation et configuration de MongoDB
+- Installation et configuration de ElasticSearch
+en standalone et/ou en cluster distribué
+
+## Etape 1: Modélisation des données autour de la notice
+
+### Les données à disposition
+
+#### Parcours des données dans le SI
+* Les données de catalogue arrivent depuis de nombreuses applications SI et sont insérées dans la Base de données PCN (Postgresql).
+* Le format initial des données consiste dans du texte formattée selon le format/ langage à balise interne à la BNF InterMarc.
+* Elle sont ensuite transformées en xml, additionnées de données de gestions et versées dans un puits /notices reparties dans le filesystem en fonction de leur numéro de notices.
+* Pour être exposées dans le catalogue,exportées en produit bibliographique ou convertit en d'autres formats pour export
 
 
-Quelques explications
+#### Types de données
 
-## 1. Modèle de données pour Mongo ##
+Les données du catalogue correspondent aux notices  modifiées par les catalogueurs dans l'application AD CAT 02.
 
-Mongo est un SGBD orienté document, j'ai donc fait le choix de faire un test:
-mettre toutes les notices interXmarc disponibles dans un seule base de données
-et dans une seule table (appelée collection) `catalogue.notices` via le script: exploration.py
+Il y en a deux types:
+- les notices d'AUTORITE
+- les notices Bibliographiques
 
-* en *applatissant* la structure XML  de la notice  du format [Intermarc](http://www.bnf.fr/fr/professionnels/f_intermarc/s.format_intermarc_biblio.html)
-voir un exemple de notices bibliographique au format interXmarc: [./exampleB.xml]
-voir un exemple de notices d'autorité au format interXmarc:  [./exampleA.xml]
+##### Notices d'AUTORITE
+10000000 =< numéro de notice >30000000
+
+représentent une entité: personne, lieu, réalisation, oeuvre intellectuelle etc...
+
+voir un [exemple de notices d'autorité](./exampleA.xml)
+
+##### Notices BIBLIOGRAPHIQUES
+
+numero de notice >= 30000000
+représentent un ouvrage
+voir un [exemple de notices bibliographique](./exampleB.xml)
+
+A ces types de notices s'ajoutent les notices Analytiques (Notice Bibliographiques d'Oeuvre en tant qu'ensemble mais rangées comme des notices biblographiques)
 
 
+Une notice regroupe l'ensemble des ouvrages physiques ou numériques concernant une oeuvre, elles sont désignées:
+- par des PEX (Partie d'exemplaire) qui correspondent aux élements intellectuel constituant de l'oeuvre (Symphonie Pastorale, A la recherche du temps perdu)
+- et par des U.C (Unité de conservation) qui correspondent à l'élement physique d'un ouvrage (Tome1, fichier, boite)
 
+#### Format des données
+
+Le format de catalogage est un format texte inspiré du MARC: InterMarc est le format de chaque notice produite par la BnF.
+
+[A propos du format InterMarc](http://www.bnf.fr/fr/professionnels/f_intermarc/s.format_intermarc_biblio.html)
+
+Il consiste dans un langage à balise.
+Ces balises consistent dans des zones, sous zones, des positions,des sous zones à position.
+
+Les valeurs contenues dans ses balises peuvent être controlées ou libres en fonction de ce que le format prévoit et qui est communiqué aux catalogueurs via le guide KITCAT.
+
+La gestion, la validation et l'évolution de ses champs ou zones sont controlés par le RIM (Référentiel InterMarc) qui définit les règles de gestion et interdépendance du format appuyé par une base de données et une application spécifique (AD CAT 90)
+Ce langage à balise est un format hiérarchique controlé, parfaitement compatible avec le XML.
+
+Chaque notice est donc transformée en XML: InterXmarc est le format pivot pour la consultation, la diffusion à des tiers et la conversion.
+
+Le format Intermarc est un format complexe qui rend compte de la diversité des usages, des départements et des objets catalogués.
+
+Une notice bibliographique est donc caractérisées au minimum par une dizaine de champs descriptifs ainsi qu'au moins une PEX et une UC.
+
+
+#### Modèle Logique de données
+
+Le modèle logique de données existant repose sur un schema SQL avec un ensemble de tables dont une colonne qui stocke l'ensemble de la notice et un ensemble de tables liées qui stockent les PEX et les UC. Les valeurs contenues dans les tables sont controlées par une autre base de données, les insertions spécifique et les
+corrections se font par DPI de même que l'export et la conversion dans d'autres format.
+
+#### Modéle Orienté document
+Un (SGBD)Système de Gestion de Base de données orientée documents s'adapte assez bien au problématiques de gestion documentaire et bibliographique. Le format de stockage est en JSON qui représente la donnée sont forme de dictionnaire de clé valeur et
+avec éventuellement des niveaux.
+
+Les premiers développement on consiste dans le changement de paradigme de stockage des données.
+
+On stocke dans une seule table (*collection* en NOSQL) et dans une seule base.
+Chaque document (ici une notice) est caractérisée par un **ensemble de clé/valeurs adapté à son cas particulier** avec des clés obligatoires (numéro de notice et type de notices).
+
+
+    Cela évite de stocker toutes les clés possibles
+    pour une notice dans une table et leur assigner la valeur nulle
+
+
+Au élement descriptif de la notice s'ajoute dans notre cas, une clé "pex" qui stocke sous forme de liste des diférents ouvrages réunit dans cette notice
+
+LA premiere étape de développement consistait dans un script qui formatter chaque notice XML en **JSON** puis insère dans uen seule base de données et dans une seule table
+IL s'agit
+- *applatir* la structure XML  de la notice  du format [Intermarc](http://www.bnf.fr/fr/professionnels/f_intermarc/s.format_intermarc_biblio.html)
 * en permettant pour **certaines zones** les valeurs multiples en **liste** et parfois en liste de dictionnaires:
   * les pex
   * les données de gestion
@@ -72,239 +128,17 @@ voir un exemple de notices d'autorité au format interXmarc:  [./exampleA.xml]
   * les dates seront au format date (datetime.date)
   * les nombres (integer, float, long)
   * les textes (string) avec controle automatique de taille autorisé
+* en réutilisant le travail de traduction déjà réalisé dans le XML
+qui donne un "sens" explicite à certaun code
 
-  le champ des notices est donc converti et transposé en json et stocké ainsi:
-  ` { <zone>$<sous_zone>P<position>: valeur} `
+le champ des notices est donc converti et transposé en json et stocké ainsi:
+
+  ` { <zone>$<sous_zone>P<position>: {"value":<valeur>, "sens:"} `
+
   y sont ajouté au meme niveau les données de gestion
   ainsi que les parties d'exemplaires sous forme de liste de dictionnaires
-  un exemple de notice d'autorité (certains champs ont été offusqués pour des raisons de confidentialité)
 
-L'objectif est de valider la faisabilité de plusieurs pistes:
+Voir le script python `parallel_index2.py`
 
-* permettre les controles de validations ultérieurs date, range, taille de texte autorisé [RIM NG]
-* tester le *report de forme* [API FNE]
-* tester le traitement automatisé massif/multidocument et l'indexation [TAM]
-* tester la mise à jour automatique des referentiels exogènes [REF EXO] selon un même réferentiel
 
-
-
-
-## 2. Mise à l'échelle verticale
-
-Après quelques tests, et quelques pertes de données de la BDD,
-la première solution implique de transférer la base sur un serveur de développement plus puissant.
-C'est une opération de **mise à l'échelle verticale** qui implique de traiter les notices interxmarc:
-- leur retraitements:
-    - cast de type
-    - indexation des pexs
-    - vérification des notices
-
-- l'ajout de valeurs multiples aggrégées après insertion dans la base
-
-```
-#historique des modifications
-"history":[{"user":<user>, "date":<dt>, "action":<action_type:signalement|edition|validation|import>, "type": <action_type>]}, ...},
-#status de la notice
-"status": "<validé|confirmé|en attente>"
-#on distingue la source de l'origine
-#la source marque l'institution initiale de provenance du document
-"source": {"org": "", "country":"", "lang": }
-#l'origine indique le point d'entrée dans la chaine de traitements qui ont permis le versement de la notice
-"origin": {"org": "", "channel":"", "action":"<manual|import|update>"}
-"doc_type":""
-
-```
-
-Pour des tests de performances plus avancé
-
-#Insertion initiale en base
-* Dump des notices depuis la base préexistante:
- ```
-$ mongo catalogue
-> db.notices.count()
-> 18 360 944
-> db.logs.count()
-> 29
-```
-par export c'est plus verbeux et complet car les index seront sauvegardés
-
- ```
- mongoexport -d catalogue -c aut -o notices_aut.json
- ```
-trop lourd donc à découper selon une logique soit volumétrique soit par paramêtre
-
-Choix de réinsérer les notices
-#Deuxième insertion en Base
-Les données vont etre versées depuis le puis des notices dans une BDD Mongo
-- parser le xml
-- applatir l'arborescence des zones sous zones et positions
-- transformation des valeurs en nombre et en dates en fonction de leur nom
-- insertion
-
-Une fois la base constituée: de multiples corrections sont à prévoir et au cas par cas
-
-Quelques indications sur les clés des documents
-
-* **IDentifiant de notices**
-
-Pour le moment, l'**id** unique de la notice correspond au numéro de notices
- (non perenne) il sera à terme remplacé par le nom [ark](http://www.bnf.fr/fr/professionnels/issn_isbn_autres_numeros/a.ark.html)
-
-Dans notre premier [exemple](./exempleB.xml) cet identifiant corresond à la fois
-au numéro présent dans la notice :
-
- `<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic"> `
-
-et au nom du fichier xml  `42008009.xml`
-
-
-Pour rappel l'ARK est utilisé pour deux types de ressources à la BnF :
-
-     * Les documents numériques (préfixe "b"), cf. par exemple
-     http://gallica.bnf.fr/ark:/12148/bpt6k107371t
-
-     * Les notices bibliographiques (préfixe « c »), cf. par exemple
-     http://catalogue.bnf.fr/ark:/12148/cb31009475p
-
-Dans notre cas, seules les notices bibliographiques nous intéressent pour la partie identififiant de la notice. Des id ark pourront être rattachés au PEX (Partie d'Exemplaire)
-
-* ** Type de notice **
-On distingue deux grand type de notices:
-  * Autorité
-  * Bibliographique
-<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic">
-
-* Les autres informations liées aux notices seront mappées a partir des code de zones une fois l'insertion faite
-
-## Echec de l'insertion dans une seule base MONGO
-4 echecs successifs d'insertion en base MONGODB:
-(Compter entre 5 et 7 jours d'insertion des 19M de notices)
-
-* 1ere tentative sur une VM : crash après aggregation
-* 2e tentative sur une VM: Memory Overflow
-* 3e tentative: erreur d'écriture sur le disque du srv de test allocation de block par déconnexion du disque /notices
-* 4e tentative: Decconnection de mongo incompatibilité avec  Virtual Box
-MongoDB requires a filesystem that supports fsync() on directories. For example, HGFS and Virtual Box’s shared folders do not support this operation.
-
- https://docs.mongodb.com/manual/administration/production-notes/#kernel-and-file-systems
-
-
-
-## 3. Mise à l'échelle horizontale
-
-La particularité du NoSQl base de données orientée documents est de permetre la mise à l'échelle horizontale
-en répartissant une seule collection sur plusieurs *shards* en cluster
-pour permettre de répartir l'espace de stockage et la capacité de calcul.
-Sur le concept du sharding https://docs.mongodb.com/v3.0/core/sharding-introduction/
-
-
-*Les SGBD avec de gros datasets  et de nombreuses applications (modifications multiples en concurrences) peuvent
-mettre à l'épreuve les capacité d'un serveur unique*
-
-
-
-### Installation d'un environnement distribué (cloud) de 3 serveurs pour elastic search / et /ou MongoDB
-
-Créer 3 VirtualHost sur le srv
-https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
-
-Requiert 64G de RAM sur le serveur
-
-http://www.tuxfixer.com/install-and-configure-elasticsearch-cluster-on-centos-7-nodes/
-
-
-Mettre 3 serveurs APACHE sur une seule machine pour créer le cluster requis
-https://crunchify.com/how-to-run-multiple-tomcat-instances-on-one-server/
-
-### Création d'un cluster qui répartisse la charge entre les deux machines à ma dispo?
-
-## Autres solutions
-
-### LITTLE CAT
-#### Reduire le périmêtre de notices pour POC
-Réduire à 10% de l'ensemble des notices BIBLIOGRAPHIQUES
-
-10% des notices BIB et
-1O0% des notices AUT
-
-* stats expresses
-19M 226 013 notices:
-- 5M566616 notices aut
-- 13M659397 notices bib
-
-
-1M4 notices BIB
-+ 55616 notices AUT?
-Selection au hasard parmis les notices  BIB
-cf script `./parallel_index2.py`
-
-
-* dans bac à sable:
-- import des notices AUT (~5M6) 5M566 615 notices AUT
-- notices BIB :  (~1M4) 1M396.601 notices BIB
-
-:folder: Archives BIB: sample_bib10_0.json
-:folder: Archives AUTH: authority.json
-
-
-* dans env de travail:
-- notices AUT (5 566 615 notices)
-- notices BIB :  1549000 soit +10% mais non samplées
-
-:folder: Archives BIB: sample_bib10_1.json
-:folder: Archives AUTH: authority.json
-
-
-#### Configuer mongo pour ES
-
-1. Transformer la BDD mongo en replicaset
-- Stopper le daemon
-sudo systemclt stop mongo
-
-- Editer la configuration de mongo
-nano /etc/mongod.conf
-Ajouter
-
-replSet=rs0
-dbpath=YOUR_PATH_TO_DATA/DB
-logpath=YOUR_PATH_TO_LOG/MONGO.LOG
-
-- Ouvrir mongo et réinitialiser la BDD
-mongo DATABASE_NAME
-config = { "_id" : "rs0", "members" : [ { "_id" : 0, "host" : "127.0.0.1:27017" } ] }
-rs.initiate(config)
-rs.slaveOk() // allows read operations to run on secondary members.
-
-:ok: Fait sur env de travail
-
-https://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
-
-
-2. Installer ElasticSearch
-- Installer Java8
-wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.rpm"
-
-sudo yum -y localinstall jdk-8u73-linux-x64.rpm
-- Installer ElasticSearch
-* Télécharger le packet ES 5
-https://www.elastic.co/downloads/elasticsearch
-
-sudo rpm -ivh elasticsearch-1.7.3.noarch.rpm
-
-3. Configurer ElasticSearch
-
-https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-centos-7#step-4-%E2%80%94-securing-elastic
-
-nano /etc/elasticsearch/elasticsearch/
-### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
- sudo systemctl daemon-reload
- sudo systemctl enable elasticsearch.service
-### You can start elasticsearch service by executing
- sudo systemctl start elasticsearch.service
-
->>> Se connecter en sudo
-
-
-- télécharger elasticsearch-mapper-attachments pour Mongo-River
-http://stackoverflow.com/questions/9140661/setting-up-mongodb-river-for-elasticsearch
-- télécharger mongoriver
+## Etape 2: Interface de consultation/recherche/modification
