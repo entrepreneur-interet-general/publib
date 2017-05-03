@@ -1,161 +1,131 @@
-## 2. Mise à l'échelle verticale
+# Environnement
 
-Après quelques tests, et quelques pertes de données de la BDD,
-la première solution implique de transférer la base sur un serveur de développement plus puissant.
-C'est une opération de **mise à l'échelle verticale** qui implique de traiter les notices interxmarc:
-- leur retraitements:
-    - cast de type
-    - indexation des pexs
-    - vérification des notices
+1. Environnement de travail  et tests
+2. Architecture: Infrasture unique vs environnement distribué
+3. Infrastructure imaginée:
+    - Base de données Mongo + extension de la recherche et des interactions avec Elastic Search
+    - Mise en place en place d'un tableau de bord Kibana?
+    - Interface minimale Flask/bottle?
+4. Procédure d'installation et configuration:
+  * Base de données Mongo
+    * Installation/ Configuration de Mongo DB Standalone
+    * Mongo DB Sharding et Replica
 
-- l'ajout de valeurs multiples aggrégées après insertion dans la base
+  * Moteur de recherche : Elastic Search
+    * Installation/configuration de Elastic Search Standalone
+    * Installation/configuration de Elastic Search Cluster
 
+## 1. Environnement de travail et tests
+
+* Installation en local sur une machine virtuelle de test
+de MongoDB
+
+      OS distrib: CentOS
+      System Requirements:
+        64-bit Architecture
+        8 GB RAM
+        2 Cores
+        30 GB disk space
+
+A noter: Les performances de MongoDB sont meilleures si l'intégralité des données correspondent à la taille de la RAM pour l'insertion, la recherche, et la modification.
+De plus, l'acces à la mémoire est ici non uniforme (Non-Uniform Access Memory (NUMA)) ce qui implique une instanciation de mongo particulière et fragilisie la persistence des données
+
+Premiers tests d'insertion de notices dans un seule instance Mongo Daemon:
+5 échecs successifs d'insertion en base MONGODB en standalone:
+(Compter entre 5 et 9 jours d'insertion des 19M de notices)
+
+**Test1**
+Insertion non parallélisée des notices, pas de changement de type. SImple transformation json des notices xml.
+
+Temps d'insertion un par un très long: compter 9 jours pour insérer les 19M2 de notices.
+La base de données finales pèse 32 Go (sans compter la place pour les journaux/logs).
+Correction multiples sur la base
+
+Le daemon de mongo s'arrete après quelques recherches et agrégations.
+> Perte de données au moment de la recherche, CPU limit
+> Rechargement de la VM et tentative d'export des données
+notices AUT Ok
+
+
+**Test2**
 ```
-#historique des modifications
-"history":[{"user":<user>, "date":<dt>, "action":<action_type:signalement|edition|validation|import>, "type": <action_type>]}, ...},
-#status de la notice
-"status": "<validé|confirmé|en attente>"
-#on distingue la source de l'origine
-#la source marque l'institution initiale de provenance du document
-"source": {"org": "", "country":"", "lang": }
-#l'origine indique le point d'entrée dans la chaine de traitements qui ont permis le versement de la notice
-"origin": {"org": "", "channel":"", "action":"<manual|import|update>"}
-"doc_type":""
-
-```
-
-Pour des tests de performances plus avancé
-
-## Insertion initiale en base (standalone)
-4 echecs successifs d'insertion en base MONGODB en standalone:
-(Compter entre 5 et 7 jours d'insertion des 19M de notices)
-
-### Première tentative
-Insertion non parallélisée des notices, pas de changement de type
-
-
-### Deuxième tentative
-
-* Dump des notices depuis la base préexistante:
- ```
 $ mongo catalogue
 > db.notices.count()
 > 18 360 944
 > db.logs.count()
 > 29
 ```
-par export c'est plus verbeux et complet car les index seront sauvegardés
+Il en manquait presque 1 M
 
+* Depuis la base préexistantes: séparer les notices AUT(6M) des notices BIB( 13M2)
+dans 2 tables différents pour correction et réinsertion des notices BIB manquantes
+> Crash et perte des données au moment de l'agrégation
+
+dumps trop lourd pour etre sauvegardés (Taille des index)
+export des données en json
+Le dump de la base remplissait tout l'espace disque
  ```
  mongoexport -d catalogue -c aut -o notices_aut.json
  ```
-Trop lourd donc à découper selon une logique soit volumétrique soit par paramêtre.
-> Crash de la VM après agrégation: Memoire et CPU insuffisant
+> Crash de la VM après export, Mémory Overflow
 > Rechargement de la VM et supression du folder contenant les données
 
+**mise à l'échelle verticale**
+* Mise à disposition d'un serveur interne
 
-### Deuxième insertion en Base
-Les données vont etre versées depuis le puis des notices dans une BDD Mongo
-- parser le xml
-- applatir l'arborescence des zones sous zones et positions
-- transformation des valeurs en nombre et en dates en fonction de leur nom
-- insertion
-
-Une fois la base constituée: de multiples corrections sont à prévoir et au cas par cas
-
-Quelques indications sur les clés des documents
-
-* **IDentifiant de notices**
-
-Pour le moment, l'**id** unique de la notice correspond au numéro de notices
- (non perenne) il sera à terme remplacé par le nom [ark](http://www.bnf.fr/fr/professionnels/issn_isbn_autres_numeros/a.ark.html)
-
-Dans notre premier [exemple](./exempleB.xml) cet identifiant corresond à la fois
-au numéro présent dans la notice :
-
- `<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic"> `
-
-et au nom du fichier xml  `42008009.xml`
+  CPU : 16 x Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+  RAM : 64 Go
+  DD : ~3 To
+  OS : CentOS 7.3
 
 
-Pour rappel l'ARK est utilisé pour deux types de ressources à la BnF :
+insertion en 5 j (Yeah!)
+- première tentative réussies de recherche
+- opération map/reduce, et d'agregations (nb_pexs)
 
-     * Les documents numériques (préfixe "b"), cf. par exemple
-     http://gallica.bnf.fr/ark:/12148/bpt6k107371t
+MongoD crash et perte de données
+Premières stats sur les pex:
+Au global
+- 22M226577 pexs
+- 13M043295 notices avec au moins une pex => bizarrerie 13 M de notices? manque 6 M de notices
 
-     * Les notices bibliographiques (préfixe « c »), cf. par exemple
-     http://catalogue.bnf.fr/ark:/12148/cb31009475p
+ Stats (sur les 13 M)
+|Nb pex | nb notices|
+|-------|-----------|
+|> 10   | 63 591    |
+|> 100  | 940       |
+|> 10   | 6         |
+|> 2000 | 1         |
+|> 10000| 0         |
 
-Dans notre cas, seules les notices bibliographiques nous intéressent pour la partie identififiant de la notice. Des id ark pourront être rattachés au PEX (Partie d'Exemplaire)
+La notices avec 2000M de Pex correspond à Indéfini
+perte de données : 6 M notices AUT?
 
-* ** Type de notice **
-On distingue deux grand type de notices:
-  * Autorité
-  * Bibliographique
-<record Numero="42008009" format="InterXMarc_Complet" type="Bibliographic">
 
-* Les autres informations liées aux notices seront mappées a partir des code de zones une fois l'insertion faite
+**Test3**
 
-> Crash de la VM après recherche: Memory Overflow
-> Rechargement de la VM et supression du folder contenant les données
-
-### Troisième insertion en base
 Après mise à disposition d'un serveur plus puissant:
-version parallélisée (multithread)
-> erreur d'écriture sur le disque du srv de test: corruption de blocks et déconnexion du disque /notices
+version parallélisée (multithread) 12 thread
+> erreur d'écriture sur le disque du srv de test: corruption de blocks et déconnexion du disque /notices.
 
 > Redémarrage du serveur et suppression du dossier contenant les donnés et le journal
+par un tiers
 
-### Quatrième insertion en base:
+**Test4**
 Après mise à disposition d'un serveur plus puissant:
-version parallélisée (multithread) avec moins de coeur (5)
+version parallélisée (multithread) avec moins de thread (5)
+
+> erreur d'écriture sur le disque du srv de test: corruption de blocks et déconnexion du disque /notices.
+
 Deconnection de mongo incompatibilité avec  Virtual Box
 MongoDB requires a filesystem that supports fsync() on directories. For example, HGFS and Virtual Box’s shared folders do not support this operation.
 
  https://docs.mongodb.com/manual/administration/production-notes/#kernel-and-file-systems
 
+> erreur d'écriture sur le disque du srv de test: déconnexion du disque /notices ou latence trop longue + plus d'espace disque (oubli de conf le stockage dans la bonne partition)
+> Suppression du dossier contenant les donnés et le journal
 
-> erreur d'écriture sur le disque du srv de test: déconnexion du disque /notices
-
-> Redémarrage du serveur et suppression du dossier contenant les donnés et le journal
-
-
-
-
-## 3. Insertion en base (cluster)
-
-La particularité du NoSQl base de données orientée documents est de permettre la **mise à l'échelle horizontale**
-en répartissant une seule collection sur plusieurs *shards* en cluster
-pour permettre de répartir l'espace de stockage et la capacité de calcul.
-
-
-Sur le concept du sharding
-en Mongo: https://docs.mongodb.com/v3.0/core/sharding-introduction/
-en ElasticSearch https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html
-
-
-*Les SGBD avec de gros datasets  et de nombreuses applications (modifications multiples en concurrences) peuvent
-mettre à l'épreuve les capacité d'un serveur unique*
-
-
-### Installation d'un environnement distribué (cloud) de 3 serveurs pourMongoDB
-
-Créer 3 VirtualHost sur le srv pour mettre 3 serveurs Mongo en réseau
-- https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
-
-Requiert 64G de RAM sur le serveur
-
-http://www.tuxfixer.com/install-and-configure-elasticsearch-cluster-on-centos-7-nodes/
-
-
-Mettre 3 serveurs APACHE sur une seule machine pour créer le cluster requis
-https://crunchify.com/how-to-run-multiple-tomcat-instances-on-one-server/
-
-### Installation d'un environnement distribué (cluster) pour ElasticSearch avec 3 nodes
-
-
-## LITTLE CAT: echantillon au hasard de 10%
-#### Reduire le périmêtre de notices pour POC
+**Test5**: **reduire le nombre de notices**
 Réduire à 10% de l'ensemble des notices BIBLIOGRAPHIQUES
 
 10% des notices BIB et
@@ -170,16 +140,15 @@ Réduire à 10% de l'ensemble des notices BIBLIOGRAPHIQUES
 1M4 notices BIB
 + 55616 notices AUT?
 Selection au hasard parmis les notices  BIB
-cf script `./parallel_index2.py`
+cf script `./insertion.py`
 
 
-* dans bac à sable:
+* dans serveur puissant:
 - import des notices AUT (~5M6) 5M566 615 notices AUT
 - notices BIB :  (~1M4) 1M396.601 notices BIB
 
 :folder: Archives BIB: sample_bib10_0.json
 :folder: Archives AUTH: authority.json
-
 
 * dans env de travail:
 - notices AUT (5 566 615 notices)
@@ -188,10 +157,85 @@ cf script `./parallel_index2.py`
 :folder: Archives BIB: sample_bib10_1.json
 :folder: Archives AUTH: authority.json
 
+10% des notices BIB + 100% des notices AUT
 
-#### Configuer mongo pour ES
 
-1. Transformer la BDD mongo en replicaset
+## 2. Architecture BIG DATA: Infrasture unique vs environnement distribué
+
+*Les SGBD avec de gros datasets  et de nombreuses applications (modifications multiples en concurrences) peuvent
+mettre à l'épreuve les capacité d'un serveur unique*
+
+Ici rentre les considération de mise à l'échelle pour éviter la mise à l'épreuve des capacités machine
+
+Considération de mise à l'échelle de Mongo : https://www.mongodb.com/blog/post/capacity-planning-and-hardware-provisioning-mongodb-ten-minutes
+
+Considération de mise à l'échelle de ES:
+https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html
+
+
+A ces difficultées on propose deux solutions:
+* mise à l'échelle verticale
+* mise à l'échelle horizontale
+
+**Mise à l'échelle verticale**: augmenter la taille de stockage, le CPU et la RAM
+Ok: limite le temps d'insertion mais difficulté lié au type de stockage des données sources serveur distant
+
+
+
+
+La particularité du NoSQl base de données orientée documents est de permettre la **mise à l'échelle horizontale**
+en répartissant une seule collection sur plusieurs *shards* (morceaux partagés) en cluster pour permettre de répartir l'espace de stockage et la capacité de calcul sur plusieurs noeuds.
+
+
+Sur le concept du sharding:
+* en Mongo:
+* en ElasticSearch
+
+
+#### Sharding en Mongo: création d'un cluster de calcul
+A propos:
+https://docs.mongodb.com/v3.0/core/sharding-introduction/
+
+Requiert:
+- 64G de RAM sur le serveur
+- création de 3 serveurs Mongo en réseau sur une même machine
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
+https://crunchify.com/how-to-run-multiple-tomcat-instances-on-one-server/
+
+
+### Sharding avec Elastic Search: création d'un Cluster
+A propos:
+https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html
+
+Requiert 1 noeud master et 2 noeuds esclave
+http://www.tuxfixer.com/install-and-configure-elasticsearch-cluster-on-centos-7-nodes/
+
+# 3. Infrastructure imaginée
+Exposer les données catalogue via une API
+
+- Base de données Mongo + extension de la recherche et des interactions avec Elastic Search
+:question:
+    peut on se passer de Mongo?
+- Mise en place en place d'un tableau de bord Kibana?
+- Interface de consultation/modification en flask /bottle
+
+# 4. Procédure d'installation et configuration:
+
+## Mongo
+Installer mongo sur CentOS
+
+### Mongo standalone
+- Editer la configuration de mongo
+nano /etc/mongod.conf
+  * path
+    dbpath=YOUR_PATH_TO_DATA/DB
+    logpath=YOUR_PATH_TO_LOG/MONGO.LOG
+
+journal=
+- Permettre la connextion multiple
+
+### Mongo Replica
+* Transformer la BDD mongo en replicaset
 - Stopper le daemon
 sudo systemclt stop mongo
 
@@ -209,9 +253,17 @@ config = { "_id" : "rs0", "members" : [ { "_id" : 0, "host" : "127.0.0.1:27017" 
 rs.initiate(config)
 rs.slaveOk() // allows read operations to run on secondary members.
 
+
+## Elastic Search
+### Elastic Search standalone
+tps://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
+### Elastic Search cluster
+
+
+
 :ok: Fait sur env de travail
 
-https://coderwall.com/p/sy1qcw/setting-up-elasticsearch-with-mongodb
+ht
 
 
 2. Installer ElasticSearch
