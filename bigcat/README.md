@@ -1,7 +1,8 @@
 # Big CAT
 
 Proposer un modèle de données orienté documents (notices)
-Test initial avec Mongo DB pour le stockage et ElasticSearch pour l'indexation et la recherche
+Test initial avec Mongo DB pour le stockage et ElasticSearch pour l'indexation et la recherche de 19M2 de notices. Les données de départ sont sous forme de fichiers xml.
+
 
 ## Objectifs
 
@@ -20,21 +21,29 @@ des notices par unité ou par paquets qui seront indexées automatiquement par l
 à d'autres référentiels et le suivi des règles d'interdépendances des zones au niveau de la  notice
 
 
-**PISTE EXO_REF /FNE**
-* Permettre le suivi, et le controle qualité sur les insertions et modifications au catalogue grace à l'historique et au logs par versions
+**PISTE EXO_REF**
+* Permettre le suivi, et le controle qualité sur les insertions et modifications au catalogue grace à l'historique et au logs
+* Ajouter un systeme de gestion de version
 
+**PISTE FNE**
 * Permettre l'indexation et la modification en temps réel ainsi que la collaboration avec d'autres institutions
 
 ## Etape 0:  Mise en place de l'environnement
 
 Les prérequis pour ce genre d'opération consiste principalement dans la mise en place d'un environnement de travail adapté et capable de traiter les 19M de notices de la BNF dans un temps relativement court.
 
-Etape négligée dans les premiers temps dont toutes les étapes ont été décrites
-dans le document [Environnement](environnement.md)
-On y trouve notamment les instructions sur l'
-- Installation et configuration de MongoDB
-- Installation et configuration de ElasticSearch
-en standalone et/ou en cluster distribué
+Cette étape et les difficultés potentielles ont été négligées dans les premiers temps pour se concentrer sur le modèle de données
+Toutes les étapes sont décrites dans le document [Environnement](environnement.md)
+
+On y trouve:
+- des considérations sur les besoins en terme de puissance de calcul et stockage
+- les différents élements théoriques sur la mise en place d'un cluster de stockage et de calcul
+- les difficultés rencontrées pour la mise en place d'un serveur standalone MONGO
+- la procédure d'installation d'un serveur MongoDB sur Centos
+- la procédure d'installation d'un serveur Elastic Search sur Centos
+- les différents tests et premières statistiques sur ce modèle
+
+Pour la mise en place et l'infrastructure nécessaire cf [Environnement](environnement.md)
 
 ## Etape 1: Modélisation des données autour de la notice
 
@@ -117,8 +126,9 @@ Chaque document (ici une notice) est caractérisée par un **ensemble de clé/va
 
 Au élement descriptif de la notice s'ajoute dans notre cas, une clé "pex" qui stocke sous forme de liste des diférents ouvrages réunit dans cette notice
 
-LA premiere étape de développement consistait dans un script qui formatter chaque notice XML en **JSON** puis insère dans uen seule base de données et dans une seule table
-IL s'agit
+La premiere étape de développement consistait dans un script qui formatter chaque notice XML en **JSON** puis insère dans une seule table d'une base de données.
+Ici le choix premier était une base Mongo "catalogue" et une table nommée "notices"
+Il s'agit
 - *applatir* la structure XML  de la notice  du format [Intermarc](http://www.bnf.fr/fr/professionnels/f_intermarc/s.format_intermarc_biblio.html)
 * en permettant pour **certaines zones** les valeurs multiples en **liste** et parfois en liste de dictionnaires:
   * les pex
@@ -138,7 +148,7 @@ le champ des notices est donc converti et transposé en json et stocké ainsi:
   y sont ajouté au meme niveau les données de gestion
   ainsi que les parties d'exemplaires sous forme de liste de dictionnaires
 
-Voir le script python `parallel_index2.py`
+Voir le script python `insertion.py`
 
 
 ## Etape 2: Interface de consultation/recherche/modification
