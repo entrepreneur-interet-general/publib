@@ -187,9 +187,6 @@ La particularité du NoSQl base de données orientée documents est de permettre
 en répartissant une seule collection sur plusieurs *shards* (morceaux partagés) en cluster pour permettre de répartir l'espace de stockage et la capacité de calcul sur plusieurs noeuds.
 
 
-Sur le concept du sharding:
-* en Mongo:
-* en ElasticSearch
 
 
 #### Sharding en Mongo: création d'un cluster de calcul
@@ -201,7 +198,7 @@ Requiert:
 - création de 3 serveurs Mongo en réseau sur une même machine
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7
 https://crunchify.com/how-to-run-multiple-tomcat-instances-on-one-server/
-
+:idea: Création de trois Dockers?
 
 ### Sharding avec Elastic Search: création d'un Cluster
 A propos:
@@ -215,7 +212,7 @@ Exposer les données catalogue via une API
 
 - Base de données Mongo + extension de la recherche et des interactions avec Elastic Search
 :question:
-    peut on se passer de Mongo?
+    peut on se passer de Mongo? d'ES?
 - Mise en place en place d'un tableau de bord Kibana?
 - Interface de consultation/modification en flask /bottle
 
@@ -225,6 +222,9 @@ Exposer les données catalogue via une API
 Installer mongo sur CentOS
 
 ### Mongo standalone
+Une seule instance mongod (daemon)
+avec l'intégralité de la base
+
 - Editer la configuration de mongo
 nano /etc/mongod.conf
   * path
@@ -232,10 +232,15 @@ nano /etc/mongod.conf
     logpath=YOUR_PATH_TO_LOG/MONGO.LOG
 
 journal=
-- Permettre la connexion multiple
+
+- Permettre la connexion multiple sur une machine NUMA
 
 
-### Mongo Replica
+### Mongo Sharding
+Plusieurs instance de mongos (serveur)
+
+
+* **Créer des replicas**
 * Transformer la BDD mongo en replicaset
 - Stopper le daemon
 sudo systemclt stop mongo
@@ -287,20 +292,21 @@ autorefresh=1
 type=rpm-md
 ```
 
+sudo yum install elasticsearch
+
 3. Configurer ElasticSearch
 
-config directory location to /etc/elasticsearch/elasticsearch.yaml
-https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-centos-7#step-4-%E2%80%94-securing-elastic
+https://www.tecmint.com/install-elasticsearch-logstash-and-kibana-elk-stack-on-centos-rhel-7/
+nano /etc/elasticsearch/elasticsearch.yml
 
-nano /etc/elasticsearch/elasticsearch.yaml
+cluster.name : big-foot
+node.name : node-1
+path.data = /data/es/
+path.logs = /data/logs/es/
+network.host: #specific adress
+network.port: #specific port
 
-cluster.name = "BIG FOOT"
-node.name = "Node1"
-path.data = "/data/es"
-path.logs = "/data/logs/es"
-network.host #specific adress
-network.port #specific port
-
+**Configurer le srv**
 
 :warning: Make sure that the heap size is set to about half the memory available
 on the system and that the owner of the process is allowed to use this
@@ -308,16 +314,53 @@ limit.
 
 Elasticsearch performs poorly when the system is swapping the memory.
 
+HEAP SIZING https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html
 
-### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
- sudo systemctl daemon-reload
- sudo systemctl enable elasticsearch.service
-### You can start elasticsearch service by executing
- sudo systemctl start elasticsearch.service
+https://www.elastic.co/guide/en/elasticsearch/reference/2.3/setup-configuration.html
 
->>> Se connecter en sudo
+```
+sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
+```
 
+Démarrer elastic search au moment du boot
+```
+sudo chkconfig --add elasticsearch
+```
 
-- télécharger elasticsearch-mapper-attachments pour Mongo-River
-http://stackoverflow.com/questions/9140661/setting-up-mongodb-river-for-elasticsearch
-- télécharger mongoriver
+Shortcuts de systemd/systemctl
+```
+sudo service elasticsearch start
+sudo service elasticsearch stop
+sudo service elasticsearch reload
+sudo service elasticsearch status
+```
+
+Impossible de se connecter via Curl SQUID reponse:404
+mais via requests si !
+>>> import requests
+>>> r = requests.get("http://127.0.0.1:9200")
+>>> print(r)
+<Response [200]>
+>>> print(r.text)
+{
+  "name" : "noJ1kO9",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "8S_mtigZS7-KepEZQfr8JQ",
+  "version" : {
+    "number" : "5.3.2",
+    "build_hash" : "3068195",
+    "build_date" : "2017-04-24T16:15:59.481Z",
+    "build_snapshot" : false,
+    "lucene_version" : "6.4.2"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+```
+netstat -tunlp
+```
+Test insertion dans Elastic
+Test -XPUT
+Install logstach
