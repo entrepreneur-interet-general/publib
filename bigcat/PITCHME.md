@@ -11,14 +11,26 @@ en temps réel avec d'autres institutions
 ---
 
 ## Contexte du projet
+
 Ce projet s'inscrit dans une feuille de route de développement à 4 ans
-en parallèle du projet FNE (mutualisation des notices bibliographique entre plusieurs institutions notamment l'ABES)
 
----
+Développement de **pilote MD**
 
-En réalité, il s'agit de proposer un pilote une preuve de concept et de refondre l'outil de production des notices bibliographiques (ce qu'on appelle métadonnées). Activité dont le coeur est la base de données du catalogue autour de laquelle gravitent un ensemble de métiers et d'enjeux qui sont ceux propre à une institution culturelle et documentaire.
+* Un nouvel outil de production des notices bibliographiques (ce qu'on appelle métadonnées).
+* Refonte complète d'une application `ADCAT02` qui permet l'edition de la BDD catalogue
+* Modélisation d'une architecture pour ces métadonnées
+* Prise en compte des modifications du format
+
+## Objectifs:
+
+* permette la mise à jour, l'insertion en base des données des catalogueurs, simple ou multiple manuel et automatique
+* suivre les modifications, corrections et l'historique d'une notice
+* raccourcir les temps d'indexation et de publication dans l'interface catalogue
+* controler la qualité et la granularité de la production des données
+* synchronisations avec d'autres institutions productrices de métadonnées
 
 ----
+
 Prise en compte :
 * des nouveaux besoins en terme de catalogage,  [Feuille de route]
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
@@ -50,19 +62,24 @@ Choix technique:
 ## Flux de métadonnées
 
 Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe. Fonctionnement en silo avec pour centre nerveux la base de données.
+Entrées ==> BDD Catalogue ==> Sorties
+                  ^
+                  |
+        RIM <=> ADCAT O2
 
 
 Flux d'entrées:
 * Dépot légal:
   - flux automatique (ONIX)
   - flux manuel (DAE)
-* Acquisition
+* Acquisition:
   - flux automatique (ONIX)
   - flux manuel (DAE)
-* Coopération autres institutions
+* Coopération autres institutions:
   - Versement dans la base (DPI)
-* Numérisation d'autres fonds
+* Numérisation d'autres fonds:
   - Versement dans la base (DPI)
+
 -----
 
 Traitement:
