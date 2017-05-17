@@ -151,17 +151,28 @@ L'écosystème justifie la diversité des enjeux autour de ses données:
   - stockage, traitement, accès aux données enjeu transversal de support des enjeux
 
 ---
-### Représentation de la donnée
-
-* Diversité de représentation d'une notice
+### Représentation d'une notice
 
 Notice bibliographique est un document qui vise à décrire une ressource
 
 3 types de notices:
 * `Notices BIBliographique` description d'un ouvrage
-* Notices AUTorité description d'une entité (personne, lieu, etc..)
-* Notices ANAlytique ensemble de
+* Notices AUTorité description d'une entité (personne, lieu, évènement, etc..)
+* Notices ANAlytique ensemble de notices ordonnées autour d'une notice ou d'une entité
 
+Une notice bibliographique est une métadonnée qui décrit une ressource
+à la BnF le modèle de notice est ainsi constitué
+* Notice AUT
+* Notice BIB
+* PEX
+* UC
+
+
+### Les différents modèles de données
+
+* Modèle descriptif des données (format| grammaire| langue)
+* Modèle logique de données (ordre| tri | selection| projection| agregation)
+* Modèle conceptuel de données (sens | usage)
 
 
 
