@@ -334,11 +334,16 @@ La métadonnée prend la forme d'un fichier XML stockée dans un système de  fi
 
 ---
 
-La métadonnée peut aussi représenter non plus une notice mais une entité
-Elle est représenté dans
+La métadonnée peut aussi être la représentation d'une entité ou un concept
+![](./bigCat/img/graph_simple.png)
+
+---
+
+---
 
 ### Les différents modèles de données
 
+* Modèle physique des données ( BDD relationnelle, fichiers, texte)
 * Modèle descriptif des données (format| grammaire| langue)
 * Modèle logique de données (ordre| tri | selection| projection| agregation)
 * Modèle conceptuel de données (sens | usage)
