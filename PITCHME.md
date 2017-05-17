@@ -29,11 +29,11 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 
 ## Objectifs:
 
-* permettre la mise à jour, l'insertion en base des données des catalogueurs, simple ou multiple/ manuel et automatique
-* suivre les modifications, corrections et l'historique d'une notice
+* permettre l'insertion/edition simple ou multiple/ manuel et automatique en temps réel
+* suivre l'historique et la provenance d'une notice
 * raccourcir les temps d'indexation et de publication dans l'interface catalogue
 * controler la qualité et la granularité de la production des données
-* synchronisation/enrichissement avec d'autres institutions 
+* synchronisation/enrichissement avec d'autres institutions
 
 ----
 ## Etat des lieux
