@@ -27,7 +27,7 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 
 ---
 
-## Objectifs:
+### Objectifs:
 
 * permettre l'insertion/edition simple ou multiple/ manuel et automatique en temps réel
 * suivre l'historique et la provenance d'une notice
@@ -37,19 +37,19 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 
 ---
 
-## Etat des lieux:
+### Prise en compte:
 
-Prise en compte :
 * des nouveaux besoins en terme de catalogage [Feuille de route]
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
-* des questions techniques soulevées par ces besoins, [Documentation technique] et entretiens des experts DL/GCA/MET/DSI
+* des questions techniques soulevées par ces besoins, [Documentation technique] et entretiens des experts/praticiens DL/DCO/MET/DSI
 * des modes de production, de stockage et d'utilisation existant des données de catalogue
-[Rapport d'étonnnement]
 * des différents technologies utilisés [Schema CATSI]
 
 ---
 
 ### Choix technologiques:
+
+---
 
 #### Stockage des données
 * Base de données Mongo (NOSQL orienté document):
@@ -58,14 +58,17 @@ Prise en compte :
   - gestion des ensembles et des listes d'items dans les sous-documents embarqués
   - pas de schéma pour des données diverses (+ 200 types de documents)
 
-#### Traitement
+---
 
+#### Traitement
+* Python/MongoDb
   - éviter les resolutions couteuses de tuples creux et les jointures complexes
   - gestion souple des références (relations entre document)
   - conserver la séparation entre les données et le controle du format
   - parallélisation des tâches (aggregation, dénombrement,mise en relation)
 
 ---
+
 #### Architecture
 
 * Environnement distribué en grappe de serveurs avec replication et redondance
@@ -73,6 +76,7 @@ Prise en compte :
 
 > blockage technique sur la mise en place en local d'une telle archi
 
+---
 
 * Format JSON (Conversion depuis le XML):
   - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
@@ -86,14 +90,19 @@ Prise en compte :
   - facile à adapter aux différents besoins
   - interface web indépendante
 
-> flask
+> flask + django_rest ?
+
+----
+
+## Premières réalisations
+
 ----
 
 ## Données, métadonnées et flux
 
 ---
 
-## Flux des métadonnées
+### Flux des métadonnées
 
 Toute l'activité de catalogage repose sur une base de données PCA dont le schéma est très complexe (multiples interdépendances)
 
@@ -156,7 +165,9 @@ x Entrées x==> BDD Catalogue ==> x Sorties
 - VIAF (WorldCat Manuel)
 
 ---
+
 ## Contexte
+
 ---
 ### Une longue tradition  de l'ingénierie documentaire:
 
@@ -173,7 +184,7 @@ Très différent des contextes de développement habituel (BI, Big Data)
 
 ---
 
-### Le contexte spécifique des données
+### Le contexte spécifique
 
 Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
 
