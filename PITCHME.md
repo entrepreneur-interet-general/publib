@@ -33,7 +33,7 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 * suivre les modifications, corrections et l'historique d'une notice
 * raccourcir les temps d'indexation et de publication dans l'interface catalogue
 * controler la qualité et la granularité de la production des données
-* synchronisations avec d'autres institutions productrices de métadonnées
+* synchronisation/enrichissement avec d'autres institutions 
 
 ----
 ## Etat des lieux
