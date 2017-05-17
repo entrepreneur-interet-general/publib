@@ -42,8 +42,7 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 * des nouveaux besoins en terme de catalogage [Feuille de route]()
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]()
 * des questions techniques soulevées par ces besoins, et entretiens des experts/praticiens DL/DCO/MET/DSI + [Documentation technique]()
-* des modes de production, de stockage et d'utilisation existant des données de catalogue[Schema CATSI]()
-* des différents technologies utilisés [Schema CATSI]()[Modele Logique de Données]()
+* des modes de production, de stockage et d'utilisation existant des données de catalogue[Schema CATSI]() + [Modele Logique de Données]() + [RIM]()
 
 ---
 
@@ -94,11 +93,15 @@ blockage technique sur la mise en place en local d'une telle archi
 
 > flask + django_rest ?
 
-----
+---
 
 ## Premières réalisations
 
-----
+###
+
+###
+
+---
 
 ## Données, métadonnées et flux
 
@@ -163,8 +166,9 @@ x Entrées x==> BDD Catalogue ==> x Sorties
 
 ---
 
-* Manuel
-- VIAF (WorldCat Manuel)
+* Via une application ou manuel:
+  - VIAF (WorldCat)
+  - ISNI
 
 ---
 
@@ -203,33 +207,34 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
 
 ---
 
-### Des métiers divers qui gravitent autour de ces métadonnées:
+### Divers métiers autour des métadonnées:
 
-* Diversité des métiers qui gravitent autour de la production des données bibliographiques:
   - éditeurs et distributeurs,
   - conservateurs,
   - archivistes,
   - bibliotécaires,
-  - catalogueurs
-  - bibliographes
-  - responsables qualité et normalisation
+  - catalogueurs,
+  - bibliographes,
+  - responsables qualité et normalisation,
   - informaticien GED
+  - ...
 
 ---
 
-### Des usages divers des métadonnées
-* Diversité des profils qui utilisent ses données bibliographiques
+### Divers usages des métadonnées
+Les usages des métadonnées sont presque exclusivement centrés autour de la consultation de ressources
+
   - académiques (étudiants/chercheurs)
   - professionnels & spécialistes (ex: juristes, métiers d'art)
   - documentalistes
   - éditeurs
   - grand public
+  - robots
 
 ---
 
-### Des enjeux spécifiques pour chacun des acteurs
+### Des enjeux spécifiques pour chacun des métiers
 
-L'écosystème justifie la diversité des enjeux autour de ses données:
   - obligation légale et promotion commerciale
   - mise en valeur d'un fond documentaire
   - conservation, pérennisation des ressources
