@@ -267,17 +267,71 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 
 ---
 
-### Représentation d'une métadonnées
+### Représentation d'une métadonnées d'un point de vue métier
 
-Une métadonnée désigne une donnée descriptive d'une entité ou une ressource documentaire.
+Une métadonnée dans le contexte d'une bibliothèque est donc la **description intellectuelle**
+d'une **ressource documentaire**
 
-
-Dans l'application existantes on trouve 3 types de notices:
-* `Notices BIB`liographique description d'un ouvrage
-* `Notices AUT`orité description d'une entité (personne, lieu, évènement, etc..)
-* `Notices ANA`lytique ensemble de notices ordonnées autour d'une notice ou d'une entité
+Mais sa représentation varie en fonction du métier
 
 ---
+
+L'épine dorsale représente la ressource documentaire (donnée + métadonnée)
+
+
+
+![](./bigcat/img/ed.PNG)
+
+---
+
+Ensuite une métadonnée peut etre vue comme une notice:
+
+* ***Notices BIBliographique*** description d'une ressource
+
+* ***Notices AUTorité*** description d'une entité (personne, lieu, évènement, etc..)
+
+* ***Notices ANAlytique*** ensemble de notices ordonnées autour d'un concept
+
+---
+
+Le format d'expression de cette métadonnée est l'**InterMarc**
+
+* Cette métadonnée (notice/entité) prend la forme d'un texte à balise au format intermarc
+```
+
+000 00706c0 m 2200027 45a
+001 FRBNF310094750000009
+008 970701s 1856 frfre b
+009 a f
+100 .. $3 11887103 $w 0 2b..... $a Nerval $m Gérard de $d 1808-1855 $4 0070
+145 .6 $3 11992732 $w .0..b.fre. $a Les |filles du feu $m français $8 20160116PRR1V04
+245 1. $a Les |filles du feu $d Texte imprimé $e introduction, Angélique, Sylvie (souvenirs du Valois), Jemmy, Octavie, Isis, Corilla, Emilie, [les chimères] $f par Gérard de Nerval
+250 .. $a Nouv. éd.
+260 .. $a Paris $c Michel Lévy frères $d 1856
+280 .. $a XIX-298 p. $d in-18
+295 1. $a Collection Michel Lévy
+410 .. $3 34241729 $t Collection Michel Lévy $x 1760-8678 $d 1856
+680 6. $a 840 $d 840
+690 .. $a VoyIt
+690 .. $a FichUnif
+917 .. $o CRI $a CG012305950003PE
+
+```
+
+---
+
+* Elle est stockée dans une Base de données centrale (dans un colonne texte spécifique)
+
+* Certaines des valeurs sont dupliquées dans d'autres colonnes pour être indexées
+
+
+
+
+
+
+
+---
+
 
 #####s Pour les archivistes
 une métadonnée est caractérisée par son épine dorsale
