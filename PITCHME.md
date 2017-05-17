@@ -57,6 +57,7 @@ Prise en compte :
   - gestion souple des références (relations entre document)
   - conserver la séparation entre les données et le controle du format
   - parallélisation des taches (aggregation, dénombrement,mise en relation)
+---
 
 * Environnement distribué en grappe de serveurs avec replication et redondance
   - favoriser la stabilité et la réactivité du système
@@ -66,9 +67,10 @@ Prise en compte :
   à 3 niveaux + relations
 
 * Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
-  - protocole moderne sur le modèle SRU avec  tout une panoplie de logique de controle
+  - protocole moderne et souple sur le modèle SRU facile à greffer à une interface et à adapter aux différents besoins
 
 ----
+
 ## Données, métadonnées et flux
 
 Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe. Fonctionnement en silo avec pour centre nerveux la base de données.
