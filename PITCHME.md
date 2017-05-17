@@ -249,21 +249,19 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 ## Données, métadonnées, modèles
 
 ---
-! Vocabulaire !
+
+###! Vocabulaire !
 
 `Donnée`:
   * document/ressource
   * unité d'information figée et transmissible
 
 `Métadonnée`:
-            * description d'une ressource (notice/entité)
-            * donnée descriptive
+  * description d'une ressource (notice/entité)
+  * donnée descriptive
 `Production`:
-            * activité de catalogage (production de notices)
-            * version déployée et utilisée par son public (vs Test)
-`UC`:
-* unité de conservation
-* unité centrale
+  * activité de catalogage (production de notices)
+  * version déployée et utilisée par son public (vs Test)
 
 ---
 
@@ -278,6 +276,7 @@ Mais sa **représentation varie** en fonction du métier
 
 L'épine dorsale représente la ressource documentaire (donnée + métadonnée)
 
+---
 
 ![](./bigcat/img/ed.PNG)
 
@@ -293,9 +292,7 @@ Une métadonnée peut être vue comme une notice:
 
 ---
 
-Une notice donc qui décrit une ressource dans un format spécifique controlé:
-
-* Le format d'expression de cette métadonnée est l'**InterMarc**
+Une notice décrit une ressource dans un format spécifique controlé l'**InterMarc**
 
 ```
 
