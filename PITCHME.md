@@ -48,56 +48,6 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 
 ---
 
-### Choix technologiques:
-
----
-
-#### Stockage des données
-  - base de données orientée sur une notice une notice = un document
-  - applatissement du format Intermarc (4 niveaux => clé, valeur(s?))
-  - gestion des documents comme des ensembles et des listes d'items dans les sous-documents embarqués
-  - pas de schéma pour des données diverses (+ 200 types de documents, des centaines de règles)
-> Base de données Mongo (NOSQL orienté document)
----
-
-#### Traitement
-
-  - éviter les resolutions couteuses de tuples creux et les jointures complexes
-  - gestion souple des références (relations entre document)
-  - conserver la séparation entre les données et le controle du format
-  - parallélisation des tâches (aggregation, dénombrement,mise en relation)
-
-> Python + MongoDb
-
----
-
-#### Architecture
-
-* Environnement distribué en grappe de serveurs avec replication et redondance
-  - favoriser la stabilité et la réactivité du système
-
-> Mongo Deploy Shard :
-blockage technique sur la mise en place en local d'une telle archi
-
----
-
-* Format JSON (Conversion depuis le XML):
-  - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
-  à 3 niveaux + relations
-> script python XML > JSON
-
----
-
-* Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
-  - protocole moderne et souple sur le modèle SRU
-  - facile à adapter aux différents besoins
-  - interface web indépendante
-
-> flask + django_rest ?
-
-
----
-
 ## Données, métadonnées et flux
 
 ---
@@ -352,18 +302,51 @@ Elle est alors stockées en RDF dans un fichier et exposé à une url
 * Modèle logique de données (ordre| tri | selection| projection| agregation)
 * Modèle conceptuel de données (sens | usage)
 
+---
 
+### Choix technologiques:
 
+---
 
+#### Stockage des données
+  - base de données orientée sur une notice une notice = un document
+  - applatissement du format Intermarc (4 niveaux => clé, valeur(s?))
+  - gestion des documents comme des ensembles et des listes d'items dans les sous-documents embarqués
+  - pas de schéma pour des données diverses (+ 200 types de documents, des centaines de règles)
+> Base de données Mongo (NOSQL orienté document)
+---
 
+#### Traitement
 
+  - éviter les resolutions couteuses de tuples creux et les jointures complexes
+  - gestion souple des références (relations entre document)
+  - conserver la séparation entre les données et le controle du format
+  - parallélisation des tâches (aggregation, dénombrement,mise en relation)
 
+> Python + MongoDb
 
+---
 
+#### Architecture
 
+* Environnement distribué en grappe de serveurs avec replication et redondance
+  - favoriser la stabilité et la réactivité du système
 
+> Mongo Deploy Shard :
+blockage technique sur la mise en place en local d'une telle archi
 
+---
 
+* Format JSON (Conversion depuis le XML):
+  - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
+  à 3 niveaux + relations
+> script python XML > JSON
 
+---
 
-> BIG CAT
+* Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
+  - protocole moderne et souple sur le modèle SRU
+  - facile à adapter aux différents besoins
+  - interface web indépendante
+
+> flask + django_rest ?
