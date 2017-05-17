@@ -39,11 +39,11 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 
 ### Prise en compte:
 
-* des nouveaux besoins en terme de catalogage [Feuille de route]
-* de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
-* des questions techniques soulevées par ces besoins, [Documentation technique] et entretiens des experts/praticiens DL/DCO/MET/DSI
-* des modes de production, de stockage et d'utilisation existant des données de catalogue
-* des différents technologies utilisés [Schema CATSI]
+* des nouveaux besoins en terme de catalogage [Feuille de route]()
+* de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]()
+* des questions techniques soulevées par ces besoins, et entretiens des experts/praticiens DL/DCO/MET/DSI + [Documentation technique]()
+* des modes de production, de stockage et d'utilisation existant des données de catalogue[Schema CATSI]()
+* des différents technologies utilisés [Schema CATSI]()[Modele Logique de Données]()
 
 ---
 
@@ -52,20 +52,21 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 ---
 
 #### Stockage des données
-* Base de données Mongo (NOSQL orienté document):
   - base de données orientée sur une notice une notice = un document
-  - applatissement du format Intermarc (4 niveaux)
-  - gestion des ensembles et des listes d'items dans les sous-documents embarqués
-  - pas de schéma pour des données diverses (+ 200 types de documents)
-
+  - applatissement du format Intermarc (4 niveaux => clé, valeur(s?))
+  - gestion des documents comme des ensembles et des listes d'items dans les sous-documents embarqués
+  - pas de schéma pour des données diverses (+ 200 types de documents, des centaines de règles)
+> Base de données Mongo (NOSQL orienté document)
 ---
 
 #### Traitement
-* Python/MongoDb
+
   - éviter les resolutions couteuses de tuples creux et les jointures complexes
   - gestion souple des références (relations entre document)
   - conserver la séparation entre les données et le controle du format
   - parallélisation des tâches (aggregation, dénombrement,mise en relation)
+
+> Python + MongoDb
 
 ---
 
@@ -74,7 +75,8 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 * Environnement distribué en grappe de serveurs avec replication et redondance
   - favoriser la stabilité et la réactivité du système
 
-> blockage technique sur la mise en place en local d'une telle archi
+> Mongo Deploy Shard :
+blockage technique sur la mise en place en local d'une telle archi
 
 ---
 
