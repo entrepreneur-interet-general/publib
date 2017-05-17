@@ -226,8 +226,7 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 
   - académiques (étudiants/chercheurs)
   - professionnels & spécialistes (ex: juristes, métiers d'art)
-  - documentalistes
-  - éditeurs
+  - documentalistes, éditeurs, bibliothécaires
   - grand public
   - robots
 
