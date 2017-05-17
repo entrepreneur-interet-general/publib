@@ -35,9 +35,10 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 * controler la qualité et la granularité de la production des données
 * synchronisation/enrichissement avec d'autres institutions
 
-----
+---
 
-## Etat des lieux
+## Etat des lieux:
+
 Prise en compte :
 * des nouveaux besoins en terme de catalogage [Feuille de route]
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
@@ -46,72 +47,82 @@ Prise en compte :
 [Rapport d'étonnnement]
 * des différents technologies utilisés [Schema CATSI]
 
-----
+---
 
-## Choix techniques
+### Choix technologiques:
 
+#### Stockage des données
 * Base de données Mongo (NOSQL orienté document):
   - base de données orientée sur une notice une notice = un document
   - applatissement du format Intermarc (4 niveaux)
   - gestion des ensembles et des listes d'items dans les sous-documents embarqués
   - pas de schéma pour des données diverses (+ 200 types de documents)
-  - éviter les resolutions de tuples creux et les jointures complexes
+
+#### Traitement
+
+  - éviter les resolutions couteuses de tuples creux et les jointures complexes
   - gestion souple des références (relations entre document)
   - conserver la séparation entre les données et le controle du format
   - parallélisation des tâches (aggregation, dénombrement,mise en relation)
 
-
 ---
+#### Architecture
 
 * Environnement distribué en grappe de serveurs avec replication et redondance
   - favoriser la stabilité et la réactivité du système
 
+> blockage technique sur la mise en place en local d'une telle archi
+
+
 * Format JSON (Conversion depuis le XML):
   - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
   à 3 niveaux + relations
+> script python XML > JSON
 
 ---
 
 * Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
   - protocole moderne et souple sur le modèle SRU
   - facile à adapter aux différents besoins
-  - interface assez
+  - interface web indépendante
 
+> flask
 ----
 
 ## Données, métadonnées et flux
+
 ---
 
 ## Flux des métadonnées
 
-Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe.
+Toute l'activité de catalogage repose sur une base de données PCA dont le schéma est très complexe (multiples interdépendances)
+
 Fonctionnement en silo des entrées sorties avec pour centre nerveux la base de données.
 
+---
+```
 x Entrées x==> BDD Catalogue ==> x Sorties
                   ^
                   |
         RIM <=> ADCAT O2
-
+```
 ---
 
 ## De multiples entrées
 
-Flux d'entrées:
 * Dépot légal:
   - flux automatique (ONIX)
   - flux manuel (DAE)
 * Acquisition:
   - flux automatique (ONIX)
   - flux manuel (DAE)
-* Coopération autres institutions:
-  - Versement dans la base (DPI)
-* Numérisation d'autres fonds:
+* Coopération / Numérisation autres institutions:
   - Versement dans la base (DPI)
 
------
+---
+
 ## Une chaine de traitement centrale
 
-Traitement:
 - Conversion
 - Insertion en base PostgresQL
 - Correction/édition/fusion
@@ -119,7 +130,7 @@ Traitement:
 - Conversion XML -> Insertion dans FS -> Indexation (SolR)
 
 
-----
+---
 
 ## De multiples sorties:
 
@@ -128,6 +139,9 @@ Traitement:
   - presse locale ancienne(XML > HTML)
   - Nouveautés Editeurs (XML> HTML)
   - Interface catalogue (WebCCA) (XML> OAI> WebCCA)
+
+---
+
 * SI Spécifique/Tiers
   - Infos Dépot Legal (ONIX > XML)
   - Entrepot OAI (XML)
@@ -135,6 +149,9 @@ Traitement:
   - data.bnf.fr (XML> RDF)
   - Produits (dump SQL> files)
   - ISNI  (XML[Atom]> BDD [OCLC])
+
+---
+
 * Manuel
 - VIAF (WorldCat Manuel)
 
@@ -152,7 +169,8 @@ de catalogage et de référencement qui justifient leur spécificité
   * format des données multiples (XML, RDF, HTML, fichiers)
   * contexte normatif international (normes ISO, AFNOR etc...)
 
-Très différent des contextes de développement Big Data
+Très différent des contextes de développement habituel (BI, Big Data)
+
 ---
 
 ### Le contexte spécifique des données
@@ -160,17 +178,19 @@ Très différent des contextes de développement Big Data
 Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
 
 ---
+
   * Qualité, conservation, pérennité et réutiliabilité des données
   * Fonctionnement en silos centré autour d'un catalogue (Référence doc)
   * Spécificité des données: descriptives d'objet et d'entité
 
 ---
+
   * Evolution du métier du catalogueur (+ d'autonomie)
   * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies et des usages)
 
 ---
 
-### Des métiers divers qui gravitent autour de ses données:
+### Des métiers divers qui gravitent autour de ces métadonnées:
 
 * Diversité des métiers qui gravitent autour de la production des données bibliographiques:
   - éditeurs et distributeurs,
@@ -184,7 +204,7 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
 
 ---
 
-### Des usages divers des données
+### Des usages divers des métadonnées
 * Diversité des profils qui utilisent ses données bibliographiques
   - académiques (étudiants/chercheurs)
   - professionnels & spécialistes (ex: juristes, métiers d'art)
@@ -212,15 +232,14 @@ L'écosystème justifie la diversité des enjeux autour de ses données:
 
 ---
 
+:warning Polysémie implicite du vocabulaire entre métiers
 
-:warning Polysémie implicite du vocabulaire
-
-Données:
+Donnée:
   * document/ressource
   * unité d'information figée et transmissible
 
-Métadonnées:
-            * étiquettes descriptives d'une ressource (notice bibliographique)
+Métadonnée:
+            * étiquettes descriptives d'une ressource (notice/entité)
             * données descriptives sur une donnée
 Production:
             * activité de catalogage (production de notices)
@@ -233,21 +252,34 @@ UC:
 
 ### Représentation d'une métadonnées
 
-Notice bibliographique est un document qui vise à décrire une ressource
+Une métadonnée désigne une donnée descriptive d'une entité ou une ressource documentaire.
 
 
-3 types de notices:
+Dans l'application existantes on trouve 3 types de notices:
 * `Notices BIB`liographique description d'un ouvrage
 * `Notices AUT`orité description d'une entité (personne, lieu, évènement, etc..)
 * `Notices ANA`lytique ensemble de notices ordonnées autour d'une notice ou d'une entité
 
-Une notice bibliographique est une métadonnée qui décrit une ressource
-à la BnF le modèle de notice est ainsi constitué
+---
 
-* Notice BIB 1
+#####s Pour les archivistes
+une métadonnée est caractérisée par son épine dorsale
 
-* PEX
-* UC
+`BIB` 1 <=> n `PEX` <=> n `UC`
+
+L'UC d'un document physique consiste dans sa localisation exacte (id_uc stocké dans une autre base)
+L'UC d'un document numérique consiste dans une url pérenne appellée id_ark
+
+---
+Pour les catalogueurs
+
+Une métadonnée consiste dans une notice bibliographique attaché à une ressource
+
+un fichier texte de description qui suit le format spécifique Intermarc
+
+```
+
+```
 
 
 ### Les différents modèles de données
