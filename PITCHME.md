@@ -1,9 +1,11 @@
 # BIG CAT
 #### *Modélisation et Architecture des métadonnées du catalogue*
 
+---
+![](./bigcat/img/defi.PNG)
 
 ---
-## Défi EIG initial
+### Défi EIG initial
 
 Préfigurer une plateforme de **co-production de données bibliographiques**
 qui permette la collaboration
@@ -11,7 +13,7 @@ en temps réel avec d'autres institutions productrices de données
 
 ---
 
-## Contexte du projet
+#s## Contexte du projet
 
 Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
@@ -93,13 +95,6 @@ blockage technique sur la mise en place en local d'une telle archi
 
 > flask + django_rest ?
 
----
-
-## Premières réalisations
-
-###
-
-###
 
 ---
 
@@ -114,14 +109,18 @@ Toute l'activité de catalogage repose sur une base de données PCA dont le sch�
 Fonctionnement en silo des entrées sorties avec pour centre nerveux la base de données.
 
 ---
+Une vue simplifiée
+
 ```
-x Entrées x==> BDD Catalogue ==> x Sorties
+x Entrées ==> BDD Catalogue ==> x Sorties
                   ^
                   |
         RIM <=> ADCAT O2
 ```
 ---
 
+![](./bigcat/img/panorama.jpg)
+---
 ## De multiples entrées
 
 * Dépot légal:
@@ -172,10 +171,10 @@ x Entrées x==> BDD Catalogue ==> x Sorties
 
 ---
 
-## Contexte
+### Contexte
 
 ---
-### Une longue tradition  de l'ingénierie documentaire:
+#### Une longue tradition  de l'ingénierie documentaire:
 
 Les données bibliographiques bénéficient d'une très longue tradition
 de catalogage et de référencement qui justifient leur spécificité
@@ -186,11 +185,12 @@ de catalogage et de référencement qui justifient leur spécificité
   * format des données multiples (XML, RDF, HTML, fichiers)
   * contexte normatif international (normes ISO, AFNOR etc...)
 
-Très différent des contextes de développement habituel (BI, Big Data)
+> Très différent des contextes de développement habituel
+(Veille, Recherche, BI)
 
 ---
 
-### Le contexte spécifique
+#### Contexte spécifique, enjeux spécifiques
 
 Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
 
@@ -207,7 +207,7 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
 
 ---
 
-### Divers métiers autour des métadonnées:
+#### Divers métiers autour des métadonnées:
 
   - éditeurs et distributeurs,
   - conservateurs,
@@ -221,7 +221,8 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
 
 ---
 
-### Divers usages des métadonnées
+#### Divers usages des métadonnées
+
 Les usages des métadonnées sont presque exclusivement centrés autour de la consultation de ressources
 
   - académiques (étudiants/chercheurs)
@@ -271,19 +272,18 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 Une métadonnée dans le contexte d'une bibliothèque est donc la **description intellectuelle**
 d'une **ressource documentaire**
 
-Mais sa représentation varie en fonction du métier
+Mais sa **représentation varie** en fonction du métier
 
 ---
 
 L'épine dorsale représente la ressource documentaire (donnée + métadonnée)
 
 
-
 ![](./bigcat/img/ed.PNG)
 
 ---
 
-Ensuite une métadonnée peut etre vue comme une notice:
+Une métadonnée peut être vue comme une notice:
 
 * ***Notices BIBliographique*** description d'une ressource
 
@@ -293,9 +293,10 @@ Ensuite une métadonnée peut etre vue comme une notice:
 
 ---
 
-Le format d'expression de cette métadonnée est l'**InterMarc**
+Une notice donc qui décrit une ressource dans un format spécifique controlé:
 
-* Cette métadonnée (notice/entité) prend la forme d'un texte à balise au format intermarc
+* Le format d'expression de cette métadonnée est l'**InterMarc**
+
 ```
 
 000 00706c0 m 2200027 45a
@@ -317,40 +318,27 @@ Le format d'expression de cette métadonnée est l'**InterMarc**
 
 ```
 
+* Un format controlé par des règles de catalogage [Kitcat](kitcat.bnf.fr)
+* La métadonnée est ainsi stockée arbre descendant
+
 ---
+Une métadonnée peut aussi etre représentée comme une **donnée de type texte**
+c'est ainsi qu'elle est stockée en base
 
 * Elle est stockée dans une Base de données centrale (dans un colonne texte spécifique)
 
 * Certaines des valeurs sont dupliquées dans d'autres colonnes pour être indexées
 
+---
 
+Cette métadonnée peut aussi etre représentée sous forme de fichier avec un langage à balise plus strict et plus adapté aux conversion dans d'autres formats de décriptions de métadonnées documentaires
 
-
-
-
+La métadonnée prend la forme d'un fichier XML stockée dans un système de  fichiers
 
 ---
 
-
-#####s Pour les archivistes
-une métadonnée est caractérisée par son épine dorsale
-
-`BIB` 1 <=> n `PEX` <=> n `UC`
-
-L'UC d'un document physique consiste dans sa localisation exacte (id_uc stocké dans une autre base)
-L'UC d'un document numérique consiste dans une url pérenne appellée id_ark
-
----
-Pour les catalogueurs
-
-Une métadonnée consiste dans une notice bibliographique attaché à une ressource
-
-un fichier texte de description qui suit le format spécifique Intermarc
-
-```
-
-```
-
+La métadonnée peut aussi représenter non plus une notice mais une entité
+Elle est représenté dans
 
 ### Les différents modèles de données
 
