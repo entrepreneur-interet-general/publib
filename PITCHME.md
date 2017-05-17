@@ -7,7 +7,7 @@
 
 Préfigurer une plateforme de **co-production de données bibliographiques**
 qui permette la collaboration
-en temps réel avec d'autres institutions
+en temps réel avec d'autres institutions productrices de données
 
 ---
 
@@ -19,18 +19,20 @@ Développement de **pilote MD**: Un nouvel outil de production de notices (méta
 * Refonte complète d'une application `ADCAT02` qui permet l'edition de la BDD catalogue
 * Modélisation d'une architecture pour ces métadonnées
 * Prise en compte des modifications du format
+* Proposition d'automatisation de certaines tâches: récupération de données
 
+--
 
 ## Objectifs:
 
-* permette la mise à jour, l'insertion en base des données des catalogueurs, simple ou multiple manuel et automatique
+* permettre la mise à jour, l'insertion en base des données des catalogueurs, simple ou multiple/ manuel et automatique
 * suivre les modifications, corrections et l'historique d'une notice
 * raccourcir les temps d'indexation et de publication dans l'interface catalogue
 * controler la qualité et la granularité de la production des données
 * synchronisations avec d'autres institutions productrices de métadonnées
 
 ----
-
+## Etat des lieux
 Prise en compte :
 * des nouveaux besoins en terme de catalogage,  [Feuille de route]
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
@@ -40,8 +42,8 @@ Prise en compte :
 * des différents technologies utilisés [Schema CATSI]
 
 ----
+## Choix techniques
 
-Choix technique:
 * Base de données Mongo (NOSQL orienté document):
   - base de données orientée sur une notice une notice = un document
   - applatissement du format Intermarc (4 niveaux)
@@ -53,20 +55,27 @@ Choix technique:
   - parallélisation des taches (aggregation, dénombrement,mise en relation)
 
 * Environnement distribué en grappe de serveurs avec replication et redondance
+  - favoriser la stabilité et la réactivité du système
 
-* Format JSON (Conversion depuis le XML): plus compact, moins de place en mémoire et simplification à 1 niveau
+* Format JSON (Conversion depuis le XML):
+  - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
+  à 3 niveaux + relations
 
-* SOAP/ REST interface
+* Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
+  - protocole moderne sur le modèle SRU avec  tout une panoplie de logique de controle
 
 ----
-## Flux de métadonnées
+## Données, métadonnées et flux
 
 Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe. Fonctionnement en silo avec pour centre nerveux la base de données.
-Entrées ==> BDD Catalogue ==> Sorties
+
+x Entrées x==> BDD Catalogue ==> x Sorties
                   ^
                   |
         RIM <=> ADCAT O2
 
+---
+## De multiples entrées
 
 Flux d'entrées:
 * Dépot légal:
@@ -81,6 +90,7 @@ Flux d'entrées:
   - Versement dans la base (DPI)
 
 -----
+## Une chaine de traitement centrale
 
 Traitement:
 - Conversion
@@ -90,7 +100,7 @@ Traitement:
 - Conversion XML -> Insertion dans FS -> Indexation (SolR)
 
 ----
-Flux de sortie:
+## De multiples sorties:
 * Portail consultation
   - BgF (XML > HTML)
   - presse locale ancienne(XML > HTML)
@@ -109,12 +119,12 @@ Flux de sortie:
 ---
 ## Contexte
 ---
-
 ### Une longue tradition  de l'ingénierie documentaire:
 
 Les données bibliographiques bénéficient d'une très longue tradition
 de catalogage et de référencement qui justifient leur spécificité
 
+---
   * format de catalogage interne (Intermarc)
   * protocole d'échange spécifique (SRU, Z39.50, AtomPub, ONIX, OAI)
   * format des données multiples (XML, RDF, HTML, fichiers)
@@ -125,14 +135,16 @@ Très différent des contextes de développement Big Data
 
 ### Le contexte spécifique des données
 
-Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur context de production et d'usage
+Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
+
+---
   * Qualité, conservation, pérennité et réutiliabilité des données
   * Fonctionnement en silos centré autour d'un catalogue (Référence doc)
   * Spécificité des données: descriptives d'objet et d'entité
 
-Dans un contexte d'évolution numérique
+---
   * Evolution du métier du catalogueur (+ d'autonomie)
-  * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies)
+  * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies et des usages)
 
 ---
 
@@ -158,6 +170,7 @@ Dans un contexte d'évolution numérique
   - grand publics
 ---
 ### Des enjeux spécifiques pour chacun des acteurs
+
 L'écosystème justifie la diversité des enjeux autour de ses données:
   - obligation légale et promotion commerciale
   - mise en valeur d'un fond documentaire
@@ -167,9 +180,29 @@ L'écosystème justifie la diversité des enjeux autour de ses données:
   - recensement exhaustif et selection de qualité
   - adaptation des données aux standards et aux normes: générique/spécifique
   - stockage, traitement, accès aux données enjeu transversal de support des enjeux
+---
+
+## Données, métadonnées, modèles
 
 ---
-### Représentation d'une notice
+:warning Polysémie implicite du vocabulaire
+
+Données:
+  * document/ressource
+  * unité d'information figée et transmissible
+Métadonnées:
+            * étiquettes descriptives d'une ressource (notice bibliographique)
+            * données descriptives sur une donnée
+Production:
+            * activité de catalogage (production de notices)
+            * version déployée et utilisée par son public (vs Test)
+UC:
+* unité de conservation
+* unité centrale
+
+---
+
+### Représentation d'une métadonnées
 
 Notice bibliographique est un document qui vise à décrire une ressource
 
