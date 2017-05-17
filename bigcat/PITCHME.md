@@ -1,5 +1,6 @@
 # BIG CAT
-####*Modélisation des métadonnées du catalogue*
+#### *Modélisation et Architecture des métadonnées du catalogue*
+
 
 ---
 ## Défi EIG initial
@@ -14,12 +15,11 @@ en temps réel avec d'autres institutions
 
 Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
-Développement de **pilote MD**
-
-* Un nouvel outil de production des notices bibliographiques (ce qu'on appelle métadonnées).
+Développement de **pilote MD**: Un nouvel outil de production de notices (métadonnées):
 * Refonte complète d'une application `ADCAT02` qui permet l'edition de la BDD catalogue
 * Modélisation d'une architecture pour ces métadonnées
 * Prise en compte des modifications du format
+
 
 ## Objectifs:
 
@@ -87,7 +87,7 @@ Traitement:
 - Insertion en base PostgresQL
 - Correction/édition/fusion
 - Indexation (SolR)
-- Conversion XML -> Insertion dans FS
+- Conversion XML -> Insertion dans FS -> Indexation (SolR)
 
 ----
 Flux de sortie:
