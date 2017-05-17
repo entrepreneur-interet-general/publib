@@ -183,7 +183,7 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 
 ---
 
-### Des enjeux spécifiques pour chacun des métiers
+### Des enjeux spécifiques
 
   - obligation légale et promotion commerciale
   - mise en valeur d'un fond documentaire
