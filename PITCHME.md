@@ -36,9 +36,10 @@ Développement de **pilote MD**: Un nouvel outil de production de métadonnées 
 * synchronisation/enrichissement avec d'autres institutions
 
 ----
+
 ## Etat des lieux
 Prise en compte :
-* des nouveaux besoins en terme de catalogage,  [Feuille de route]
+* des nouveaux besoins en terme de catalogage [Feuille de route]
 * de l'évolution du format interne de description des métadonnées, [Atelier InterMarcNG]
 * des questions techniques soulevées par ces besoins, [Documentation technique] et entretiens des experts DL/GCA/MET/DSI
 * des modes de production, de stockage et d'utilisation existant des données de catalogue
@@ -46,6 +47,7 @@ Prise en compte :
 * des différents technologies utilisés [Schema CATSI]
 
 ----
+
 ## Choix techniques
 
 * Base de données Mongo (NOSQL orienté document):
@@ -56,7 +58,9 @@ Prise en compte :
   - éviter les resolutions de tuples creux et les jointures complexes
   - gestion souple des références (relations entre document)
   - conserver la séparation entre les données et le controle du format
-  - parallélisation des taches (aggregation, dénombrement,mise en relation)
+  - parallélisation des tâches (aggregation, dénombrement,mise en relation)
+
+
 ---
 
 * Environnement distribué en grappe de serveurs avec replication et redondance
@@ -66,14 +70,22 @@ Prise en compte :
   - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
   à 3 niveaux + relations
 
+---
+
 * Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
-  - protocole moderne et souple sur le modèle SRU facile à greffer à une interface et à adapter aux différents besoins
+  - protocole moderne et souple sur le modèle SRU
+  - facile à adapter aux différents besoins
+  - interface assez
 
 ----
 
 ## Données, métadonnées et flux
+---
 
-Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe. Fonctionnement en silo avec pour centre nerveux la base de données.
+## Flux des métadonnées
+
+Toute l'activité de catalogage repose sur une base de données PCA dont le modèle est très complexe.
+Fonctionnement en silo des entrées sorties avec pour centre nerveux la base de données.
 
 x Entrées x==> BDD Catalogue ==> x Sorties
                   ^
@@ -81,6 +93,7 @@ x Entrées x==> BDD Catalogue ==> x Sorties
         RIM <=> ADCAT O2
 
 ---
+
 ## De multiples entrées
 
 Flux d'entrées:
@@ -105,8 +118,11 @@ Traitement:
 - Indexation (SolR)
 - Conversion XML -> Insertion dans FS -> Indexation (SolR)
 
+
 ----
+
 ## De multiples sorties:
+
 * Portail consultation
   - BgF (XML > HTML)
   - presse locale ancienne(XML > HTML)
@@ -165,6 +181,7 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
   - bibliographes
   - responsables qualité et normalisation
   - informaticien GED
+
 ---
 
 ### Des usages divers des données
@@ -173,8 +190,10 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
   - professionnels & spécialistes (ex: juristes, métiers d'art)
   - documentalistes
   - éditeurs
-  - grand publics
+  - grand public
+
 ---
+
 ### Des enjeux spécifiques pour chacun des acteurs
 
 L'écosystème justifie la diversité des enjeux autour de ses données:
@@ -186,16 +205,20 @@ L'écosystème justifie la diversité des enjeux autour de ses données:
   - recensement exhaustif et selection de qualité
   - adaptation des données aux standards et aux normes: générique/spécifique
   - stockage, traitement, accès aux données enjeu transversal de support des enjeux
+
 ---
 
 ## Données, métadonnées, modèles
 
 ---
+
+
 :warning Polysémie implicite du vocabulaire
 
 Données:
   * document/ressource
   * unité d'information figée et transmissible
+
 Métadonnées:
             * étiquettes descriptives d'une ressource (notice bibliographique)
             * données descriptives sur une donnée
@@ -212,10 +235,11 @@ UC:
 
 Notice bibliographique est un document qui vise à décrire une ressource
 
+
 3 types de notices:
-* `Notices BIBliographique` description d'un ouvrage
-* Notices AUTorité description d'une entité (personne, lieu, évènement, etc..)
-* Notices ANAlytique ensemble de notices ordonnées autour d'une notice ou d'une entité
+* `Notices BIB`liographique description d'un ouvrage
+* `Notices AUT`orité description d'une entité (personne, lieu, évènement, etc..)
+* `Notices ANA`lytique ensemble de notices ordonnées autour d'une notice ou d'une entité
 
 Une notice bibliographique est une métadonnée qui décrit une ressource
 à la BnF le modèle de notice est ainsi constitué
