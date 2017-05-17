@@ -249,20 +249,19 @@ Les usages des métadonnées sont presque exclusivement centrés autour de la co
 ## Données, métadonnées, modèles
 
 ---
+! Vocabulaire !
 
-:warning Polysémie implicite du vocabulaire entre métiers
-
-Donnée:
+`Donnée`:
   * document/ressource
   * unité d'information figée et transmissible
 
-Métadonnée:
-            * étiquettes descriptives d'une ressource (notice/entité)
-            * données descriptives sur une donnée
-Production:
+`Métadonnée`:
+            * description d'une ressource (notice/entité)
+            * donnée descriptive
+`Production`:
             * activité de catalogage (production de notices)
             * version déployée et utilisée par son public (vs Test)
-UC:
+`UC`:
 * unité de conservation
 * unité centrale
 
