@@ -130,11 +130,12 @@ Les données bibliographiques en ce qu'elle décrivent des ressources documentai
   * Fonctionnement en silos centré autour d'un catalogue (Référence doc)
   * Spécificité des données: descriptives d'objet et d'entité
 
-Dans un context en tension
+Dans un contexte d'évolution numérique
   * Evolution du métier du catalogueur (+ d'autonomie)
   * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies)
 
 ---
+
 ### Des métiers divers qui gravitent autour de ses données:
 
 * Diversité des métiers qui gravitent autour de la production des données bibliographiques:
@@ -179,8 +180,9 @@ Notice bibliographique est un document qui vise à décrire une ressource
 
 Une notice bibliographique est une métadonnée qui décrit une ressource
 à la BnF le modèle de notice est ainsi constitué
-* Notice AUT
-* Notice BIB
+
+* Notice BIB 1
+
 * PEX
 * UC
 
