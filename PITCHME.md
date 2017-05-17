@@ -15,13 +15,17 @@ en temps réel avec d'autres institutions productrices de données
 
 Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
-Développement de **pilote MD**: Un nouvel outil de production de notices (métadonnées):
+Développement de **pilote MD**: Un nouvel outil de production de métadonnées (notices/entités)
+
+---
+
 * Refonte complète d'une application `ADCAT02` qui permet l'edition de la BDD catalogue
 * Modélisation d'une architecture pour ces métadonnées
 * Prise en compte des modifications du format
 * Proposition d'automatisation de certaines tâches: récupération de données
+* Collaboration envisagée avec une institution pour synchroniser les notices
 
---
+---
 
 ## Objectifs:
 
