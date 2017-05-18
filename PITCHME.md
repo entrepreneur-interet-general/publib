@@ -1,15 +1,18 @@
-# BIG CAT
-#### *Modélisation et Architecture des métadonnées du catalogue*
+# PUBLIB
+
+![](./bigcat/img/publib.JPEG)
 
 ---
-![](./bigcat/img/defi.PNG)
 
----
 ### Défi EIG initial
 
 Préfigurer une plateforme de **co-production de données bibliographiques**
 qui permette la collaboration
-en temps réel avec d'autres institutions productrices de données
+en temps réel en interne avec d'autres institutions productrices de données
+
+---
+
+![](./bigcat/img/defi.PNG)
 
 ---
 
@@ -19,7 +22,130 @@ Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
 Développement de **pilote MD**: Un nouvel outil de production de métadonnées (notices/entités)
 
+Rapprochement avec l'ABES: Projet FNE(Fichier National Entité)
+
 ---
+
+### Feuille de route
+
+* Discussion en cours sur la gouvernance des données pour le FNE [en cours]
+
+* Atelier d'étude d'évolution du format [mars]
+
+* Etude de faisabilité de PiloteMd [au 2 Trimestre]
+
+---
+
+### Place de l'EIG dans ce projet
+
+
+* Etat des lieux de l'existant (rapport d'étonnement):
+  * [collectif]()
+  * [spécifique à la BNF]()
+
+* Etude de faisabilité du projet ProdMD
+  * définition de pistes de travail
+
+---
+
+* Développements liminaires autour de plusieurs pistes:
+  * ETL
+  * TAM
+  * API FNE
+  * RIM NG
+  * REF Exo
+
+---
+
+Le contexte et le défi posé favorise les réflexions autour du modèle de production des métadonnées existant
+
+
+---
+
+### Contexte
+
+---
+#### Une longue tradition  de l'ingénierie documentaire:
+
+Les données bibliographiques bénéficient d'une très longue tradition
+de catalogage et de référencement qui justifient leur spécificité
+
+---
+  * format de catalogage interne (Intermarc)
+  * protocole d'échange spécifique (SRU, Z39.50, AtomPub, ONIX, OAI)
+  * format des données multiples (XML, RDF, HTML, fichiers)
+  * contexte normatif international (normes ISO, AFNOR etc...)
+
+> Très différent des contextes de développement habituel
+(Veille, Recherche, BI)
+
+---
+
+#### Contexte spécifique, enjeux spécifiques
+
+Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
+
+---
+
+  * Qualité, conservation, pérennité et réutiliabilité des données
+  * Fonctionnement en silos centré autour d'un catalogue (Référence doc)
+  * Spécificité des données: descriptives d'objet et d'entité
+
+---
+
+  * Evolution du métier du catalogueur (+ d'autonomie)
+  * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies et des usages)
+
+---
+
+#### Divers métiers autour des métadonnées:
+
+  - éditeurs et distributeurs,
+  - conservateurs,
+  - archivistes,
+  - bibliotécaires,
+  - catalogueurs,
+  - bibliographes,
+  - responsables qualité et normalisation,
+  - informaticien (GED, DBA, reseaux ...)
+
+---
+
+#### Divers usages des métadonnées
+
+Les usages des métadonnées sont presque exclusivement centrés autour de la consultation de ressources
+
+  - académiques (étudiants/chercheurs)
+  - professionnels & spécialistes (ex: juristes, métiers d'art)
+  - documentalistes, éditeurs, bibliothécaires
+  - grand public
+  - robots
+
+---
+
+### Des enjeux spécifiques
+
+  - obligation légale et promotion commerciale
+  - mise en valeur d'un fond documentaire
+  - conservation, pérennisation des ressources
+  - accès, circulation et diffusion des ressources documentaires
+  - ordre, granularité, fiabilité des descriptions des ressources
+  - recensement exhaustif et selection de qualité
+  - adaptation des données aux standards et aux normes: générique/spécifique
+  - stockage, traitement, accès aux données enjeu transversal de support des enjeux
+
+---
+
+### Etat des lieux à 3 mois
+
+
+
+
+---
+
+# BIG CAT
+
+#### *Modélisation et Architecture des métadonnées du catalogue*
 
 * Refonte complète d'une application `ADCAT02` qui permet l'edition de la BDD catalogue
 * Modélisation d'une architecture pour ces métadonnées
@@ -70,6 +196,7 @@ x Entrées ==> BDD Catalogue ==> x Sorties
 ---
 
 ![](./bigcat/img/panorama.jpg)
+
 ---
 ## De multiples entrées
 
@@ -121,97 +248,19 @@ x Entrées ==> BDD Catalogue ==> x Sorties
 
 ---
 
-### Contexte
-
----
-#### Une longue tradition  de l'ingénierie documentaire:
-
-Les données bibliographiques bénéficient d'une très longue tradition
-de catalogage et de référencement qui justifient leur spécificité
-
----
-  * format de catalogage interne (Intermarc)
-  * protocole d'échange spécifique (SRU, Z39.50, AtomPub, ONIX, OAI)
-  * format des données multiples (XML, RDF, HTML, fichiers)
-  * contexte normatif international (normes ISO, AFNOR etc...)
-
-> Très différent des contextes de développement habituel
-(Veille, Recherche, BI)
-
----
-
-#### Contexte spécifique, enjeux spécifiques
-
-Les données bibliographiques en ce qu'elle décrivent des ressources documentaires, patrimoniales et culturelles ont des enjeux spécifiques propre à leur contexte de production et d'usage
-
----
-
-  * Qualité, conservation, pérennité et réutiliabilité des données
-  * Fonctionnement en silos centré autour d'un catalogue (Référence doc)
-  * Spécificité des données: descriptives d'objet et d'entité
-
----
-
-  * Evolution du métier du catalogueur (+ d'autonomie)
-  * Mise en tension du métier d'informaticien documentaire (fonction support, évolution des technologies et des usages)
-
----
-
-#### Divers métiers autour des métadonnées:
-
-  - éditeurs et distributeurs,
-  - conservateurs,
-  - archivistes,
-  - bibliotécaires,
-  - catalogueurs,
-  - bibliographes,
-  - responsables qualité et normalisation,
-  - informaticien GED
-  - ...
-
----
-
-#### Divers usages des métadonnées
-
-Les usages des métadonnées sont presque exclusivement centrés autour de la consultation de ressources
-
-  - académiques (étudiants/chercheurs)
-  - professionnels & spécialistes (ex: juristes, métiers d'art)
-  - documentalistes, éditeurs, bibliothécaires
-  - grand public
-  - robots
-
----
-
-### Des enjeux spécifiques
-
-  - obligation légale et promotion commerciale
-  - mise en valeur d'un fond documentaire
-  - conservation, pérennisation des ressources
-  - accès, circulation et diffusion des ressources documentaires
-  - ordre, granularité, fiabilité des descriptions des ressources
-  - recensement exhaustif et selection de qualité
-  - adaptation des données aux standards et aux normes: générique/spécifique
-  - stockage, traitement, accès aux données enjeu transversal de support des enjeux
-
----
-
 ## Données, métadonnées, modèles
 
 ---
-
-###! Vocabulaire !
-
+### Vocabulaire !
 `Donnée`:
   * document/ressource
   * unité d'information figée et transmissible
-
 `Métadonnée`:
   * description d'une ressource (notice/entité)
   * donnée descriptive
 `Production`:
-  * activité de catalogage (production de notices)
-  * version déployée et utilisée par son public (vs Test)
+  * activité de catalogage
+  * opposé à Version Test
 
 ---
 
