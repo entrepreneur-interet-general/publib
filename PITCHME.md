@@ -54,7 +54,7 @@ Les pistes d'intervention
   * RIM NG
   * REF Exo
 
-> Réflexions autour du modèle de données
+Mais Réflexions autour de l'architecture et du modèle de données en amont
 ---
 
 ### Contexte
@@ -215,6 +215,9 @@ Refonte de l'outil de production des métadonnées implique:
 * Evolution du mode de création édition fusion de la BDD catalogue pour plus d'autonomie
 * Modifications du format de catalogage pour plus de souplesse et de granularité
 * Ajout de données de provenance et historique pour suivi qualité et tracabilité
+
+---
+
 * Automatisation de certaines tâches: récupération de données, mise à jour de standard
 * Permettre la collaboration dans la production des métadonnées: synchroniser les notices
 * Raccourcir les temps d'indexation et de publication au catalogue
@@ -241,7 +244,10 @@ sur des volumes de données toujours croissants en flux tendu?
 * la recherche qualifiée à la volée
 
 ---
+Avant de parler de modèle ou d'architecture il convent de s'entendre sur les termes
 
+
+---
 ## Données, métadonnées, modèles
 
 ---
@@ -353,4 +359,87 @@ data.bnf.fr/12008369/jean_de_la_fontaine_fables/rdf.xml
 ```
 ---
 
+#### Données: le format et le référentiel
+
+Les notices produites sont exprimées dans un format commun
+l'Intermarc et validés par un référentiel.
+
+Des règles de validation propre à la politique de catalogage
+sont appliquées à l'édition de la notice
+
+* Manuel du catalogueur KITCAT
+
+Elles suivent les normes internationales de catalogage et les adaptent à leur besoin
+
 ---
+
+### Données: le stockage
+
+Si on se place d'un point de vue d'ingénieur la représentation des données varie.
+Rentre en compte les considérations:
+* de stockage
+* d'indexation
+* de traitement
+
+---
+Deux accès aux données:
+
+* En base (SQL)
+* En fichiers xml
+
+---
+
+1 To de fichiers
+19M de notices (6M AUT | 13M BIB)
+
+---
+
+
+---
+
+### Choix technologiques:
+
+---
+
+#### Stockage des données
+  - base de données orientée sur une notice une notice = un document
+  - applatissement du format Intermarc (4 niveaux => clé, valeur(s?))
+  - gestion des documents comme des ensembles et des listes d'items dans les sous-documents embarqués
+  - pas de schéma pour des données diverses (+ 200 types de documents, des centaines de règles)
+> Base de données Mongo (NOSQL orienté document)
+---
+
+#### Traitement
+
+  - éviter les resolutions couteuses de tuples creux et les jointures complexes
+  - gestion souple des références (relations entre document)
+  - conserver la séparation entre les données et le controle du format
+  - parallélisation des tâches (aggregation, dénombrement,mise en relation)
+
+> Python + MongoDb
+
+---
+
+#### Architecture
+
+* Environnement distribué en grappe de serveurs avec replication et redondance
+  - favoriser la stabilité et la réactivité du système
+
+> Mongo Deploy Shard :
+blockage technique sur la mise en place en local d'une telle archi
+
+---
+
+* Format JSON (Conversion depuis le XML):
+  - plus compact, moins de place en mémoire et simplification à 1 niveau d'un format
+  à 3 niveaux + relations
+> script python XML > JSON
+
+---
+
+* Développement d'un service SOAP avec une API REST pour l'interrogation et l'édition de la BDD:
+  - protocole moderne et souple sur le modèle SRU
+  - facile à adapter aux différents besoins
+  - interface web indépendante
+
+> flask + django_rest ?
