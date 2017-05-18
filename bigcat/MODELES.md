@@ -21,10 +21,9 @@ Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
 * Développement de **pilote MD**: refonte de l'outil de production de métadonnées (notices/entités)
 
-* Développement du **FNE**: rapprochement avec l'ABES pour la coproduction d'un Fichier National Entité
+* Développement du ** FNE** Rapprochement avec l'ABES pour la coproduction d'un Fichier National Entité
 
 ---
-
 ### Intervention de l'EIG
 
 * Contexte et état des lieux de l'existant (4 mois):
@@ -38,18 +37,7 @@ Ce projet s'inscrit dans une feuille de route de développement à 4 ans
 
 > Développements liminaires autour de pistes (points techniques spécifiques du projet de refonte)
 
-* finalement reformulée en **pistes** d'intervention
 
-
----
-Les pistes d'intervention
-  * ETL
-  * TAM
-  * API FNE
-  * RIM NG
-  * REF Exo
-
-> Réflexions autour du modèle de données
 ---
 
 ### Contexte
@@ -146,10 +134,9 @@ x Entrées ==> BDD Catalogue ==> x Sorties
         RIM <=> ADCAT O2
 ```
 ---
-Une vue du SI (Sortie)
 ![](./bigcat/img/SI_Schema.PNG)
 ---
-Une vue panoramique
+
 ![](./bigcat/img/panorama.jpg)
 
 ---
@@ -200,152 +187,5 @@ Une vue panoramique
 * Via une application ou manuel:
   - VIAF (WorldCat)
   - ISNI
-
----
-
-#### Pilote MD
-
-Refonte de l'outil de production des métadonnées implique:
-
-* Evolution du mode de création édition fusion de la BDD catalogue pour plus d'autonomie
-* Modifications du format de catalogage pour plus de souplesse et de granularité
-* Ajout de données de provenance et historique pour suivi qualité et tracabilité
-* Automatisation de certaines tâches: récupération de données, mise à jour de standard
-* Permettre la collaboration dans la production des métadonnées: synchroniser les notices
-* Raccourcir les temps d'indexation et de publication au catalogue
-
----
-
-#### Projet BIG CAT
-
-Tous ses objectifs gravitent en réalité autour d'une
-question centrales:
-
-quel **modèle** et quelle **architecture** pour ces métadonnées?
-
-sur des volumes de données toujours croissants en flux tendu?
-
----
-
-##### Une architecture qui permette:
-
-* l'édition/modification multiple
-* la collaboration temps réel
-* le controle qualité (validation du format + normes)
-* le suivi historique et la provenance
-* la recherche qualifiée à la volée
-
----
-
-## Données, métadonnées, modèles
-
----
-### Définition
-
-`Donnée`:
-  * document/ressource
-  * unité d'information figée et transmissible
-
----
-
-`Métadonnée`:
-  * description d'une ressource (notice/entité)
-  * donnée de type descriptif sur une donnée
-
----
-
-`Modèle`:
-* Modèle physique des données (fichiers, BDD, textes, blob)
-* Modèle descriptif des données (format, grammaire, langue, code)
-* Modèle logique de données (matrice, arbre, ensemble, relations)
-* Modèle conceptuel de données (sens, concept, relations, ontologie)
-
----
-
-Une métadonnée dans le contexte d'une bibliothèque est la **description intellectuelle**
-d'une **ressource documentaire**
-
-Mais sa **représentation varie** en fonction des considérations métiers:
-* stockage, indexation, traitement
-* qualification, étiquettage
-* organisation, interrogation
-
----
-
-#### Les métadonnées: une ressource
-
-L'épine dorsale représente la ressource documentaire (donnée + métadonnée)
-
----
-
-![](./bigcat/img/ed.PNG)
-
----
-
-#### Les métadonnées: une notice
-
-Dans la pure tradition du catalogueur on différencie 2 types de notices:
-
-* ***Notices BIB***liographique description d'une ressource
-
-* ***Notices AUT***orité description d'une entité (personne, titre, organisation, lieu, évènement, etc..)
-
----
-#### Exemple
-
-```
-
-000 00706c0 m 2200027 45a
-001 FRBNF310094750000009
-008 970701s 1856 frfre b
-009 a f
-100 .. $3 11887103 $w 0 2b..... $a Nerval $m Gérard de $d 1808-1855 $4 0070
-145 .6 $3 11992732 $w .0..b.fre. $a Les |filles du feu $m français $8 20160116PRR1V04
-245 1. $a Les |filles du feu $d Texte imprimé $e introduction, Angélique, Sylvie (souvenirs du Valois), Jemmy, Octavie, Isis, Corilla, Emilie, [les chimères] $f par Gérard de Nerval
-250 .. $a Nouv. éd.
-260 .. $a Paris $c Michel Lévy frères $d 1856
-280 .. $a XIX-298 p. $d in-18
-295 1. $a Collection Michel Lévy
-410 .. $3 34241729 $t Collection Michel Lévy $x 1760-8678 $d 1856
-680 6. $a 840 $d 840
-690 .. $a VoyIt
-690 .. $a FichUnif
-917 .. $o CRI $a CG012305950003PE
-
-```
----
-#### Les métadonnées : une entité
-
-Une métadonnée peut représenter un concept, une entité d'un certain type  qui s'inscrit dans une ontologie un modèle de représentation d'une idée
-
-![](./bigcat/img/graph_simple.jpg)
-
-
----
-
-La BnF procède à une **transition bibliographique**
-Elle passe de la  notion de notice (ressource) à la notion d'entité.
-
-### Exemple
-
-Une entité oeuvre est caractérisée par un titre une forme une date, un concept et un auteur elle peut réunir plusieurs manifestations et plusieurs items
-
----
-
-### Exemple
-
-Fables de la Fontaine
-data.bnf.fr/12008369/jean_de_la_fontaine_fables/rdf.xml
-
-```
-<rdf:RDF><rdf:Description rdf:about="http://data.bnf.fr/ark:/12148/cb35862812c">
-<rdarelationships:workManifested rdf:resource="http://data.bnf.fr/ark:/12148/cb120083695#frbr:Work"/></rdf:Description>
-<rdf:Description rdf:about="http://data.bnf.fr/ark:/12148/cb120083695#frbr:Work">
-<rdf:Description rdf:about="http://ark.bnf.fr/ark:/12148/mm132200434x"><dcterms:title>Le chat et le vieux rat : Livre troisième, fable XVIII</dcterms:title>
-<dcterms:subject rdf:resource="http://data.bnf.fr/ark:/12148/cb120083695"/><rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/><rdf:type rdf:resource="http://data.bnf.fr/ontology/bnf-onto/expositionVirtuelle"/>
-</rdf:Description>
-...
-```
----
 
 ---
