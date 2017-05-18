@@ -1,6 +1,9 @@
 # PUBLIB
 
+---
+
 ![](./bigcat/img/publib.JPEG)
+
 ---
 
 ### Défi EIG initial
